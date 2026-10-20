@@ -1,28 +1,40 @@
-# Stack: Personalised digital twin (1:1 tracking + correction view)
+# Stack: Accuracy-first personalised digital twin
+
+**Design priority #1 is anatomical accuracy — see `docs/accuracy.md` for tiers,
+targets and red lines. This stack implements Tier A; lower tiers must be
+labelled and may not drive corrections or exoskeleton assistance.**
 
 ```
-ONBOARDING (once per person)
-  photo(s)/scan ──► shapy (metric measurements) / ECON / PIXIE ──► smplx shape (betas)
-                 ──► SKEL / OSSO (skeleton) ──► OpenSim scaled model (+ CEINMS calibration if EMG available)
+TIER-A ONBOARDING (once per person — this is what makes it a twin, not an avatar)
+  MRI/CT (DICOM)
+    ──► Slicer/Slicer (clinician review) 
+    ──► wasserth/TotalSegmentator (+ MIC-DKFZ/nnUNet for custom structures)
+    ──► patient bone/muscle meshes (unibas-gravis/scalismo if imaging is sparse)
+    ──► PatrikMrnka/msk-PIPE / TPS-MRI workflow / msk-STAPLE
+        ──► personalised OpenSim .osim (patient joint centres/axes, muscle attachments)
+    ──► functional calibration movements + CEINMS calibration (if EMG collected)
+    ──► validation report stored WITH the twin (error per accuracy layer)
 
-LIVE TWIN (every session)
-  clinic:  cameras ──► mediapipe / mmpose ──► GVHMR (world frame) / EasyMocap (multi-view)
-  home:    SlimeVR trackers ──► SlimeVR-Server ─┐
-  always:  labstreaminglayer (LSL) syncs video + IMU + EMG (+ haptics) into one XDF recording
-                 ──► twin in aitviewer-skel / Unity (Realtime_SMPLX_Unity pattern)
+LIVE TWIN (every session — solved against the Tier-A model, not a generic body)
+  clinic:  multi-cam EasyMocap / Pose2Sim + IMU fusion
+  home:    SlimeVR trackers ──► SlimeVR-Server
+  always:  labstreaminglayer (LSL) syncs video + IMU + EMG (+ haptics) into one XDF
+  front-end pose (mediapipe / mmpose / GVHMR) is an input signal only —
+      final joint angles come from IK on the patient's own OpenSim model
 
-CORRECTION VIEW
-  measured motion ──► STGCN-rehab / UI-PRMD models (quality score, what is wrong)
-                  ──► motion-diffusion-model (propose corrected motion)
-                      ⚠️ constrained by SKEL/OpenSim joint limits — never show raw diffusion output
+LOWER TIERS (screening only, labelled, no corrections/exo from these)
+  Tier B: photos/scan ──► shapy / ECON / PIXIE ──► SMPL-X ──► SKEL/OSSO ──► scaled OpenSim
+  Tier C: video/IMU only on a generic model (adherence, rep counting)
+
+CORRECTION VIEW (Tier A only)
+  measured motion ──► STGCN-rehab / UI-PRMD (quality score)
+                  ──► corrected target computed on the patient's joint geometry/limits
+                      (motion-diffusion-model may propose; OpenSim validates)
                   ──► OpenSim Moco (muscle activity the corrected motion requires)
-                  ──► side-by-side: patient twin vs corrected twin
+                  ──► side-by-side: patient twin vs corrected twin, errors displayed
 ```
 
-Clone the twin additions:
-`python scripts/clone.py --only muelea/shapy,google-ai-edge/mediapipe,open-mmlab/mmpose,zju3dv/GVHMR,SlimeVR/SlimeVR-Server,SlimeVR/SlimeVR-Tracker-ESP,sccn/labstreaminglayer,fokhruli/STGCN-rehab,CEINMS/CEINMS`
-
-Reality checks:
-- "1:1" is a target, not a monocular-video property. Accuracy tier must be stated per setup (single phone < multi-cam < multi-cam+IMU).
-- Muscle size/underdevelopment cannot be read from surface shape alone — onboarding needs strength/MVC (and ideally EMG via CEINMS) calibration.
-- Every corrected-motion visualisation must cite the measurement file it was derived from (see docs/architecture.md).
+Clone Tier-A onboarding:
+`python scripts/clone.py --only Slicer/Slicer,wasserth/TotalSegmentator,MIC-DKFZ/nnUNet,PatrikMrnka/msk-PIPE,CEINMS/CEINMS,opensim-org/opensim-core`
+Clone live layer:
+`python scripts/clone.py --only zju3dv/EasyMocap,perfanalytics/pose2sim,SlimeVR/SlimeVR-Server,SlimeVR/SlimeVR-Tracker-ESP,sccn/labstreaminglayer`

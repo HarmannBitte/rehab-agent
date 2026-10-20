@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "generated_for": "Rehab Agent meta-repo",
-  "snapshot_note": "Original 70: maintainer's pasted snapshot (not live). Repos 71-98 added 2026-10-21 with live GitHub API metadata (stars/forks/language/license/updated) fetched that day. Verify upstream before citing.",
+  "snapshot_note": "Repos 1-70: maintainer snapshot. Repos 71-104: live GitHub API metadata fetched on addition (2026-10-21). Accuracy-first expansion (99-104) fetched same day. Verify upstream before citing.",
   "categories": {
     "body-models": "Parametric body & skeleton models (SMPL/SMPL-X, SKEL, OSSO, tissues)",
     "anatomy-models": "Anatomy & personalised model generation",
@@ -14,7 +14,8 @@
     "rehab-assistive": "Rehab, gait & assistive-device specific projects",
     "3d-reconstruction": "3D reconstruction, mesh generation & world models",
     "rehab-assessment": "Rehab exercise assessment, clinical scores & movement correction",
-    "haptics-exoskeleton": "Haptic feedback suits, exoskeleton hardware & actuators"
+    "haptics-exoskeleton": "Haptic feedback suits, exoskeleton hardware & actuators",
+    "medical-imaging": "Medical imaging, segmentation & patient-specific anatomy (DICOM/MRI/CT)"
   },
   "pipeline_stages": {
     "capture": "1 · Capture",
@@ -37,7 +38,7 @@
     "needs-review": "Needs review — source list gave no usable description",
     "private": "Private — listed but not publicly cloneable"
   },
-  "count": 98,
+  "count": 104,
   "repos": [
     {
       "id": 1,
@@ -2622,6 +2623,174 @@
       ],
       "notes": "Cheapest path to custom actuator control for exo prototyping. License (GitHub API, 2026-10-21): MIT.",
       "upstream_path": "upstream/simplefoc/Arduino-FOC"
+    },
+    {
+      "id": 99,
+      "slug": "wasserth/TotalSegmentator",
+      "owner": "wasserth",
+      "name": "TotalSegmentator",
+      "url": "https://github.com/wasserth/TotalSegmentator",
+      "description": "Tool for robust segmentation of >100 important anatomical structures in CT and MR images",
+      "language": "Python",
+      "stars_snapshot": 3074,
+      "forks_snapshot": 490,
+      "updated_snapshot": "2026-10-20 (live API 2026-10-21)",
+      "private": false,
+      "category": "medical-imaging",
+      "pipeline_stages": [
+        "body-model",
+        "skeleton"
+      ],
+      "tier": "core",
+      "tags": [
+        "totalsegmentator",
+        "ct",
+        "mri",
+        "segmentation",
+        "anatomy"
+      ],
+      "notes": "Accuracy-first onboarding: patient bone/muscle/organ geometry from their own MRI/CT, replacing statistical guessing. License (GitHub API, 2026-10-21): Apache-2.0.",
+      "upstream_path": "upstream/wasserth/TotalSegmentator"
+    },
+    {
+      "id": 100,
+      "slug": "MIC-DKFZ/nnUNet",
+      "owner": "MIC-DKFZ",
+      "name": "nnUNet",
+      "url": "https://github.com/MIC-DKFZ/nnUNet",
+      "description": "nnU-Net — self-configuring biomedical image segmentation framework (the segmentation engine behind TotalSegmentator)",
+      "language": "Python",
+      "stars_snapshot": 8978,
+      "forks_snapshot": 2503,
+      "updated_snapshot": "2026-10-20 (live API 2026-10-21)",
+      "private": false,
+      "category": "medical-imaging",
+      "pipeline_stages": [
+        "body-model",
+        "tooling"
+      ],
+      "tier": "extended",
+      "tags": [
+        "nnunet",
+        "segmentation",
+        "medical-imaging",
+        "training"
+      ],
+      "notes": "Train custom bone/muscle segmentation when TotalSegmentator classes are not specific enough. License (GitHub API, 2026-10-21): Apache-2.0.",
+      "upstream_path": "upstream/MIC-DKFZ/nnUNet"
+    },
+    {
+      "id": 101,
+      "slug": "Slicer/Slicer",
+      "owner": "Slicer",
+      "name": "Slicer",
+      "url": "https://github.com/Slicer/Slicer",
+      "description": "3D Slicer — free open-source platform for medical image visualisation, DICOM handling, segmentation, registration and quantification",
+      "language": "C++",
+      "stars_snapshot": 2674,
+      "forks_snapshot": 799,
+      "updated_snapshot": "2026-10-20 (live API 2026-10-21)",
+      "private": false,
+      "category": "medical-imaging",
+      "pipeline_stages": [
+        "body-model",
+        "visualization",
+        "tooling"
+      ],
+      "tier": "core",
+      "tags": [
+        "3d-slicer",
+        "dicom",
+        "segmentation",
+        "medical-imaging"
+      ],
+      "notes": "Clinician workstation to inspect/correct segmentations and landmarks before they enter the twin. Accuracy gate, not optional tooling. License (GitHub API, 2026-10-21): NOASSERTION.",
+      "upstream_path": "upstream/Slicer/Slicer"
+    },
+    {
+      "id": 102,
+      "slug": "unibas-gravis/scalismo",
+      "owner": "unibas-gravis",
+      "name": "scalismo",
+      "url": "https://github.com/unibas-gravis/scalismo",
+      "description": "Scalismo — library for statistical shape modelling and model-based image analysis",
+      "language": "Scala",
+      "stars_snapshot": 269,
+      "forks_snapshot": 66,
+      "updated_snapshot": "2026-10-17 (live API 2026-10-21)",
+      "private": false,
+      "category": "medical-imaging",
+      "pipeline_stages": [
+        "body-model",
+        "skeleton"
+      ],
+      "tier": "specialized",
+      "tags": [
+        "scalismo",
+        "statistical-shape-model",
+        "bone",
+        "scala"
+      ],
+      "notes": "Reconstruct full bone shapes from sparse landmarks/imaging when a full MRI/CT is unavailable. License (GitHub API, 2026-10-21): Apache-2.0.",
+      "upstream_path": "upstream/unibas-gravis/scalismo"
+    },
+    {
+      "id": 103,
+      "slug": "PatrikMrnka/msk-PIPE",
+      "owner": "PatrikMrnka",
+      "name": "msk-PIPE",
+      "url": "https://github.com/PatrikMrnka/msk-PIPE",
+      "description": "Automated pipeline generating personalised musculoskeletal models from medical images: CT/MRI -> segmentation -> OpenSim model with muscle attachments and wrapping",
+      "language": "Python",
+      "stars_snapshot": 2,
+      "forks_snapshot": 0,
+      "updated_snapshot": "2026-10-11 (live API 2026-10-21)",
+      "private": false,
+      "category": "anatomy-models",
+      "pipeline_stages": [
+        "skeleton",
+        "biomechanics",
+        "muscle-sim"
+      ],
+      "tier": "extended",
+      "tags": [
+        "msk-pipe",
+        "personalised",
+        "opensim",
+        "ct",
+        "mri",
+        "muscle-attachments"
+      ],
+      "notes": "End-to-end patient-specific OpenSim generation (uses MSK-STAPLE, already catalogued). New/small project — audit before depending on it. License: not declared in GitHub API metadata (2026-10-21) — check upstream repo.",
+      "upstream_path": "upstream/PatrikMrnka/msk-PIPE"
+    },
+    {
+      "id": 104,
+      "slug": "katya-stanzy/thin-plate-spline_personalised_muscoloskeletal_model",
+      "owner": "katya-stanzy",
+      "name": "thin-plate-spline_personalised_muscoloskeletal_model",
+      "url": "https://github.com/katya-stanzy/thin-plate-spline_personalised_muscoloskeletal_model",
+      "description": "MRI-based workflow for personalised musculoskeletal models: subject-specific joint centres and muscle paths via thin-plate-spline mapping (3D Slicer + OpenSim)",
+      "language": "Jupyter Notebook",
+      "stars_snapshot": 10,
+      "forks_snapshot": 0,
+      "updated_snapshot": "2026-09-04 (live API 2026-10-21)",
+      "private": false,
+      "category": "anatomy-models",
+      "pipeline_stages": [
+        "skeleton",
+        "biomechanics"
+      ],
+      "tier": "extended",
+      "tags": [
+        "mri",
+        "personalised",
+        "joint-centres",
+        "thin-plate-spline",
+        "opensim"
+      ],
+      "notes": "Evidence-driven alternative to generic scaling; published comparison shows generic scaling can misplace e.g. the knee centre by centimetres. License: not declared in GitHub API metadata (2026-10-21) — check upstream repo.",
+      "upstream_path": "upstream/katya-stanzy/thin-plate-spline_personalised_muscoloskeletal_model"
     }
   ]
 }

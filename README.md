@@ -1,6 +1,6 @@
 # Rehab Agent — Meta-Repository
 
-> A curated meta-repo that organises **98 upstream GitHub repositories** into one
+> A curated meta-repo that organises **104 upstream GitHub repositories** into one
 > rehabilitation-technology pipeline: capture → pose → body/skeleton model →
 > biomechanics → muscle simulation → feedback & visualisation.
 >
@@ -8,7 +8,7 @@
 > clone/status tooling, architecture docs, and recommended stacks. Each upstream
 > project stays in its own repo, under its own license.
 
-[![Catalog](https://img.shields.io/badge/catalog-98_repos-blue)](#catalog)
+[![Catalog](https://img.shields.io/badge/catalog-104_repos-blue)](#catalog)
 ![Status](https://img.shields.io/badge/status-research__prototype-orange)
 
 ## ⚠️ Not a medical device
@@ -18,12 +18,22 @@ clinician. Any patient-facing use needs clinical validation, ethics approval, an
 privacy review for video / IMU / health data. See
 [`docs/safety-and-licensing.md`](docs/safety-and-licensing.md).
 
+## 🎯 Design priority #1: anatomical accuracy
+
+**Full accuracy of the human body in the twin is the key requirement.**
+A webcam + SMPL-X gives a statistically average body that moves plausibly —
+that is Tier C screening, not a twin. The target is **Tier A**: the patient's
+own bones, joint centres/axes and muscle attachments from their MRI/CT,
+tracked live against that personalised model, with a measured error budget
+attached to every output. Tiers, targets, onboarding pipeline and red lines:
+[`docs/accuracy.md`](docs/accuracy.md) · [`stacks/digital-twin.md`](stacks/digital-twin.md).
+
 ## Quick start
 
 ```bash
 git clone <this-repo> rehab-agent && cd rehab-agent
 
-python3 scripts/validate_catalog.py     # check the catalog (98 repos)
+python3 scripts/validate_catalog.py     # check the catalog (104 repos)
 python3 scripts/list.py --tier core     # see the recommended first wave
 python3 scripts/clone.py --tier core --dry-run
 python3 scripts/clone.py --tier core    # shallow-clone core repos into upstream/
@@ -59,7 +69,7 @@ Human views: [`docs/catalog.md`](docs/catalog.md) · [`catalog/repos.csv`](catal
 | Category | What it covers | Repos |
 |---|---|---:|
 | `body-models` | Parametric body & skeleton models (SMPL/SMPL-X, SKEL, OSSO, tissues) | 10 |
-| `anatomy-models` | Anatomy & personalised model generation | 5 |
+| `anatomy-models` | Anatomy & personalised model generation | 7 |
 | `pose-mocap` | Pose estimation & motion capture (video, markerless, IMU) | 21 |
 | `biomechanics` | Biomechanics engines & OpenSim pipeline | 13 |
 | `musculoskeletal-sim` | Musculoskeletal simulation, humanoid control & RL | 12 |
@@ -68,6 +78,7 @@ Human views: [`docs/catalog.md`](docs/catalog.md) · [`catalog/repos.csv`](catal
 | `datasets-interaction` | Datasets & human-object/scene interaction | 2 |
 | `rehab-assessment` | Rehab exercise assessment, clinical scores & movement correction | 3 |
 | `haptics-exoskeleton` | Haptic feedback suits, exoskeleton hardware & actuators | 6 |
+| `medical-imaging` | Medical imaging, segmentation & patient-specific anatomy (DICOM/MRI/CT) | 4 |
 | `rehab-assistive` | Rehab, gait & assistive-device specific projects | 5 |
 | `3d-reconstruction` | 3D reconstruction, mesh generation & world models | 8 |
 
@@ -75,14 +86,14 @@ Human views: [`docs/catalog.md`](docs/catalog.md) · [`catalog/repos.csv`](catal
 
 | Tier | Meaning | Repos |
 |---|---|---:|
-| `core` | Core — evaluate first for Rehab Agent v1 | 31 |
-| `extended` | Extended — useful second wave / alternatives | 28 |
-| `specialized` | Specialized — niche modality, task, or platform | 23 |
+| `core` | Core — evaluate first for Rehab Agent v1 | 33 |
+| `extended` | Extended — useful second wave / alternatives | 31 |
+| `specialized` | Specialized — niche modality, task, or platform | 24 |
 | `experimental` | Experimental — recent/paper code; validate before depending on it | 11 |
 | `needs-review` | Needs review — source list gave no usable description | 4 |
 | `private` | Private — listed but not publicly cloneable | 1 |
 
-### Core stack — evaluate first (31 repos)
+### Core stack — evaluate first (33 repos)
 
 | Repository | Category | Why it is core |
 |---|---|---|
@@ -117,6 +128,8 @@ Human views: [`docs/catalog.md`](docs/catalog.md) · [`catalog/repos.csv`](catal
 | [CEINMS/CEINMS](https://github.com/CEINMS/CEINMS) | biomechanics | EMG-informed, per-person calibrated muscle forces |
 | [naubiomech/OpenExo](https://github.com/naubiomech/OpenExo) | haptics-exoskeleton | Modular open-source exoskeleton platform (hardware + control) |
 | [senseshift/senseshift-firmware](https://github.com/senseshift/senseshift-firmware) | haptics-exoskeleton | DIY haptic vest/sleeve firmware (posture cueing suit) |
+| [wasserth/TotalSegmentator](https://github.com/wasserth/TotalSegmentator) | medical-imaging | >100 anatomical structures segmented from the patient's own CT/MRI |
+| [Slicer/Slicer](https://github.com/Slicer/Slicer) | medical-imaging | 3D Slicer: clinician DICOM/segmentation review — the accuracy gate |
 
 ## Recommended stacks
 
@@ -127,7 +140,7 @@ Human views: [`docs/catalog.md`](docs/catalog.md) · [`catalog/repos.csv`](catal
 | SMPL → biomechanics | You have SMPL/SMPL-X motion and need joint loads | [`stacks/smpl-to-biomechanics.md`](stacks/smpl-to-biomechanics.md) |
 | Muscle simulation & RL | Simulate muscle effort, assistance, exoskeletons | [`stacks/muscle-sim-rl.md`](stacks/muscle-sim-rl.md) |
 | Blender anatomy visualisation | Clinician/patient-facing 3D anatomy | [`stacks/blender-anatomy.md`](stacks/blender-anatomy.md) |
-| Personalised digital twin | Per-person shape onboarding, 1:1 live tracking, wrong-vs-corrected view | [`stacks/digital-twin.md`](stacks/digital-twin.md) |
+| Accuracy-first digital twin | Tier-A: patient MRI/CT → own bones/joints/muscles → live 1:1 tracking → wrong-vs-corrected view | [`stacks/digital-twin.md`](stacks/digital-twin.md) |
 | Haptic suit + exoskeleton | Vibrotactile posture cueing now; powered joint support as research track | [`stacks/haptic-exo-suit.md`](stacks/haptic-exo-suit.md) |
 
 ## Repo map
@@ -139,7 +152,7 @@ rehab-agent/
 │   ├── repos.json             ← SOURCE OF TRUTH (edit this)
 │   ├── repos.csv / repos.yaml ← generated
 ├── docs/
-│   ├── catalog.md             ← generated full tables (all 98)
+│   ├── catalog.md             ← generated full tables (all 104)
 │   ├── architecture.md        ← pipeline, data formats, contracts
 │   ├── roadmap.md             ← phased build plan
 │   ├── evaluation.md          ← scoring rubric for picking repos

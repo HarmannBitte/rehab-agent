@@ -1,4 +1,4 @@
-# Full catalog — all 98 repositories
+# Full catalog — all 104 repositories
 
 Generated from `catalog/repos.json` by `scripts/generate_catalog.py`. Do not hand-edit this file; edit the JSON and regenerate.
 
@@ -19,7 +19,7 @@ Stars/forks/updated are the maintainer's pasted snapshot, **not live data**.
 | 71 | [muelea/shapy](https://github.com/muelea/shapy) | core | body-model | Python | 389 | SHAPY — accurate 3D body shape regression using metric and semantic attributes; predicts SMPL-X shape plus height/weight/chest/waist/hip measurements from an image |
 | 73 | [yfeng95/PIXIE](https://github.com/yfeng95/PIXIE) | extended | body-model | Python | 517 | PIXIE — collaborative regression of expressive bodies: whole-body SMPL-X with detailed face and hand articulation from a single image |
 
-## anatomy-models — Anatomy & personalised model generation (5)
+## anatomy-models — Anatomy & personalised model generation (7)
 
 | # | Repository | Tier | Stages | Lang | ★ snapshot | Description |
 |---:|---|---|---|---|---:|---|
@@ -28,6 +28,8 @@ Stars/forks/updated are the maintainer's pasted snapshot, **not live data**.
 | 11 | [makehumancommunity/mpfb2](https://github.com/makehumancommunity/mpfb2) | specialized | body-model, visualization | Python | 648 | MPFB2 — free and open source human generator for Blender |
 | 39 | [modenaxe/msk-STAPLE](https://github.com/modenaxe/msk-STAPLE) | specialized | skeleton, body-model | MATLAB | 65 | STAPLE — Shared Tools for Automatic Personalised Lower Extremity modelling: generating skeletal models from 3D bone geometries |
 | 47 | [LNSGroup/MS-Human-700](https://github.com/LNSGroup/MS-Human-700) | specialized | muscle-sim, body-model | — | 51 | MS-Human-700: Whole-body Human MusculoSkeletal Model |
+| 103 | [PatrikMrnka/msk-PIPE](https://github.com/PatrikMrnka/msk-PIPE) | extended | skeleton, biomechanics, muscle-sim | Python | 2 | Automated pipeline generating personalised musculoskeletal models from medical images: CT/MRI -> segmentation -> OpenSim model with muscle attachments and wrapping |
+| 104 | [katya-stanzy/thin-plate-spline_personalised_muscoloskeletal_model](https://github.com/katya-stanzy/thin-plate-spline_personalised_muscoloskeletal_model) | extended | skeleton, biomechanics | Jupyter Notebook | 10 | MRI-based workflow for personalised musculoskeletal models: subject-specific joint centres and muscle paths via thin-plate-spline mapping (3D Slicer + OpenSim) |
 
 ## pose-mocap — Pose estimation & motion capture (video, markerless, IMU) (21)
 
@@ -161,3 +163,12 @@ Stars/forks/updated are the maintainer's pasted snapshot, **not live data**.
 | 96 | [LucidVR/lucidgloves](https://github.com/LucidVR/lucidgloves) | specialized | feedback-haptics | C++ | 2396 | LucidGloves — Arduino/ESP32 DIY VR haptic gloves with force feedback, via OpenGloves |
 | 97 | [mjbots/moteus](https://github.com/mjbots/moteus) | extended | control-rl, feedback-haptics | C++ | 1345 | moteus — open-source brushless DC servo motor controller (firmware and PCB designs) |
 | 98 | [simplefoc/Arduino-FOC](https://github.com/simplefoc/Arduino-FOC) | specialized | control-rl | C++ | 3074 | Arduino SimpleFOC — field-oriented control library for BLDC and stepper motors across Arduino/STM32/ESP32-class hardware |
+
+## medical-imaging — Medical imaging, segmentation & patient-specific anatomy (DICOM/MRI/CT) (4)
+
+| # | Repository | Tier | Stages | Lang | ★ snapshot | Description |
+|---:|---|---|---|---|---:|---|
+| 99 | [wasserth/TotalSegmentator](https://github.com/wasserth/TotalSegmentator) | core | body-model, skeleton | Python | 3074 | Tool for robust segmentation of >100 important anatomical structures in CT and MR images |
+| 100 | [MIC-DKFZ/nnUNet](https://github.com/MIC-DKFZ/nnUNet) | extended | body-model, tooling | Python | 8978 | nnU-Net — self-configuring biomedical image segmentation framework (the segmentation engine behind TotalSegmentator) |
+| 101 | [Slicer/Slicer](https://github.com/Slicer/Slicer) | core | body-model, visualization, tooling | C++ | 2674 | 3D Slicer — free open-source platform for medical image visualisation, DICOM handling, segmentation, registration and quantification |
+| 102 | [unibas-gravis/scalismo](https://github.com/unibas-gravis/scalismo) | specialized | body-model, skeleton | Scala | 269 | Scalismo — library for statistical shape modelling and model-based image analysis |
