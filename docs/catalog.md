@@ -1,4 +1,4 @@
-# Full catalog — all 105 repositories
+# Full catalog — all 108 repositories
 
 Generated from `catalog/repos.json` by `scripts/generate_catalog.py`. Do not hand-edit this file; edit the JSON and regenerate.
 
@@ -15,7 +15,7 @@ Stars/forks/updated are the maintainer's pasted snapshot, **not live data**.
 | 10 | [open-mmlab/mmhuman3d](https://github.com/open-mmlab/mmhuman3d) | extended | body-model, pose, tooling | Python | 1430 | OpenMMLab 3D Human Parametric Model Toolbox and Benchmark |
 | 21 | [MarilynKeller/HIT](https://github.com/MarilynKeller/HIT) | extended | body-model, skeleton | Python | 102 | HIT: Estimating Internal Human Implicit Tissues from the Body Surface (2024) |
 | 24 | [ahmedosman/STAR](https://github.com/ahmedosman/STAR) | extended | body-model | Python | 727 | STAR — A Sparse Trained Articulated Human Body Regressor (ECCV 2020) |
-| 60 | [hailsong/RC-SMPL](https://github.com/hailsong/RC-SMPL) | needs-review | body-model | C# | 10 | RC-SMPL (SMPL integration; details in upstream repo) |
+| 60 | [hailsong/RC-SMPL](https://github.com/hailsong/RC-SMPL) | specialized | body-model, visualization | C# | 10 | RC-SMPL — Real-time Cumulative SMPL-based Avatar Body Generation (IEEE ISMAR 2023); cumulatively updates avatar texture and normal maps from images/video in real time |
 | 71 | [muelea/shapy](https://github.com/muelea/shapy) | core | body-model | Python | 389 | SHAPY — accurate 3D body shape regression using metric and semantic attributes; predicts SMPL-X shape plus height/weight/chest/waist/hip measurements from an image |
 | 73 | [yfeng95/PIXIE](https://github.com/yfeng95/PIXIE) | extended | body-model | Python | 517 | PIXIE — collaborative regression of expressive bodies: whole-body SMPL-X with detailed face and hand articulation from a single image |
 
@@ -89,7 +89,7 @@ Stars/forks/updated are the maintainer's pasted snapshot, **not live data**.
 | 44 | [amathislab/musclemimic](https://github.com/amathislab/musclemimic) | extended | muscle-sim, control-rl | Python | 353 | Towards Embodied AI with MuscleMimic: Unlocking full-body musculoskeletal motor learning at scale |
 | 45 | [amathislab/musclemimic_models](https://github.com/amathislab/musclemimic_models) | extended | muscle-sim, body-model | Python | 61 | Musculoskeletal models released from MuscleMimic research: full-body musculoskeletal model |
 | 46 | [robfiras/loco-mujoco](https://github.com/robfiras/loco-mujoco) | extended | control-rl, muscle-sim | Python | 1474 | Imitation learning benchmark focusing on complex locomotion tasks using MuJoCo |
-| 54 | [lsw9021/MASS](https://github.com/lsw9021/MASS) | needs-review | muscle-sim | Mathematica | 638 | MASS (details in upstream repo) |
+| 54 | [lsw9021/MASS](https://github.com/lsw9021/MASS) | specialized | muscle-sim, control-rl | Mathematica | 638 | MASS (Muscle-Actuated Skeletal System) — simulation and control of a full-body musculoskeletal system driven by muscle activations, with Python/PyTorch deep-RL interfacing (SIGGRAPH 2019) |
 | 92 | [sofa-framework/sofa](https://github.com/sofa-framework/sofa) | specialized | muscle-sim, visualization | C++ | 1279 | SOFA — real-time multi-physics simulation with emphasis on medical simulation; FEM soft-tissue modelling |
 
 ## visualization-tools — Visualization, viewers & editing tools (8)
@@ -105,7 +105,7 @@ Stars/forks/updated are the maintainer's pasted snapshot, **not live data**.
 | 58 | [strayrobots/3d-annotation-tool](https://github.com/strayrobots/3d-annotation-tool) | specialized | visualization, tooling | C++ | 94 | A graphical user interface to annotate point clouds and 3D data |
 | 85 | [sangho0n/Realtime_SMPLX_Unity](https://github.com/sangho0n/Realtime_SMPLX_Unity) | specialized | visualization, body-model | C# | 50 | Real-time SMPL-X in Unity — shape reconstruction via a Python server plus MediaPipe pose in Unity, animating SMPL-X live |
 
-## data-capture — RGB-D / sensor capture (6)
+## data-capture — RGB-D / sensor capture (8)
 
 | # | Repository | Tier | Stages | Lang | ★ snapshot | Description |
 |---:|---|---|---|---|---:|---|
@@ -115,6 +115,8 @@ Stars/forks/updated are the maintainer's pasted snapshot, **not live data**.
 | 81 | [SlimeVR/SlimeVR-Tracker-ESP](https://github.com/SlimeVR/SlimeVR-Tracker-ESP) | core | capture | C++ | 1088 | SlimeVR Tracker firmware for ESP32/ESP8266 and various IMUs — DIY open-hardware body trackers |
 | 82 | [sccn/labstreaminglayer](https://github.com/sccn/labstreaminglayer) | core | capture, tooling | HTML | 788 | Lab Streaming Layer (LSL) — multimodal time-synchronised data transmission and recording (liblsl, pylsl, LabRecorder/XDF ecosystem) |
 | 105 | [realsenseai/librealsense](https://github.com/realsenseai/librealsense) | core | capture, tooling | C++ | 9060 | RealSense SDK 2.0 (librealsense) — official cross-platform driver/library for RealSense depth cameras including the D455; includes pyrealsense2 and ROS wrappers |
+| 106 | [ethz-asl/kalibr](https://github.com/ethz-asl/kalibr) | specialized | capture, tooling | C++ | 5770 | Kalibr — visual-inertial calibration toolbox for cameras and IMUs |
+| 107 | [AprilRobotics/apriltag](https://github.com/AprilRobotics/apriltag) | specialized | capture, tooling | C | 2578 | AprilTag — visual fiducial marker system for robotics (pose of tagged objects from camera images) |
 
 ## datasets-interaction — Datasets & human-object/scene interaction (2)
 
@@ -129,11 +131,11 @@ Stars/forks/updated are the maintainer's pasted snapshot, **not live data**.
 |---:|---|---|---|---|---:|---|
 | 48 | [DaebangStn/exo-plore](https://github.com/DaebangStn/exo-plore) | specialized | control-rl, muscle-sim | C++ | 22 | EXO-PLORE: Exploring Exoskeleton Control Space through Human-Aligned Simulation (ICLR 2026) |
 | 49 | [stanfordnmbl/sit2stand](https://github.com/stanfordnmbl/sit2stand) | specialized | biomechanics | HTML | 4 | Stanford NMBL sit-to-stand project (details in upstream repo) |
-| 53 | [rohwalia/MyoBack](https://github.com/rohwalia/MyoBack) | needs-review | muscle-sim | Python | 7 | MyoBack (details in upstream repo) |
+| 53 | [rohwalia/MyoBack](https://github.com/rohwalia/MyoBack) | specialized | muscle-sim, biomechanics | Python | 7 | MyoBack — simulation of a neuromusculoskeletal model of the back with an exoskeleton; a MyoSuite back model derived from a physiologically accurate OpenSim model, validated with a passive back exoskeleton |
 | 55 | [neumovelab/myoassist](https://github.com/neumovelab/myoassist) | specialized | muscle-sim, control-rl | Jupyter Notebook | 62 | MyoAssist (assistive musculoskeletal simulation; details in upstream repo) |
-| 56 | [hzm2016/mass-dart-exo](https://github.com/hzm2016/mass-dart-exo) | needs-review | muscle-sim, control-rl | Mathematica | 2 | MASS / DART exoskeleton project (details in upstream repo) |
+| 56 | [hzm2016/mass-dart-exo](https://github.com/hzm2016/mass-dart-exo) | specialized | muscle-sim, control-rl | Mathematica | 2 | MASS/DART exoskeleton variant — upstream README presents the MASS muscle-actuated full-body skeletal simulation system; exoskeleton-specific changes are not documented in the README |
 
-## 3d-reconstruction — 3D reconstruction, mesh generation & world models (8)
+## 3d-reconstruction — 3D reconstruction, mesh generation & world models (9)
 
 | # | Repository | Tier | Stages | Lang | ★ snapshot | Description |
 |---:|---|---|---|---|---:|---|
@@ -145,6 +147,7 @@ Stars/forks/updated are the maintainer's pasted snapshot, **not live data**.
 | 69 | [xibushu/UniForge3D](https://github.com/xibushu/UniForge3D) | experimental | body-model | Python | 373 | UniForge3D: Joint 3D Reconstruction and Generation in a Shared Anchor-Guided Space |
 | 70 | [Net-Maker/GaussiAnimate](https://github.com/Net-Maker/GaussiAnimate) | experimental | body-model, visualization | Python | 157 | GaussiAnimate: Reconstruct and Rig Animatable Categories with Level of Dynamics |
 | 72 | [YuliangXiu/ECON](https://github.com/YuliangXiu/ECON) | extended | capture, body-model | Python | 1213 | ECON — explicit clothed humans optimised via normal integration; high-fidelity 3D clothed human from a single image, SMPL-X animatable |
+| 108 | [alicevision/Meshroom](https://github.com/alicevision/Meshroom) | extended | capture, body-model | Python | 13028 | Meshroom — node-based photogrammetry toolbox (AliceVision) for 3D reconstruction from photos |
 
 ## rehab-assessment — Rehab exercise assessment, clinical scores & movement correction (3)
 

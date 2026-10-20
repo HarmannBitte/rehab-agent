@@ -731,31 +731,31 @@ repos:
   - slug: "rohwalia/MyoBack"
     url: "https://github.com/rohwalia/MyoBack"
     category: "rehab-assistive"
-    tier: "needs-review"
+    tier: "specialized"
     language: "Python"
-    updated_snapshot: "Feb 17, 2025"
-    description: "MyoBack (details in upstream repo)"
-    notes: "No description in source list — review upstream before categorizing further."
+    updated_snapshot: "2026-10-14 (live API 2026-10-21)"
+    description: "MyoBack — simulation of a neuromusculoskeletal model of the back with an exoskeleton; a MyoSuite back model derived from a physiologically accurate OpenSim model, validated with a passive back exoskeleton"
+    notes: "Resolved 2026-10-21 from upstream README. Back/spine rehab + exo evaluation niche; pairs with dfki-av/simspine. License: not declared in GitHub API metadata (2026-10-21) — check upstream repo."
     upstream_path: "upstream/rohwalia/MyoBack"
     stars_snapshot: 7
     forks_snapshot: 1
     private: false
-    pipeline_stages: ["muscle-sim"]
-    tags: ["back", "myo"]
+    pipeline_stages: ["muscle-sim", "biomechanics"]
+    tags: ["myoback", "back", "myosuite", "exoskeleton", "opensim"]
   - slug: "lsw9021/MASS"
     url: "https://github.com/lsw9021/MASS"
     category: "musculoskeletal-sim"
-    tier: "needs-review"
+    tier: "specialized"
     language: "Mathematica"
-    updated_snapshot: "Sep 20, 2023"
-    description: "MASS (details in upstream repo)"
-    notes: "No description in source list — review upstream; Mathematica dependency noted."
+    updated_snapshot: "2026-10-20 (live API 2026-10-21)"
+    description: "MASS (Muscle-Actuated Skeletal System) — simulation and control of a full-body musculoskeletal system driven by muscle activations, with Python/PyTorch deep-RL interfacing (SIGGRAPH 2019)"
+    notes: "Resolved 2026-10-21 from upstream README (Apache-2.0). Research simulator; compare against MyoSuite/SCONE before adopting. License (GitHub API, 2026-10-21): Apache-2.0."
     upstream_path: "upstream/lsw9021/MASS"
     stars_snapshot: 638
     forks_snapshot: 122
     private: false
-    pipeline_stages: ["muscle-sim"]
-    tags: ["mass", "mathematica"]
+    pipeline_stages: ["muscle-sim", "control-rl"]
+    tags: ["mass", "muscle-actuated", "full-body", "rl"]
   - slug: "neumovelab/myoassist"
     url: "https://github.com/neumovelab/myoassist"
     category: "rehab-assistive"
@@ -773,17 +773,17 @@ repos:
   - slug: "hzm2016/mass-dart-exo"
     url: "https://github.com/hzm2016/mass-dart-exo"
     category: "rehab-assistive"
-    tier: "needs-review"
+    tier: "specialized"
     language: "Mathematica"
-    updated_snapshot: "Dec 10, 2025"
-    description: "MASS / DART exoskeleton project (details in upstream repo)"
-    notes: "No description in source list — review upstream before use."
+    updated_snapshot: "2026-10-14 (live API 2026-10-21)"
+    description: "MASS/DART exoskeleton variant — upstream README presents the MASS muscle-actuated full-body skeletal simulation system; exoskeleton-specific changes are not documented in the README"
+    notes: "Partially resolved 2026-10-21: base system identified as MASS, but exo specifics are undocumented upstream — audit the code diff before any use. License (GitHub API, 2026-10-21): Apache-2.0."
     upstream_path: "upstream/hzm2016/mass-dart-exo"
     stars_snapshot: 2
-    forks_snapshot: null
+    forks_snapshot: 0
     private: false
     pipeline_stages: ["muscle-sim", "control-rl"]
-    tags: ["exoskeleton", "dart", "mass"]
+    tags: ["mass", "dart", "exoskeleton"]
   - slug: "strayrobots/scanner"
     url: "https://github.com/strayrobots/scanner"
     category: "data-capture"
@@ -829,17 +829,17 @@ repos:
   - slug: "hailsong/RC-SMPL"
     url: "https://github.com/hailsong/RC-SMPL"
     category: "body-models"
-    tier: "needs-review"
+    tier: "specialized"
     language: "C#"
-    updated_snapshot: "Dec 21, 2023"
-    description: "RC-SMPL (SMPL integration; details in upstream repo)"
-    notes: "No description in source list — likely Unity/C# SMPL integration; review upstream."
+    updated_snapshot: "2026-10-14 (live API 2026-10-21)"
+    description: "RC-SMPL — Real-time Cumulative SMPL-based Avatar Body Generation (IEEE ISMAR 2023); cumulatively updates avatar texture and normal maps from images/video in real time"
+    notes: "Resolved 2026-10-21 from upstream README. Twin *appearance* layer (texture/normals), not anatomical accuracy. License: not declared in GitHub API metadata (2026-10-21) — check upstream repo."
     upstream_path: "upstream/hailsong/RC-SMPL"
     stars_snapshot: 10
-    forks_snapshot: null
+    forks_snapshot: 0
     private: false
-    pipeline_stages: ["body-model"]
-    tags: ["smpl", "csharp", "unity"]
+    pipeline_stages: ["body-model", "visualization"]
+    tags: ["rc-smpl", "smpl", "avatar", "real-time", "texture"]
   - slug: "xiexh20/behave-dataset"
     url: "https://github.com/xiexh20/behave-dataset"
     category: "datasets-interaction"
@@ -1470,3 +1470,45 @@ repos:
     private: false
     pipeline_stages: ["capture", "tooling"]
     tags: ["realsense", "d455", "depth-camera", "sdk", "rgbd"]
+  - slug: "ethz-asl/kalibr"
+    url: "https://github.com/ethz-asl/kalibr"
+    category: "data-capture"
+    tier: "specialized"
+    language: "C++"
+    updated_snapshot: "2026-10-20 (live API 2026-10-21)"
+    description: "Kalibr — visual-inertial calibration toolbox for cameras and IMUs"
+    notes: "Extrinsic/intrinsic calibration for the selected hardware (cameras + D455 IMU). Accuracy of everything downstream is bounded by this step. License (GitHub API, 2026-10-21): NOASSERTION."
+    upstream_path: "upstream/ethz-asl/kalibr"
+    stars_snapshot: 5770
+    forks_snapshot: 1617
+    private: false
+    pipeline_stages: ["capture", "tooling"]
+    tags: ["kalibr", "calibration", "camera-imu", "visual-inertial"]
+  - slug: "AprilRobotics/apriltag"
+    url: "https://github.com/AprilRobotics/apriltag"
+    category: "data-capture"
+    tier: "specialized"
+    language: "C"
+    updated_snapshot: "2026-10-20 (live API 2026-10-21)"
+    description: "AprilTag — visual fiducial marker system for robotics (pose of tagged objects from camera images)"
+    notes: "Known-geometry fiducials for extrinsic calibration checks and validation-rig ground truth (docs/validation-protocol.md). License (GitHub API, 2026-10-21): NOASSERTION."
+    upstream_path: "upstream/AprilRobotics/apriltag"
+    stars_snapshot: 2578
+    forks_snapshot: 684
+    private: false
+    pipeline_stages: ["capture", "tooling"]
+    tags: ["apriltag", "fiducial", "calibration", "ground-truth"]
+  - slug: "alicevision/Meshroom"
+    url: "https://github.com/alicevision/Meshroom"
+    category: "3d-reconstruction"
+    tier: "extended"
+    language: "Python"
+    updated_snapshot: "2026-10-20 (live API 2026-10-21)"
+    description: "Meshroom — node-based photogrammetry toolbox (AliceVision) for 3D reconstruction from photos"
+    notes: "Higher-resolution static surface reconstruction from the RGB cameras than iPhone LiDAR; subject must hold still — breathing/movement is the accuracy limit. License (GitHub API, 2026-10-21): NOASSERTION."
+    upstream_path: "upstream/alicevision/Meshroom"
+    stars_snapshot: 13028
+    forks_snapshot: 1235
+    private: false
+    pipeline_stages: ["capture", "body-model"]
+    tags: ["meshroom", "photogrammetry", "alicevision", "surface-reconstruction"]

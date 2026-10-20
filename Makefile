@@ -1,5 +1,5 @@
 # Convenience wrappers — all logic lives in scripts/*.py (stdlib only)
-.PHONY: validate generate list-core clone-core status
+.PHONY: validate generate list-core clone-core status test pins
 validate:
 	python3 scripts/validate_catalog.py
 generate:
@@ -10,3 +10,7 @@ clone-core:
 	python3 scripts/clone.py --tier core
 status:
 	python3 scripts/status.py
+test:
+	python3 -m unittest discover -s tests -v
+pins:
+	python3 scripts/record_pins.py

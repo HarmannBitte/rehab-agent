@@ -1,0 +1,71 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Rehab Agent session record",
+  "description": "One folder per session (docs/hardware.md protocol step 7). No direct identifiers: person_ref is pseudonymous.",
+  "type": "object",
+  "required": ["session_id", "person_ref", "started_at", "twin_tier", "hardware", "streams", "calibration", "sync", "accuracy_layers"],
+  "properties": {
+    "session_id": {"type": "string"},
+    "person_ref": {"type": "string", "description": "Pseudonymous reference only. Never a name or medical record number."},
+    "started_at": {"type": "string", "format": "date-time"},
+    "synthetic": {"type": "boolean", "description": "True for example/test data. Must be false for real sessions."},
+    "twin_tier": {"enum": ["A", "B", "C"], "description": "docs/accuracy.md tiers. Tier travels with the data."},
+    "hardware": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["device_id", "type"],
+        "properties": {
+          "device_id": {"type": "string"},
+          "type": {"enum": ["rgb-camera", "iphone-lidar", "realsense-d455", "imu-suit", "emg", "other"]},
+          "serial_or_name": {"type": "string"},
+          "firmware": {"type": "string"}
+        }
+      }
+    },
+    "streams": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["device_id", "modality", "file"],
+        "properties": {
+          "device_id": {"type": "string"},
+          "modality": {"enum": ["rgb", "depth", "pointcloud", "imu", "emg", "pose2d", "pose3d"]},
+          "file": {"type": "string"},
+          "fps": {"type": "number"},
+          "resolution": {"type": "string"}
+        }
+      }
+    },
+    "calibration": {
+      "type": "object",
+      "required": ["intrinsics_source", "extrinsics_file", "reprojection_error_px"],
+      "properties": {
+        "intrinsics_source": {"type": "string"},
+        "extrinsics_file": {"type": "string"},
+        "reprojection_error_px": {"type": "number"}
+      }
+    },
+    "sync": {
+      "type": "object",
+      "required": ["method", "max_offset_ms_after_correction"],
+      "properties": {
+        "method": {"const": "labstreaminglayer"},
+        "proof_event": {"type": "string", "description": "e.g. LED flash / hand clap at session start"},
+        "max_offset_ms_after_correction": {"type": "number", "description": "Must be < 5 for kinematics use (docs/hardware.md)"}
+      }
+    },
+    "accuracy_layers": {
+      "type": "object",
+      "description": "Per docs/accuracy.md: status of each layer for this person/session.",
+      "additionalProperties": {
+        "type": "object",
+        "required": ["status"],
+        "properties": {
+          "status": {"enum": ["personalised", "generic", "unvalidated"]},
+          "error": {"type": "string", "description": "Measured error with units, e.g. 'joint-centre <= 4 mm vs MRI'"}
+        }
+      }
+    }
+  }
+}

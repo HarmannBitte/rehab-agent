@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Validation report (docs/validation-protocol.md output)",
+  "type": "object",
+  "required": ["person_ref", "date", "reference_system", "movements", "kinematics_rmse_deg", "gates"],
+  "properties": {
+    "person_ref": {"type": "string"},
+    "date": {"type": "string", "format": "date"},
+    "reference_system": {"type": "string", "description": "What truth was compared against: marker mocap lab, MRI landmarks, tape measures, dynamometer..."},
+    "movements": {"type": "array", "items": {"type": "string"}},
+    "kinematics_rmse_deg": {
+      "type": "object",
+      "description": "RMSE per joint per plane — planes reported separately, never averaged away.",
+      "additionalProperties": {
+        "type": "object",
+        "properties": {
+          "sagittal": {"type": "number"},
+          "frontal": {"type": "number"},
+          "transverse": {"type": "number"}
+        }
+      }
+    },
+    "joint_centre_error_mm": {"type": "object", "additionalProperties": {"type": "number"}},
+    "gates": {
+      "type": "object",
+      "description": "Each docs/accuracy.md acceptance target: pass/fail as measured on this setup.",
+      "additionalProperties": {"enum": ["pass", "fail", "not-tested"]}
+    },
+    "approved_for": {"type": "array", "items": {"enum": ["screening", "posture-feedback", "muscle-claims", "exo-assistance"]},
+      "description": "What this validation licenses the system to do. exo-assistance requires all gates pass."}
+  }
+}

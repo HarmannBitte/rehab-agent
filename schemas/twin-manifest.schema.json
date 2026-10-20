@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Digital twin manifest (one per person)",
+  "type": "object",
+  "required": ["person_ref", "twin_tier", "created_at", "anatomy_source", "models", "accuracy_layers"],
+  "properties": {
+    "person_ref": {"type": "string", "description": "Pseudonymous only."},
+    "twin_tier": {"enum": ["A", "B", "C"]},
+    "created_at": {"type": "string", "format": "date-time"},
+    "anatomy_source": {
+      "type": "object",
+      "required": ["type"],
+      "properties": {
+        "type": {"enum": ["mri", "ct", "body-scan", "photos", "generic"]},
+        "segmentation_reviewed_by_clinician": {"type": "boolean", "description": "Required true for Tier A (3D Slicer gate, docs/accuracy.md)"}
+      }
+    },
+    "models": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["kind", "file"],
+        "properties": {
+          "kind": {"enum": ["opensim-osim", "smplx-npz", "bone-meshes", "muscle-meshes", "other"]},
+          "file": {"type": "string"},
+          "built_with": {"type": "array", "items": {"type": "string"}, "description": "Upstream catalog slugs, ideally with pinned commits from catalog/pins.json"}
+        }
+      }
+    },
+    "accuracy_layers": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": ["status"],
+        "properties": {
+          "status": {"enum": ["personalised", "generic", "unvalidated"]},
+          "error": {"type": "string"}
+        }
+      }
+    },
+    "validation_report": {"type": "string", "description": "Path to a validation-report (docs/validation-protocol.md)"}
+  }
+}

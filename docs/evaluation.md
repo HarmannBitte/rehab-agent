@@ -14,8 +14,9 @@ Score each upstream repo 0–2 per axis before promoting it a tier:
 Rules used for the initial tiering in `catalog/repos.json`:
 - **core**: rehab-relevant, standard I/O, and either active or a de-facto standard (OpenSim, SMPL-X).
 - **experimental**: 2025–26 paper code or very recent releases — promising, unproven reproducibility.
-- **needs-review**: the source list gave no description (MyoBack, MASS, mass-dart-exo, RC-SMPL).
-  First contribution opportunity: review upstream and write the missing description.
+- **needs-review**: the source list gave no description. All four original cases
+  (MyoBack, MASS, mass-dart-exo, RC-SMPL) were resolved from upstream READMEs on
+  2026-10-21; the tier remains available for future incompletely-described additions.
 - **private**: DAAPT — catalogued for completeness; do not attempt to clone.
 
 Stars/forks in the catalog are a pasted snapshot for orientation only.

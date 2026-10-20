@@ -1,6 +1,6 @@
 # Rehab Agent — Meta-Repository
 
-> A curated meta-repo that organises **105 upstream GitHub repositories** into one
+> A curated meta-repo that organises **108 upstream GitHub repositories** into one
 > rehabilitation-technology pipeline: capture → pose → body/skeleton model →
 > biomechanics → muscle simulation → feedback & visualisation.
 >
@@ -8,7 +8,7 @@
 > clone/status tooling, architecture docs, and recommended stacks. Each upstream
 > project stays in its own repo, under its own license.
 
-[![Catalog](https://img.shields.io/badge/catalog-105_repos-blue)](#catalog)
+[![Catalog](https://img.shields.io/badge/catalog-108_repos-blue)](#catalog)
 ![Status](https://img.shields.io/badge/status-research__prototype-orange)
 
 ## ⚠️ Not a medical device
@@ -42,7 +42,7 @@ support live tracking, but bone/joint/muscle accuracy still comes from MRI/CT
 ```bash
 git clone <this-repo> rehab-agent && cd rehab-agent
 
-python3 scripts/validate_catalog.py     # check the catalog (105 repos)
+python3 scripts/validate_catalog.py     # check the catalog (108 repos)
 python3 scripts/list.py --tier core     # see the recommended first wave
 python3 scripts/clone.py --tier core --dry-run
 python3 scripts/clone.py --tier core    # shallow-clone core repos into upstream/
@@ -83,23 +83,23 @@ Human views: [`docs/catalog.md`](docs/catalog.md) · [`catalog/repos.csv`](catal
 | `biomechanics` | Biomechanics engines & OpenSim pipeline | 13 |
 | `musculoskeletal-sim` | Musculoskeletal simulation, humanoid control & RL | 12 |
 | `visualization-tools` | Visualization, viewers & editing tools | 8 |
-| `data-capture` | RGB-D / sensor capture | 6 |
+| `data-capture` | RGB-D / sensor capture | 8 |
 | `datasets-interaction` | Datasets & human-object/scene interaction | 2 |
 | `rehab-assessment` | Rehab exercise assessment, clinical scores & movement correction | 3 |
 | `haptics-exoskeleton` | Haptic feedback suits, exoskeleton hardware & actuators | 6 |
 | `medical-imaging` | Medical imaging, segmentation & patient-specific anatomy (DICOM/MRI/CT) | 4 |
 | `rehab-assistive` | Rehab, gait & assistive-device specific projects | 5 |
-| `3d-reconstruction` | 3D reconstruction, mesh generation & world models | 8 |
+| `3d-reconstruction` | 3D reconstruction, mesh generation & world models | 9 |
 
 ### By tier
 
 | Tier | Meaning | Repos |
 |---|---|---:|
 | `core` | Core — evaluate first for Rehab Agent v1 | 34 |
-| `extended` | Extended — useful second wave / alternatives | 31 |
-| `specialized` | Specialized — niche modality, task, or platform | 24 |
+| `extended` | Extended — useful second wave / alternatives | 32 |
+| `specialized` | Specialized — niche modality, task, or platform | 30 |
 | `experimental` | Experimental — recent/paper code; validate before depending on it | 11 |
-| `needs-review` | Needs review — source list gave no usable description | 4 |
+| `needs-review` | Needs review — source list gave no usable description | 0 (all resolved 2026-10-21) |
 | `private` | Private — listed but not publicly cloneable | 1 |
 
 ### Core stack — evaluate first (34 repos)
@@ -162,7 +162,7 @@ rehab-agent/
 │   ├── repos.json             ← SOURCE OF TRUTH (edit this)
 │   ├── repos.csv / repos.yaml ← generated
 ├── docs/
-│   ├── catalog.md             ← generated full tables (all 105)
+│   ├── catalog.md             ← generated full tables (all 108)
 │   ├── architecture.md        ← pipeline, data formats, contracts
 │   ├── roadmap.md             ← phased build plan
 │   ├── evaluation.md          ← scoring rubric for picking repos

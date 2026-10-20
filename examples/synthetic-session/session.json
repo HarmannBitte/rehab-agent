@@ -1,0 +1,25 @@
+{
+  "session_id": "synthetic-0001",
+  "person_ref": "SYNTHETIC-EXAMPLE-NOT-A-PATIENT",
+  "started_at": "2026-10-21T09:00:00Z",
+  "synthetic": true,
+  "twin_tier": "B",
+  "hardware": [
+    {"device_id": "cam1", "type": "rgb-camera", "serial_or_name": "example-webcam-front"},
+    {"device_id": "iphone1", "type": "iphone-lidar", "serial_or_name": "example-iphone-pro"},
+    {"device_id": "d455-1", "type": "realsense-d455", "serial_or_name": "example-d455"}
+  ],
+  "streams": [
+    {"device_id": "cam1", "modality": "rgb", "file": "cam1.mp4", "fps": 60, "resolution": "1920x1080"},
+    {"device_id": "iphone1", "modality": "depth", "file": "iphone1_depth.r3d", "fps": 30, "resolution": "256x192"},
+    {"device_id": "d455-1", "modality": "depth", "file": "d455-1.bag", "fps": 30, "resolution": "1280x720"}
+  ],
+  "calibration": {"intrinsics_source": "factory + ChArUco check", "extrinsics_file": "calibration/extrinsics.json", "reprojection_error_px": 0.4},
+  "sync": {"method": "labstreaminglayer", "proof_event": "LED flash at start", "max_offset_ms_after_correction": 2.1},
+  "accuracy_layers": {
+    "bone_geometry": {"status": "generic", "error": "not personalised - no imaging yet"},
+    "joint_centres": {"status": "generic", "error": "scaled model, unvalidated"},
+    "surface_shape": {"status": "personalised", "error": "iPhone LiDAR scan, cm-level (Tier B)"},
+    "kinematics": {"status": "unvalidated", "error": "pending docs/validation-protocol.md run"}
+  }
+}
