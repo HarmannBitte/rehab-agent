@@ -16,8 +16,9 @@ TIER-A ONBOARDING (once per person — this is what makes it a twin, not an avat
     ──► validation report stored WITH the twin (error per accuracy layer)
 
 LIVE TWIN (every session — solved against the Tier-A model, not a generic body)
-  clinic:  multi-cam EasyMocap / Pose2Sim + IMU fusion
-  home:    SlimeVR trackers ──► SlimeVR-Server
+  hardware: RGB camera(s) + iPhone LiDAR + optional RealSense D455 (docs/hardware.md)
+  clinic:  multi-cam EasyMocap / Pose2Sim (+ D455 depth view) + IMU fusion
+  home:    iPhone (Record3D RGB-D) and/or SlimeVR trackers ──► SlimeVR-Server
   always:  labstreaminglayer (LSL) syncs video + IMU + EMG (+ haptics) into one XDF
   front-end pose (mediapipe / mmpose / GVHMR) is an input signal only —
       final joint angles come from IK on the patient's own OpenSim model

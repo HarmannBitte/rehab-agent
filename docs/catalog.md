@@ -1,4 +1,4 @@
-# Full catalog — all 104 repositories
+# Full catalog — all 105 repositories
 
 Generated from `catalog/repos.json` by `scripts/generate_catalog.py`. Do not hand-edit this file; edit the JSON and regenerate.
 
@@ -105,7 +105,7 @@ Stars/forks/updated are the maintainer's pasted snapshot, **not live data**.
 | 58 | [strayrobots/3d-annotation-tool](https://github.com/strayrobots/3d-annotation-tool) | specialized | visualization, tooling | C++ | 94 | A graphical user interface to annotate point clouds and 3D data |
 | 85 | [sangho0n/Realtime_SMPLX_Unity](https://github.com/sangho0n/Realtime_SMPLX_Unity) | specialized | visualization, body-model | C# | 50 | Real-time SMPL-X in Unity — shape reconstruction via a Python server plus MediaPipe pose in Unity, animating SMPL-X live |
 
-## data-capture — RGB-D / sensor capture (5)
+## data-capture — RGB-D / sensor capture (6)
 
 | # | Repository | Tier | Stages | Lang | ★ snapshot | Description |
 |---:|---|---|---|---|---:|---|
@@ -114,6 +114,7 @@ Stars/forks/updated are the maintainer's pasted snapshot, **not live data**.
 | 80 | [SlimeVR/SlimeVR-Server](https://github.com/SlimeVR/SlimeVR-Server) | core | capture, pose | Fluent | 1047 | SlimeVR Server — server for the SlimeVR open full-body tracking ecosystem; fuses IMU trackers into a full-body pose |
 | 81 | [SlimeVR/SlimeVR-Tracker-ESP](https://github.com/SlimeVR/SlimeVR-Tracker-ESP) | core | capture | C++ | 1088 | SlimeVR Tracker firmware for ESP32/ESP8266 and various IMUs — DIY open-hardware body trackers |
 | 82 | [sccn/labstreaminglayer](https://github.com/sccn/labstreaminglayer) | core | capture, tooling | HTML | 788 | Lab Streaming Layer (LSL) — multimodal time-synchronised data transmission and recording (liblsl, pylsl, LabRecorder/XDF ecosystem) |
+| 105 | [realsenseai/librealsense](https://github.com/realsenseai/librealsense) | core | capture, tooling | C++ | 9060 | RealSense SDK 2.0 (librealsense) — official cross-platform driver/library for RealSense depth cameras including the D455; includes pyrealsense2 and ROS wrappers |
 
 ## datasets-interaction — Datasets & human-object/scene interaction (2)
 

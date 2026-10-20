@@ -1456,3 +1456,17 @@ repos:
     private: false
     pipeline_stages: ["skeleton", "biomechanics"]
     tags: ["mri", "personalised", "joint-centres", "thin-plate-spline", "opensim"]
+  - slug: "realsenseai/librealsense"
+    url: "https://github.com/realsenseai/librealsense"
+    category: "data-capture"
+    tier: "core"
+    language: "C++"
+    updated_snapshot: "2026-10-20 (live API 2026-10-21)"
+    description: "RealSense SDK 2.0 (librealsense) — official cross-platform driver/library for RealSense depth cameras including the D455; includes pyrealsense2 and ROS wrappers"
+    notes: "Selected-hardware driver (optional RealSense D455 — see docs/hardware.md). Depth is stereo with on-device calibration; use rs-align for RGB-depth alignment and record hardware timestamps for LSL sync. License (GitHub API, 2026-10-21): Apache-2.0."
+    upstream_path: "upstream/realsenseai/librealsense"
+    stars_snapshot: 9060
+    forks_snapshot: 5044
+    private: false
+    pipeline_stages: ["capture", "tooling"]
+    tags: ["realsense", "d455", "depth-camera", "sdk", "rgbd"]

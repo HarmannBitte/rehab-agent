@@ -1,6 +1,6 @@
 # Rehab Agent — Meta-Repository
 
-> A curated meta-repo that organises **104 upstream GitHub repositories** into one
+> A curated meta-repo that organises **105 upstream GitHub repositories** into one
 > rehabilitation-technology pipeline: capture → pose → body/skeleton model →
 > biomechanics → muscle simulation → feedback & visualisation.
 >
@@ -8,7 +8,7 @@
 > clone/status tooling, architecture docs, and recommended stacks. Each upstream
 > project stays in its own repo, under its own license.
 
-[![Catalog](https://img.shields.io/badge/catalog-104_repos-blue)](#catalog)
+[![Catalog](https://img.shields.io/badge/catalog-105_repos-blue)](#catalog)
 ![Status](https://img.shields.io/badge/status-research__prototype-orange)
 
 ## ⚠️ Not a medical device
@@ -28,12 +28,21 @@ tracked live against that personalised model, with a measured error budget
 attached to every output. Tiers, targets, onboarding pipeline and red lines:
 [`docs/accuracy.md`](docs/accuracy.md) · [`stacks/digital-twin.md`](stacks/digital-twin.md).
 
+## 📷 Selected hardware
+
+**RGB camera(s) + iPhone LiDAR (Pro, 12 Pro+) + optional RealSense D455.**
+Roles, verified sensor specs, clinic-rig geometry, and the calibration/sync
+protocol are fixed in [`docs/hardware.md`](docs/hardware.md). Honest summary:
+LiDAR/D455 surfaces are centimetre-class (Tier B) — they register shape and
+support live tracking, but bone/joint/muscle accuracy still comes from MRI/CT
+(Tier A, `docs/accuracy.md`).
+
 ## Quick start
 
 ```bash
 git clone <this-repo> rehab-agent && cd rehab-agent
 
-python3 scripts/validate_catalog.py     # check the catalog (104 repos)
+python3 scripts/validate_catalog.py     # check the catalog (105 repos)
 python3 scripts/list.py --tier core     # see the recommended first wave
 python3 scripts/clone.py --tier core --dry-run
 python3 scripts/clone.py --tier core    # shallow-clone core repos into upstream/
@@ -74,7 +83,7 @@ Human views: [`docs/catalog.md`](docs/catalog.md) · [`catalog/repos.csv`](catal
 | `biomechanics` | Biomechanics engines & OpenSim pipeline | 13 |
 | `musculoskeletal-sim` | Musculoskeletal simulation, humanoid control & RL | 12 |
 | `visualization-tools` | Visualization, viewers & editing tools | 8 |
-| `data-capture` | RGB-D / sensor capture | 5 |
+| `data-capture` | RGB-D / sensor capture | 6 |
 | `datasets-interaction` | Datasets & human-object/scene interaction | 2 |
 | `rehab-assessment` | Rehab exercise assessment, clinical scores & movement correction | 3 |
 | `haptics-exoskeleton` | Haptic feedback suits, exoskeleton hardware & actuators | 6 |
@@ -86,14 +95,14 @@ Human views: [`docs/catalog.md`](docs/catalog.md) · [`catalog/repos.csv`](catal
 
 | Tier | Meaning | Repos |
 |---|---|---:|
-| `core` | Core — evaluate first for Rehab Agent v1 | 33 |
+| `core` | Core — evaluate first for Rehab Agent v1 | 34 |
 | `extended` | Extended — useful second wave / alternatives | 31 |
 | `specialized` | Specialized — niche modality, task, or platform | 24 |
 | `experimental` | Experimental — recent/paper code; validate before depending on it | 11 |
 | `needs-review` | Needs review — source list gave no usable description | 4 |
 | `private` | Private — listed but not publicly cloneable | 1 |
 
-### Core stack — evaluate first (33 repos)
+### Core stack — evaluate first (34 repos)
 
 | Repository | Category | Why it is core |
 |---|---|---|
@@ -130,6 +139,7 @@ Human views: [`docs/catalog.md`](docs/catalog.md) · [`catalog/repos.csv`](catal
 | [senseshift/senseshift-firmware](https://github.com/senseshift/senseshift-firmware) | haptics-exoskeleton | DIY haptic vest/sleeve firmware (posture cueing suit) |
 | [wasserth/TotalSegmentator](https://github.com/wasserth/TotalSegmentator) | medical-imaging | >100 anatomical structures segmented from the patient's own CT/MRI |
 | [Slicer/Slicer](https://github.com/Slicer/Slicer) | medical-imaging | 3D Slicer: clinician DICOM/segmentation review — the accuracy gate |
+| [realsenseai/librealsense](https://github.com/realsenseai/librealsense) | data-capture | RealSense SDK for the optional D455 depth camera (selected hardware) |
 
 ## Recommended stacks
 
@@ -152,7 +162,7 @@ rehab-agent/
 │   ├── repos.json             ← SOURCE OF TRUTH (edit this)
 │   ├── repos.csv / repos.yaml ← generated
 ├── docs/
-│   ├── catalog.md             ← generated full tables (all 104)
+│   ├── catalog.md             ← generated full tables (all 105)
 │   ├── architecture.md        ← pipeline, data formats, contracts
 │   ├── roadmap.md             ← phased build plan
 │   ├── evaluation.md          ← scoring rubric for picking repos
