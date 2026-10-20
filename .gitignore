@@ -1,0 +1,28 @@
+# Upstream clones — never vendored into the meta-repo
+upstream/*
+!upstream/.gitkeep
+
+# Model weights & datasets (usually license-gated; never commit)
+*.pth
+*.pt
+*.ckpt
+*.npz
+*.pkl
+models/
+weights/
+data/
+*.mp4
+*.mov
+
+# Patient / session data
+sessions/
+recordings/
+
+# Python / OS
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.DS_Store
+.idea/
+.vscode/
