@@ -28,7 +28,7 @@ for r in repos:
     lines.append("    tags: [" + ", ".join(q(s) for s in r["tags"]) + "]")
 (ROOT/"catalog"/"repos.yaml").write_text("\n".join(lines)+"\n",encoding="utf-8")
 # Markdown catalog grouped by category
-out=["# Full catalog — all 70 repositories","","Generated from `catalog/repos.json` by `scripts/generate_catalog.py`. Do not hand-edit this file; edit the JSON and regenerate.","","Stars/forks/updated are the maintainer's pasted snapshot, **not live data**.",""]
+out=[f"# Full catalog — all {len(repos)} repositories","","Generated from `catalog/repos.json` by `scripts/generate_catalog.py`. Do not hand-edit this file; edit the JSON and regenerate.","","Stars/forks/updated are the maintainer's pasted snapshot, **not live data**.",""]
 for cat,label in D["categories"].items():
     rows=[r for r in repos if r["category"]==cat]
     if not rows: continue

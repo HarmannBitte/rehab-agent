@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "generated_for": "Rehab Agent meta-repo",
-  "snapshot_note": "Stars/forks/updated are as pasted by the maintainer (Oct 2026 list snapshot), NOT live GitHub data. Verify upstream before citing.",
+  "snapshot_note": "Original 70: maintainer's pasted snapshot (not live). Repos 71-98 added 2026-10-21 with live GitHub API metadata (stars/forks/language/license/updated) fetched that day. Verify upstream before citing.",
   "categories": {
     "body-models": "Parametric body & skeleton models (SMPL/SMPL-X, SKEL, OSSO, tissues)",
     "anatomy-models": "Anatomy & personalised model generation",
@@ -12,7 +12,9 @@
     "data-capture": "RGB-D / sensor capture",
     "datasets-interaction": "Datasets & human-object/scene interaction",
     "rehab-assistive": "Rehab, gait & assistive-device specific projects",
-    "3d-reconstruction": "3D reconstruction, mesh generation & world models"
+    "3d-reconstruction": "3D reconstruction, mesh generation & world models",
+    "rehab-assessment": "Rehab exercise assessment, clinical scores & movement correction",
+    "haptics-exoskeleton": "Haptic feedback suits, exoskeleton hardware & actuators"
   },
   "pipeline_stages": {
     "capture": "1 · Capture",
@@ -24,7 +26,8 @@
     "control-rl": "7 · Control / RL",
     "visualization": "8 · Visualization",
     "dataset": "Data / benchmark",
-    "tooling": "Tooling / glue"
+    "tooling": "Tooling / glue",
+    "feedback-haptics": "9 · Feedback / haptics"
   },
   "tiers": {
     "core": "Core — evaluate first for Rehab Agent v1",
@@ -34,7 +37,7 @@
     "needs-review": "Needs review — source list gave no usable description",
     "private": "Private — listed but not publicly cloneable"
   },
-  "count": 70,
+  "count": 98,
   "repos": [
     {
       "id": 1,
@@ -1863,6 +1866,762 @@
       ],
       "notes": "Rigging/animation research; peripheral until human-specific results are shown.",
       "upstream_path": "upstream/Net-Maker/GaussiAnimate"
+    },
+    {
+      "id": 71,
+      "slug": "muelea/shapy",
+      "owner": "muelea",
+      "name": "shapy",
+      "url": "https://github.com/muelea/shapy",
+      "description": "SHAPY — accurate 3D body shape regression using metric and semantic attributes; predicts SMPL-X shape plus height/weight/chest/waist/hip measurements from an image",
+      "language": "Python",
+      "stars_snapshot": 389,
+      "forks_snapshot": 62,
+      "updated_snapshot": "2026-10-05 (live API 2026-10-21)",
+      "private": false,
+      "category": "body-models",
+      "pipeline_stages": [
+        "body-model"
+      ],
+      "tier": "core",
+      "tags": [
+        "shapy",
+        "anthropometry",
+        "body-measurements",
+        "smpl-x"
+      ],
+      "notes": "Digital-twin onboarding: turns a photo + optional measurements into a personalised body shape. License: not declared in GitHub API metadata (2026-10-21) — check upstream repo.",
+      "upstream_path": "upstream/muelea/shapy"
+    },
+    {
+      "id": 72,
+      "slug": "YuliangXiu/ECON",
+      "owner": "YuliangXiu",
+      "name": "ECON",
+      "url": "https://github.com/YuliangXiu/ECON",
+      "description": "ECON — explicit clothed humans optimised via normal integration; high-fidelity 3D clothed human from a single image, SMPL-X animatable",
+      "language": "Python",
+      "stars_snapshot": 1213,
+      "forks_snapshot": 115,
+      "updated_snapshot": "2026-10-14 (live API 2026-10-21)",
+      "private": false,
+      "category": "3d-reconstruction",
+      "pipeline_stages": [
+        "capture",
+        "body-model"
+      ],
+      "tier": "extended",
+      "tags": [
+        "econ",
+        "clothed-avatar",
+        "single-image"
+      ],
+      "notes": "Captures the patient's actual outer/clothed shape for the twin. License (GitHub API, 2026-10-21): NOASSERTION.",
+      "upstream_path": "upstream/YuliangXiu/ECON"
+    },
+    {
+      "id": 73,
+      "slug": "yfeng95/PIXIE",
+      "owner": "yfeng95",
+      "name": "PIXIE",
+      "url": "https://github.com/yfeng95/PIXIE",
+      "description": "PIXIE — collaborative regression of expressive bodies: whole-body SMPL-X with detailed face and hand articulation from a single image",
+      "language": "Python",
+      "stars_snapshot": 517,
+      "forks_snapshot": 70,
+      "updated_snapshot": "2026-09-29 (live API 2026-10-21)",
+      "private": false,
+      "category": "body-models",
+      "pipeline_stages": [
+        "body-model"
+      ],
+      "tier": "extended",
+      "tags": [
+        "pixie",
+        "expressive",
+        "avatar",
+        "face",
+        "hands"
+      ],
+      "notes": "Avatar personalisation including face/hands. License (GitHub API, 2026-10-21): NOASSERTION.",
+      "upstream_path": "upstream/yfeng95/PIXIE"
+    },
+    {
+      "id": 74,
+      "slug": "google-ai-edge/mediapipe",
+      "owner": "google-ai-edge",
+      "name": "mediapipe",
+      "url": "https://github.com/google-ai-edge/mediapipe",
+      "description": "MediaPipe — cross-platform ML perception pipelines; Pose infers 33 3D body landmarks in real time on phone, desktop and web",
+      "language": "C++",
+      "stars_snapshot": 37345,
+      "forks_snapshot": 6189,
+      "updated_snapshot": "2026-10-20 (live API 2026-10-21)",
+      "private": false,
+      "category": "pose-mocap",
+      "pipeline_stages": [
+        "capture",
+        "pose"
+      ],
+      "tier": "core",
+      "tags": [
+        "mediapipe",
+        "blazepose",
+        "real-time",
+        "mobile",
+        "web"
+      ],
+      "notes": "Zero-friction patient-side tracker for the live twin. License (GitHub API, 2026-10-21): Apache-2.0.",
+      "upstream_path": "upstream/google-ai-edge/mediapipe"
+    },
+    {
+      "id": 75,
+      "slug": "open-mmlab/mmpose",
+      "owner": "open-mmlab",
+      "name": "mmpose",
+      "url": "https://github.com/open-mmlab/mmpose",
+      "description": "MMPose — OpenMMLab pose estimation toolbox and benchmark, including the RTMPose real-time model family",
+      "language": "Python",
+      "stars_snapshot": 7967,
+      "forks_snapshot": 1540,
+      "updated_snapshot": "2026-10-20 (live API 2026-10-21)",
+      "private": false,
+      "category": "pose-mocap",
+      "pipeline_stages": [
+        "pose"
+      ],
+      "tier": "core",
+      "tags": [
+        "mmpose",
+        "rtmpose",
+        "real-time",
+        "toolbox"
+      ],
+      "notes": "Production/swappable 2D-pose layer under Pose2Sim-style pipelines. License (GitHub API, 2026-10-21): Apache-2.0.",
+      "upstream_path": "upstream/open-mmlab/mmpose"
+    },
+    {
+      "id": 76,
+      "slug": "zju3dv/GVHMR",
+      "owner": "zju3dv",
+      "name": "GVHMR",
+      "url": "https://github.com/zju3dv/GVHMR",
+      "description": "GVHMR — world-grounded human motion recovery via gravity-view coordinates; SMPL motion in camera and world frames from monocular video",
+      "language": "Jupyter Notebook",
+      "stars_snapshot": 2161,
+      "forks_snapshot": 256,
+      "updated_snapshot": "2026-10-20 (live API 2026-10-21)",
+      "private": false,
+      "category": "pose-mocap",
+      "pipeline_stages": [
+        "pose",
+        "body-model"
+      ],
+      "tier": "core",
+      "tags": [
+        "gvhmr",
+        "world-grounded",
+        "gravity",
+        "smpl",
+        "monocular"
+      ],
+      "notes": "Gravity/world frame is essential for posture (vs camera-frame pose). License (GitHub API, 2026-10-21): NOASSERTION.",
+      "upstream_path": "upstream/zju3dv/GVHMR"
+    },
+    {
+      "id": 77,
+      "slug": "zju3dv/EasyMocap",
+      "owner": "zju3dv",
+      "name": "EasyMocap",
+      "url": "https://github.com/zju3dv/EasyMocap",
+      "description": "EasyMocap — multi-view and monocular SMPL/SMPL-X/MANO motion capture toolkit",
+      "language": "Python",
+      "stars_snapshot": 4929,
+      "forks_snapshot": 571,
+      "updated_snapshot": "2026-10-20 (live API 2026-10-21)",
+      "private": false,
+      "category": "pose-mocap",
+      "pipeline_stages": [
+        "capture",
+        "pose",
+        "body-model"
+      ],
+      "tier": "extended",
+      "tags": [
+        "easymocap",
+        "multi-view",
+        "smpl-x",
+        "calibration"
+      ],
+      "notes": "Clinic-grade multi-camera tier for higher-accuracy twin sessions. License (GitHub API, 2026-10-21): NOASSERTION.",
+      "upstream_path": "upstream/zju3dv/EasyMocap"
+    },
+    {
+      "id": 78,
+      "slug": "facebookresearch/sapiens",
+      "owner": "facebookresearch",
+      "name": "sapiens",
+      "url": "https://github.com/facebookresearch/sapiens",
+      "description": "Sapiens — high-resolution foundation models for human-centric vision: 2D pose, body-part segmentation, depth and normals",
+      "language": "Python",
+      "stars_snapshot": 5432,
+      "forks_snapshot": 323,
+      "updated_snapshot": "2026-10-16 (live API 2026-10-21)",
+      "private": false,
+      "category": "pose-mocap",
+      "pipeline_stages": [
+        "capture",
+        "pose"
+      ],
+      "tier": "extended",
+      "tags": [
+        "sapiens",
+        "foundation-model",
+        "whole-body",
+        "segmentation"
+      ],
+      "notes": "Dense human perception front-end (keypoints + parts) for twin fitting. License (GitHub API, 2026-10-21): NOASSERTION.",
+      "upstream_path": "upstream/facebookresearch/sapiens"
+    },
+    {
+      "id": 79,
+      "slug": "facebookresearch/sapiens2",
+      "owner": "facebookresearch",
+      "name": "sapiens2",
+      "url": "https://github.com/facebookresearch/sapiens2",
+      "description": "Sapiens2 — 1K-resolution human vision transformers pretrained on 1B human images; pose, segmentation, normals, pointmaps, matting",
+      "language": "Python",
+      "stars_snapshot": 998,
+      "forks_snapshot": 68,
+      "updated_snapshot": "2026-10-20 (live API 2026-10-21)",
+      "private": false,
+      "category": "pose-mocap",
+      "pipeline_stages": [
+        "capture",
+        "pose"
+      ],
+      "tier": "experimental",
+      "tags": [
+        "sapiens2",
+        "foundation-model",
+        "whole-body"
+      ],
+      "notes": "Successor to Sapiens; evaluate against Sapiens v1 before adopting. License (GitHub API, 2026-10-21): NOASSERTION.",
+      "upstream_path": "upstream/facebookresearch/sapiens2"
+    },
+    {
+      "id": 80,
+      "slug": "SlimeVR/SlimeVR-Server",
+      "owner": "SlimeVR",
+      "name": "SlimeVR-Server",
+      "url": "https://github.com/SlimeVR/SlimeVR-Server",
+      "description": "SlimeVR Server — server for the SlimeVR open full-body tracking ecosystem; fuses IMU trackers into a full-body pose",
+      "language": "Fluent",
+      "stars_snapshot": 1047,
+      "forks_snapshot": 257,
+      "updated_snapshot": "2026-10-18 (live API 2026-10-21)",
+      "private": false,
+      "category": "data-capture",
+      "pipeline_stages": [
+        "capture",
+        "pose"
+      ],
+      "tier": "core",
+      "tags": [
+        "slimevr",
+        "imu",
+        "full-body-tracking",
+        "suit"
+      ],
+      "notes": "Sensor-suit hub: the wearable side of the 1:1 twin without cameras. License (GitHub API, 2026-10-21): Apache-2.0.",
+      "upstream_path": "upstream/SlimeVR/SlimeVR-Server"
+    },
+    {
+      "id": 81,
+      "slug": "SlimeVR/SlimeVR-Tracker-ESP",
+      "owner": "SlimeVR",
+      "name": "SlimeVR-Tracker-ESP",
+      "url": "https://github.com/SlimeVR/SlimeVR-Tracker-ESP",
+      "description": "SlimeVR Tracker firmware for ESP32/ESP8266 and various IMUs — DIY open-hardware body trackers",
+      "language": "C++",
+      "stars_snapshot": 1088,
+      "forks_snapshot": 396,
+      "updated_snapshot": "2026-10-20 (live API 2026-10-21)",
+      "private": false,
+      "category": "data-capture",
+      "pipeline_stages": [
+        "capture"
+      ],
+      "tier": "core",
+      "tags": [
+        "slimevr",
+        "esp32",
+        "imu",
+        "firmware",
+        "open-hardware"
+      ],
+      "notes": "Buildable/buyable IMU trackers; pairs with SlimeVR-Server. License (GitHub API, 2026-10-21): Apache-2.0.",
+      "upstream_path": "upstream/SlimeVR/SlimeVR-Tracker-ESP"
+    },
+    {
+      "id": 82,
+      "slug": "sccn/labstreaminglayer",
+      "owner": "sccn",
+      "name": "labstreaminglayer",
+      "url": "https://github.com/sccn/labstreaminglayer",
+      "description": "Lab Streaming Layer (LSL) — multimodal time-synchronised data transmission and recording (liblsl, pylsl, LabRecorder/XDF ecosystem)",
+      "language": "HTML",
+      "stars_snapshot": 788,
+      "forks_snapshot": 197,
+      "updated_snapshot": "2026-10-17 (live API 2026-10-21)",
+      "private": false,
+      "category": "data-capture",
+      "pipeline_stages": [
+        "capture",
+        "tooling"
+      ],
+      "tier": "core",
+      "tags": [
+        "lsl",
+        "synchronization",
+        "xdf",
+        "multimodal",
+        "emg"
+      ],
+      "notes": "Sync layer that keeps video + IMU + EMG + haptic streams aligned for a true 1:1 twin. License (GitHub API, 2026-10-21): NOASSERTION.",
+      "upstream_path": "upstream/sccn/labstreaminglayer"
+    },
+    {
+      "id": 83,
+      "slug": "DeepLabCut/DeepLabCut",
+      "owner": "DeepLabCut",
+      "name": "DeepLabCut",
+      "url": "https://github.com/DeepLabCut/DeepLabCut",
+      "description": "DeepLabCut — markerless pose estimation of user-defined features with deep learning (animals incl. humans)",
+      "language": "Python",
+      "stars_snapshot": 5795,
+      "forks_snapshot": 1795,
+      "updated_snapshot": "2026-10-20 (live API 2026-10-21)",
+      "private": false,
+      "category": "pose-mocap",
+      "pipeline_stages": [
+        "pose",
+        "tooling"
+      ],
+      "tier": "specialized",
+      "tags": [
+        "deeplabcut",
+        "custom-landmarks",
+        "markerless",
+        "training"
+      ],
+      "notes": "Use when rehab needs custom landmarks (e.g. scapula/pelvis) trained on your own labelled video. License (GitHub API, 2026-10-21): LGPL-3.0.",
+      "upstream_path": "upstream/DeepLabCut/DeepLabCut"
+    },
+    {
+      "id": 84,
+      "slug": "DeepLabCut/DeepLabCut-live",
+      "owner": "DeepLabCut",
+      "name": "DeepLabCut-live",
+      "url": "https://github.com/DeepLabCut/DeepLabCut-live",
+      "description": "DeepLabCut-Live — SDK for running DeepLabCut models on a live video stream",
+      "language": "Python",
+      "stars_snapshot": 239,
+      "forks_snapshot": 57,
+      "updated_snapshot": "2026-10-02 (live API 2026-10-21)",
+      "private": false,
+      "category": "pose-mocap",
+      "pipeline_stages": [
+        "capture",
+        "pose"
+      ],
+      "tier": "specialized",
+      "tags": [
+        "deeplabcut-live",
+        "real-time",
+        "live"
+      ],
+      "notes": "Real-time companion to DeepLabCut for live custom-landmark tracking. License (GitHub API, 2026-10-21): NOASSERTION.",
+      "upstream_path": "upstream/DeepLabCut/DeepLabCut-live"
+    },
+    {
+      "id": 85,
+      "slug": "sangho0n/Realtime_SMPLX_Unity",
+      "owner": "sangho0n",
+      "name": "Realtime_SMPLX_Unity",
+      "url": "https://github.com/sangho0n/Realtime_SMPLX_Unity",
+      "description": "Real-time SMPL-X in Unity — shape reconstruction via a Python server plus MediaPipe pose in Unity, animating SMPL-X live",
+      "language": "C#",
+      "stars_snapshot": 50,
+      "forks_snapshot": 6,
+      "updated_snapshot": "2026-07-25 (live API 2026-10-21)",
+      "private": false,
+      "category": "visualization-tools",
+      "pipeline_stages": [
+        "visualization",
+        "body-model"
+      ],
+      "tier": "specialized",
+      "tags": [
+        "unity",
+        "smpl-x",
+        "real-time",
+        "digital-twin-runtime"
+      ],
+      "notes": "Reference implementation for the missing live-twin Unity front-end (example code, not a product). License (GitHub API, 2026-10-21): MIT.",
+      "upstream_path": "upstream/sangho0n/Realtime_SMPLX_Unity"
+    },
+    {
+      "id": 86,
+      "slug": "avakanski/A-Deep-Learning-Framework-for-Assessing-Physical-Rehabilitation-Exercises",
+      "owner": "avakanski",
+      "name": "A-Deep-Learning-Framework-for-Assessing-Physical-Rehabilitation-Exercises",
+      "url": "https://github.com/avakanski/A-Deep-Learning-Framework-for-Assessing-Physical-Rehabilitation-Exercises",
+      "description": "Framework for quality assessment of physical rehabilitation exercises on the UI-PRMD dataset (skeletal joint data, correct vs incorrect movements)",
+      "language": "Jupyter Notebook",
+      "stars_snapshot": 75,
+      "forks_snapshot": 22,
+      "updated_snapshot": "2026-10-18 (live API 2026-10-21)",
+      "private": false,
+      "category": "rehab-assessment",
+      "pipeline_stages": [
+        "dataset",
+        "pose"
+      ],
+      "tier": "extended",
+      "tags": [
+        "ui-prmd",
+        "exercise-assessment",
+        "quality-score",
+        "dataset"
+      ],
+      "notes": "Teaches the agent what 'wrong' looks like for standard rehab exercises. License: not declared in GitHub API metadata (2026-10-21) — check upstream repo.",
+      "upstream_path": "upstream/avakanski/A-Deep-Learning-Framework-for-Assessing-Physical-Rehabilitation-Exercises"
+    },
+    {
+      "id": 87,
+      "slug": "fokhruli/STGCN-rehab",
+      "owner": "fokhruli",
+      "name": "STGCN-rehab",
+      "url": "https://github.com/fokhruli/STGCN-rehab",
+      "description": "Graph convolutional networks for assessment of physical rehabilitation exercises (KIMORE and UI-PRMD)",
+      "language": "Python",
+      "stars_snapshot": 44,
+      "forks_snapshot": 16,
+      "updated_snapshot": "2026-08-31 (live API 2026-10-21)",
+      "private": false,
+      "category": "rehab-assessment",
+      "pipeline_stages": [
+        "dataset",
+        "pose"
+      ],
+      "tier": "core",
+      "tags": [
+        "stgcn",
+        "kimore",
+        "ui-prmd",
+        "quality-score",
+        "clinical-scores"
+      ],
+      "notes": "Clinician-scored exercise quality (KIMORE includes patients) — core for the correction layer. License (GitHub API, 2026-10-21): MIT.",
+      "upstream_path": "upstream/fokhruli/STGCN-rehab"
+    },
+    {
+      "id": 88,
+      "slug": "GuyTevet/motion-diffusion-model",
+      "owner": "GuyTevet",
+      "name": "motion-diffusion-model",
+      "url": "https://github.com/GuyTevet/motion-diffusion-model",
+      "description": "MDM — Human Motion Diffusion Model; text/action-to-motion generation plus motion editing and in-betweening",
+      "language": "Python",
+      "stars_snapshot": 4120,
+      "forks_snapshot": 464,
+      "updated_snapshot": "2026-10-20 (live API 2026-10-21)",
+      "private": false,
+      "category": "rehab-assessment",
+      "pipeline_stages": [
+        "pose",
+        "body-model"
+      ],
+      "tier": "experimental",
+      "tags": [
+        "mdm",
+        "diffusion",
+        "motion-editing",
+        "correction-visualization"
+      ],
+      "notes": "Generates a 'corrected' movement to show the patient. MUST be constrained by SKEL/OpenSim joint limits; diffusion alone can produce anatomically impossible motion. License (GitHub API, 2026-10-21): MIT.",
+      "upstream_path": "upstream/GuyTevet/motion-diffusion-model"
+    },
+    {
+      "id": 89,
+      "slug": "opensim-org/opensim-moco",
+      "owner": "opensim-org",
+      "name": "opensim-moco",
+      "url": "https://github.com/opensim-org/opensim-moco",
+      "description": "OpenSim Moco — solve optimal control problems for musculoskeletal models with direct collocation (muscle activity for observed/corrected motion, motion prediction)",
+      "language": "C++",
+      "stars_snapshot": 73,
+      "forks_snapshot": 18,
+      "updated_snapshot": "2026-07-26 (live API 2026-10-21)",
+      "private": false,
+      "category": "biomechanics",
+      "pipeline_stages": [
+        "biomechanics",
+        "muscle-sim"
+      ],
+      "tier": "extended",
+      "tags": [
+        "moco",
+        "optimal-control",
+        "opensim",
+        "muscle-activity"
+      ],
+      "notes": "Standalone repo is ARCHIVED; development moved into opensim-core (already catalogued). Listed so the capability is discoverable. License (GitHub API, 2026-10-21): Apache-2.0. ARCHIVED upstream (read-only).",
+      "upstream_path": "upstream/opensim-org/opensim-moco"
+    },
+    {
+      "id": 90,
+      "slug": "mitkof6/OpenSimRT",
+      "owner": "mitkof6",
+      "name": "OpenSimRT",
+      "url": "https://github.com/mitkof6/OpenSimRT",
+      "description": "OpenSimRT — real-time musculoskeletal kinematics and dynamics analysis using marker- and IMU-based solutions",
+      "language": "C++",
+      "stars_snapshot": 82,
+      "forks_snapshot": 26,
+      "updated_snapshot": "2026-08-07 (live API 2026-10-21)",
+      "private": false,
+      "category": "biomechanics",
+      "pipeline_stages": [
+        "capture",
+        "biomechanics"
+      ],
+      "tier": "extended",
+      "tags": [
+        "opensimrt",
+        "real-time",
+        "biofeedback",
+        "imu"
+      ],
+      "notes": "Real-time biofeedback path (e.g. gait retraining) on top of OpenSim. License (GitHub API, 2026-10-21): GPL-3.0.",
+      "upstream_path": "upstream/mitkof6/OpenSimRT"
+    },
+    {
+      "id": 91,
+      "slug": "CEINMS/CEINMS",
+      "owner": "CEINMS",
+      "name": "CEINMS",
+      "url": "https://github.com/CEINMS/CEINMS",
+      "description": "CEINMS — Calibrated EMG-Informed Neuromusculoskeletal Modelling Toolbox; estimates muscle forces and joint moments calibrated to the individual, OpenSim-compatible",
+      "language": "C++",
+      "stars_snapshot": 33,
+      "forks_snapshot": 12,
+      "updated_snapshot": "2026-08-26 (live API 2026-10-21)",
+      "private": false,
+      "category": "biomechanics",
+      "pipeline_stages": [
+        "biomechanics",
+        "muscle-sim"
+      ],
+      "tier": "core",
+      "tags": [
+        "ceinms",
+        "emg",
+        "personalized",
+        "muscle-force",
+        "opensim"
+      ],
+      "notes": "The muscle-personalisation layer: without EMG-informed calibration, 'underdeveloped muscle' claims are generic-model guesses. A real-time variant (CEINMS-RT) targets wearable-robot control. License (GitHub API, 2026-10-21): Apache-2.0.",
+      "upstream_path": "upstream/CEINMS/CEINMS"
+    },
+    {
+      "id": 92,
+      "slug": "sofa-framework/sofa",
+      "owner": "sofa-framework",
+      "name": "sofa",
+      "url": "https://github.com/sofa-framework/sofa",
+      "description": "SOFA — real-time multi-physics simulation with emphasis on medical simulation; FEM soft-tissue modelling",
+      "language": "C++",
+      "stars_snapshot": 1279,
+      "forks_snapshot": 368,
+      "updated_snapshot": "2026-10-20 (live API 2026-10-21)",
+      "private": false,
+      "category": "musculoskeletal-sim",
+      "pipeline_stages": [
+        "muscle-sim",
+        "visualization"
+      ],
+      "tier": "specialized",
+      "tags": [
+        "sofa",
+        "fem",
+        "soft-tissue",
+        "medical-simulation"
+      ],
+      "notes": "Muscle/soft-tissue deformation layer — MuJoCo/MyoSuite muscles are line actuators and cannot show bulge/atrophy visually. License (GitHub API, 2026-10-21): LGPL-2.1.",
+      "upstream_path": "upstream/sofa-framework/sofa"
+    },
+    {
+      "id": 93,
+      "slug": "naubiomech/OpenExo",
+      "owner": "naubiomech",
+      "name": "OpenExo",
+      "url": "https://github.com/naubiomech/OpenExo",
+      "description": "OpenExo — open-source modular exoskeleton platform for mobility and rehabilitation research: mechanical designs, electronics, firmware, control and biofeedback schemes",
+      "language": "HTML",
+      "stars_snapshot": 384,
+      "forks_snapshot": 97,
+      "updated_snapshot": "2026-10-19 (live API 2026-10-21)",
+      "private": false,
+      "category": "haptics-exoskeleton",
+      "pipeline_stages": [
+        "control-rl",
+        "feedback-haptics",
+        "muscle-sim"
+      ],
+      "tier": "core",
+      "tags": [
+        "openexo",
+        "exoskeleton",
+        "hardware",
+        "modular",
+        "rehabilitation"
+      ],
+      "notes": "KEY hardware repo: the buildable exoskeleton base (hip/ankle/elbow configurations). License (GitHub API, 2026-10-21): NOASSERTION.",
+      "upstream_path": "upstream/naubiomech/OpenExo"
+    },
+    {
+      "id": 94,
+      "slug": "neurobionics/opensourceleg",
+      "owner": "neurobionics",
+      "name": "opensourceleg",
+      "url": "https://github.com/neurobionics/opensourceleg",
+      "description": "Open-Source Leg — open-source SDK for developing and testing algorithms on robotic prosthesis/exoskeleton leg hardware (actuators and sensors)",
+      "language": "Python",
+      "stars_snapshot": 120,
+      "forks_snapshot": 76,
+      "updated_snapshot": "2026-10-10 (live API 2026-10-21)",
+      "private": false,
+      "category": "haptics-exoskeleton",
+      "pipeline_stages": [
+        "control-rl"
+      ],
+      "tier": "extended",
+      "tags": [
+        "open-source-leg",
+        "prosthesis",
+        "actuators",
+        "sdk"
+      ],
+      "notes": "Lower-limb actuator/sensor control stack; prosthesis-first but transferable to exo legs. License (GitHub API, 2026-10-21): LGPL-2.1.",
+      "upstream_path": "upstream/neurobionics/opensourceleg"
+    },
+    {
+      "id": 95,
+      "slug": "senseshift/senseshift-firmware",
+      "owner": "senseshift",
+      "name": "senseshift-firmware",
+      "url": "https://github.com/senseshift/senseshift-firmware",
+      "description": "SenseShift firmware — open-source firmware for DIY haptic-feedback devices (vest, gloves, sleeves), compatible with bHaptics and OpenGloves protocols",
+      "language": "C++",
+      "stars_snapshot": 149,
+      "forks_snapshot": 22,
+      "updated_snapshot": "2026-10-05 (live API 2026-10-21)",
+      "private": false,
+      "category": "haptics-exoskeleton",
+      "pipeline_stages": [
+        "feedback-haptics"
+      ],
+      "tier": "core",
+      "tags": [
+        "haptic-vest",
+        "diy",
+        "bhaptics-protocol",
+        "vibrotactile"
+      ],
+      "notes": "The posture-cueing suit: vibrate where posture breaks. Haptic cueing is buildable today, unlike powered spinal support. License (GitHub API, 2026-10-21): GPL-3.0.",
+      "upstream_path": "upstream/senseshift/senseshift-firmware"
+    },
+    {
+      "id": 96,
+      "slug": "LucidVR/lucidgloves",
+      "owner": "LucidVR",
+      "name": "lucidgloves",
+      "url": "https://github.com/LucidVR/lucidgloves",
+      "description": "LucidGloves — Arduino/ESP32 DIY VR haptic gloves with force feedback, via OpenGloves",
+      "language": "C++",
+      "stars_snapshot": 2396,
+      "forks_snapshot": 288,
+      "updated_snapshot": "2026-10-20 (live API 2026-10-21)",
+      "private": false,
+      "category": "haptics-exoskeleton",
+      "pipeline_stages": [
+        "feedback-haptics"
+      ],
+      "tier": "specialized",
+      "tags": [
+        "haptic-gloves",
+        "force-feedback",
+        "hands",
+        "diy"
+      ],
+      "notes": "Hand-rehab niche only; not a body/posture solution. License (GitHub API, 2026-10-21): MIT.",
+      "upstream_path": "upstream/LucidVR/lucidgloves"
+    },
+    {
+      "id": 97,
+      "slug": "mjbots/moteus",
+      "owner": "mjbots",
+      "name": "moteus",
+      "url": "https://github.com/mjbots/moteus",
+      "description": "moteus — open-source brushless DC servo motor controller (firmware and PCB designs)",
+      "language": "C++",
+      "stars_snapshot": 1345,
+      "forks_snapshot": 405,
+      "updated_snapshot": "2026-10-20 (live API 2026-10-21)",
+      "private": false,
+      "category": "haptics-exoskeleton",
+      "pipeline_stages": [
+        "control-rl",
+        "feedback-haptics"
+      ],
+      "tier": "extended",
+      "tags": [
+        "moteus",
+        "bldc",
+        "servo-controller",
+        "open-hardware"
+      ],
+      "notes": "Actuator controller for actual joint-support torque in an exo build. License (GitHub API, 2026-10-21): Apache-2.0.",
+      "upstream_path": "upstream/mjbots/moteus"
+    },
+    {
+      "id": 98,
+      "slug": "simplefoc/Arduino-FOC",
+      "owner": "simplefoc",
+      "name": "Arduino-FOC",
+      "url": "https://github.com/simplefoc/Arduino-FOC",
+      "description": "Arduino SimpleFOC — field-oriented control library for BLDC and stepper motors across Arduino/STM32/ESP32-class hardware",
+      "language": "C++",
+      "stars_snapshot": 3074,
+      "forks_snapshot": 762,
+      "updated_snapshot": "2026-10-20 (live API 2026-10-21)",
+      "private": false,
+      "category": "haptics-exoskeleton",
+      "pipeline_stages": [
+        "control-rl"
+      ],
+      "tier": "specialized",
+      "tags": [
+        "simplefoc",
+        "foc",
+        "bldc",
+        "actuator",
+        "prototyping"
+      ],
+      "notes": "Cheapest path to custom actuator control for exo prototyping. License (GitHub API, 2026-10-21): MIT.",
+      "upstream_path": "upstream/simplefoc/Arduino-FOC"
     }
   ]
 }

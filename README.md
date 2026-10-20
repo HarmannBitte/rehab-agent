@@ -1,6 +1,6 @@
 # Rehab Agent — Meta-Repository
 
-> A curated meta-repo that organises **70 upstream GitHub repositories** into one
+> A curated meta-repo that organises **98 upstream GitHub repositories** into one
 > rehabilitation-technology pipeline: capture → pose → body/skeleton model →
 > biomechanics → muscle simulation → feedback & visualisation.
 >
@@ -8,7 +8,7 @@
 > clone/status tooling, architecture docs, and recommended stacks. Each upstream
 > project stays in its own repo, under its own license.
 
-[![Catalog](https://img.shields.io/badge/catalog-70_repos-blue)](#catalog)
+[![Catalog](https://img.shields.io/badge/catalog-98_repos-blue)](#catalog)
 ![Status](https://img.shields.io/badge/status-research__prototype-orange)
 
 ## ⚠️ Not a medical device
@@ -23,7 +23,7 @@ privacy review for video / IMU / health data. See
 ```bash
 git clone <this-repo> rehab-agent && cd rehab-agent
 
-python3 scripts/validate_catalog.py     # check the catalog (70 repos)
+python3 scripts/validate_catalog.py     # check the catalog (98 repos)
 python3 scripts/list.py --tier core     # see the recommended first wave
 python3 scripts/clone.py --tier core --dry-run
 python3 scripts/clone.py --tier core    # shallow-clone core repos into upstream/
@@ -58,29 +58,31 @@ Human views: [`docs/catalog.md`](docs/catalog.md) · [`catalog/repos.csv`](catal
 
 | Category | What it covers | Repos |
 |---|---|---:|
-| `body-models` | Parametric body & skeleton models (SMPL/SMPL-X, SKEL, OSSO, tissues) | 8 |
+| `body-models` | Parametric body & skeleton models (SMPL/SMPL-X, SKEL, OSSO, tissues) | 10 |
 | `anatomy-models` | Anatomy & personalised model generation | 5 |
-| `pose-mocap` | Pose estimation & motion capture (video, markerless, IMU) | 13 |
-| `biomechanics` | Biomechanics engines & OpenSim pipeline | 10 |
-| `musculoskeletal-sim` | Musculoskeletal simulation, humanoid control & RL | 11 |
-| `visualization-tools` | Visualization, viewers & editing tools | 7 |
-| `data-capture` | RGB-D / sensor capture | 2 |
+| `pose-mocap` | Pose estimation & motion capture (video, markerless, IMU) | 21 |
+| `biomechanics` | Biomechanics engines & OpenSim pipeline | 13 |
+| `musculoskeletal-sim` | Musculoskeletal simulation, humanoid control & RL | 12 |
+| `visualization-tools` | Visualization, viewers & editing tools | 8 |
+| `data-capture` | RGB-D / sensor capture | 5 |
 | `datasets-interaction` | Datasets & human-object/scene interaction | 2 |
+| `rehab-assessment` | Rehab exercise assessment, clinical scores & movement correction | 3 |
+| `haptics-exoskeleton` | Haptic feedback suits, exoskeleton hardware & actuators | 6 |
 | `rehab-assistive` | Rehab, gait & assistive-device specific projects | 5 |
-| `3d-reconstruction` | 3D reconstruction, mesh generation & world models | 7 |
+| `3d-reconstruction` | 3D reconstruction, mesh generation & world models | 8 |
 
 ### By tier
 
 | Tier | Meaning | Repos |
 |---|---|---:|
-| `core` | Core — evaluate first for Rehab Agent v1 | 20 |
-| `extended` | Extended — useful second wave / alternatives | 19 |
-| `specialized` | Specialized — niche modality, task, or platform | 17 |
-| `experimental` | Experimental — recent/paper code; validate before depending on it | 9 |
+| `core` | Core — evaluate first for Rehab Agent v1 | 31 |
+| `extended` | Extended — useful second wave / alternatives | 28 |
+| `specialized` | Specialized — niche modality, task, or platform | 23 |
+| `experimental` | Experimental — recent/paper code; validate before depending on it | 11 |
 | `needs-review` | Needs review — source list gave no usable description | 4 |
 | `private` | Private — listed but not publicly cloneable | 1 |
 
-### Core stack — evaluate first (20 repos)
+### Core stack — evaluate first (31 repos)
 
 | Repository | Category | Why it is core |
 |---|---|---|
@@ -104,6 +106,17 @@ Human views: [`docs/catalog.md`](docs/catalog.md) · [`catalog/repos.csv`](catal
 | [Xinyu-Yi/TransPose](https://github.com/Xinyu-Yi/TransPose) | pose-mocap | TransPose — real-time motion capture that estimates poses and global translations using only 6 IMUs |
 | [Xinyu-Yi/PIP](https://github.com/Xinyu-Yi/PIP) | pose-mocap | PIP — real-time system that captures physically correct human motion, joint torques, and ground reaction forces with only 6 IMUs |
 | [freemocap/freemocap](https://github.com/freemocap/freemocap) | pose-mocap | FreeMoCap — Free Motion Capture for Everyone |
+| [muelea/shapy](https://github.com/muelea/shapy) | body-models | Metric body-shape regression from an image (twin onboarding measurements) |
+| [google-ai-edge/mediapipe](https://github.com/google-ai-edge/mediapipe) | pose-mocap | Real-time 33-landmark pose on phone/web/laptop |
+| [open-mmlab/mmpose](https://github.com/open-mmlab/mmpose) | pose-mocap | RTMPose real-time pose toolbox (swappable 2D-pose layer) |
+| [zju3dv/GVHMR](https://github.com/zju3dv/GVHMR) | pose-mocap | World/gravity-grounded SMPL motion from monocular video |
+| [SlimeVR/SlimeVR-Server](https://github.com/SlimeVR/SlimeVR-Server) | data-capture | IMU full-body tracking server (wearable twin sensing) |
+| [SlimeVR/SlimeVR-Tracker-ESP](https://github.com/SlimeVR/SlimeVR-Tracker-ESP) | data-capture | ESP32 IMU tracker firmware (open-hardware suit sensors) |
+| [sccn/labstreaminglayer](https://github.com/sccn/labstreaminglayer) | data-capture | LSL: time-sync for video + IMU + EMG + haptics |
+| [fokhruli/STGCN-rehab](https://github.com/fokhruli/STGCN-rehab) | rehab-assessment | Clinician-scored exercise quality (KIMORE / UI-PRMD) |
+| [CEINMS/CEINMS](https://github.com/CEINMS/CEINMS) | biomechanics | EMG-informed, per-person calibrated muscle forces |
+| [naubiomech/OpenExo](https://github.com/naubiomech/OpenExo) | haptics-exoskeleton | Modular open-source exoskeleton platform (hardware + control) |
+| [senseshift/senseshift-firmware](https://github.com/senseshift/senseshift-firmware) | haptics-exoskeleton | DIY haptic vest/sleeve firmware (posture cueing suit) |
 
 ## Recommended stacks
 
@@ -114,6 +127,8 @@ Human views: [`docs/catalog.md`](docs/catalog.md) · [`catalog/repos.csv`](catal
 | SMPL → biomechanics | You have SMPL/SMPL-X motion and need joint loads | [`stacks/smpl-to-biomechanics.md`](stacks/smpl-to-biomechanics.md) |
 | Muscle simulation & RL | Simulate muscle effort, assistance, exoskeletons | [`stacks/muscle-sim-rl.md`](stacks/muscle-sim-rl.md) |
 | Blender anatomy visualisation | Clinician/patient-facing 3D anatomy | [`stacks/blender-anatomy.md`](stacks/blender-anatomy.md) |
+| Personalised digital twin | Per-person shape onboarding, 1:1 live tracking, wrong-vs-corrected view | [`stacks/digital-twin.md`](stacks/digital-twin.md) |
+| Haptic suit + exoskeleton | Vibrotactile posture cueing now; powered joint support as research track | [`stacks/haptic-exo-suit.md`](stacks/haptic-exo-suit.md) |
 
 ## Repo map
 
@@ -124,12 +139,12 @@ rehab-agent/
 │   ├── repos.json             ← SOURCE OF TRUTH (edit this)
 │   ├── repos.csv / repos.yaml ← generated
 ├── docs/
-│   ├── catalog.md             ← generated full tables (all 70)
+│   ├── catalog.md             ← generated full tables (all 98)
 │   ├── architecture.md        ← pipeline, data formats, contracts
 │   ├── roadmap.md             ← phased build plan
 │   ├── evaluation.md          ← scoring rubric for picking repos
 │   └── safety-and-licensing.md
-├── stacks/                    ← 5 opinionated, runnable-path recipes
+├── stacks/                    ← 7 opinionated, runnable-path recipes
 ├── scripts/
 │   ├── clone.py  list.py  status.py
 │   ├── validate_catalog.py  generate_catalog.py

@@ -1,10 +1,10 @@
-# Full catalog — all 70 repositories
+# Full catalog — all 98 repositories
 
 Generated from `catalog/repos.json` by `scripts/generate_catalog.py`. Do not hand-edit this file; edit the JSON and regenerate.
 
 Stars/forks/updated are the maintainer's pasted snapshot, **not live data**.
 
-## body-models — Parametric body & skeleton models (SMPL/SMPL-X, SKEL, OSSO, tissues) (8)
+## body-models — Parametric body & skeleton models (SMPL/SMPL-X, SKEL, OSSO, tissues) (10)
 
 | # | Repository | Tier | Stages | Lang | ★ snapshot | Description |
 |---:|---|---|---|---|---:|---|
@@ -16,6 +16,8 @@ Stars/forks/updated are the maintainer's pasted snapshot, **not live data**.
 | 21 | [MarilynKeller/HIT](https://github.com/MarilynKeller/HIT) | extended | body-model, skeleton | Python | 102 | HIT: Estimating Internal Human Implicit Tissues from the Body Surface (2024) |
 | 24 | [ahmedosman/STAR](https://github.com/ahmedosman/STAR) | extended | body-model | Python | 727 | STAR — A Sparse Trained Articulated Human Body Regressor (ECCV 2020) |
 | 60 | [hailsong/RC-SMPL](https://github.com/hailsong/RC-SMPL) | needs-review | body-model | C# | 10 | RC-SMPL (SMPL integration; details in upstream repo) |
+| 71 | [muelea/shapy](https://github.com/muelea/shapy) | core | body-model | Python | 389 | SHAPY — accurate 3D body shape regression using metric and semantic attributes; predicts SMPL-X shape plus height/weight/chest/waist/hip measurements from an image |
+| 73 | [yfeng95/PIXIE](https://github.com/yfeng95/PIXIE) | extended | body-model | Python | 517 | PIXIE — collaborative regression of expressive bodies: whole-body SMPL-X with detailed face and hand articulation from a single image |
 
 ## anatomy-models — Anatomy & personalised model generation (5)
 
@@ -27,7 +29,7 @@ Stars/forks/updated are the maintainer's pasted snapshot, **not live data**.
 | 39 | [modenaxe/msk-STAPLE](https://github.com/modenaxe/msk-STAPLE) | specialized | skeleton, body-model | MATLAB | 65 | STAPLE — Shared Tools for Automatic Personalised Lower Extremity modelling: generating skeletal models from 3D bone geometries |
 | 47 | [LNSGroup/MS-Human-700](https://github.com/LNSGroup/MS-Human-700) | specialized | muscle-sim, body-model | — | 51 | MS-Human-700: Whole-body Human MusculoSkeletal Model |
 
-## pose-mocap — Pose estimation & motion capture (video, markerless, IMU) (13)
+## pose-mocap — Pose estimation & motion capture (video, markerless, IMU) (21)
 
 | # | Repository | Tier | Stages | Lang | ★ snapshot | Description |
 |---:|---|---|---|---|---:|---|
@@ -44,8 +46,16 @@ Stars/forks/updated are the maintainer's pasted snapshot, **not live data**.
 | 64 | [Xinyu-Yi/PIP](https://github.com/Xinyu-Yi/PIP) | core | capture, pose, biomechanics | Python | 369 | PIP — real-time system that captures physically correct human motion, joint torques, and ground reaction forces with only 6 IMUs |
 | 65 | [Xinyu-Yi/PNP](https://github.com/Xinyu-Yi/PNP) | extended | capture, pose, biomechanics | Python | 137 | PNP — real-time human motion capture based on 6 IMUs, upgrading PIP through non-inertial forces |
 | 68 | [freemocap/freemocap](https://github.com/freemocap/freemocap) | core | capture, pose | TypeScript | 10474 | FreeMoCap — Free Motion Capture for Everyone |
+| 74 | [google-ai-edge/mediapipe](https://github.com/google-ai-edge/mediapipe) | core | capture, pose | C++ | 37345 | MediaPipe — cross-platform ML perception pipelines; Pose infers 33 3D body landmarks in real time on phone, desktop and web |
+| 75 | [open-mmlab/mmpose](https://github.com/open-mmlab/mmpose) | core | pose | Python | 7967 | MMPose — OpenMMLab pose estimation toolbox and benchmark, including the RTMPose real-time model family |
+| 76 | [zju3dv/GVHMR](https://github.com/zju3dv/GVHMR) | core | pose, body-model | Jupyter Notebook | 2161 | GVHMR — world-grounded human motion recovery via gravity-view coordinates; SMPL motion in camera and world frames from monocular video |
+| 77 | [zju3dv/EasyMocap](https://github.com/zju3dv/EasyMocap) | extended | capture, pose, body-model | Python | 4929 | EasyMocap — multi-view and monocular SMPL/SMPL-X/MANO motion capture toolkit |
+| 78 | [facebookresearch/sapiens](https://github.com/facebookresearch/sapiens) | extended | capture, pose | Python | 5432 | Sapiens — high-resolution foundation models for human-centric vision: 2D pose, body-part segmentation, depth and normals |
+| 79 | [facebookresearch/sapiens2](https://github.com/facebookresearch/sapiens2) | experimental | capture, pose | Python | 998 | Sapiens2 — 1K-resolution human vision transformers pretrained on 1B human images; pose, segmentation, normals, pointmaps, matting |
+| 83 | [DeepLabCut/DeepLabCut](https://github.com/DeepLabCut/DeepLabCut) | specialized | pose, tooling | Python | 5795 | DeepLabCut — markerless pose estimation of user-defined features with deep learning (animals incl. humans) |
+| 84 | [DeepLabCut/DeepLabCut-live](https://github.com/DeepLabCut/DeepLabCut-live) | specialized | capture, pose | Python | 239 | DeepLabCut-Live — SDK for running DeepLabCut models on a live video stream |
 
-## biomechanics — Biomechanics engines & OpenSim pipeline (10)
+## biomechanics — Biomechanics engines & OpenSim pipeline (13)
 
 | # | Repository | Tier | Stages | Lang | ★ snapshot | Description |
 |---:|---|---|---|---|---:|---|
@@ -59,8 +69,11 @@ Stars/forks/updated are the maintainer's pasted snapshot, **not live data**.
 | 50 | [stanfordnmbl/GaitDynamics](https://github.com/stanfordnmbl/GaitDynamics) | extended | biomechanics | Python | 132 | Gait dynamics tools (Stanford NMBL) |
 | 62 | [dfki-av/simspine](https://github.com/dfki-av/simspine) | experimental | skeleton, biomechanics | Python | 13 | SIMSPINE: A Biomechanics-Aware Simulation Framework for 3D Spine Motion Annotation and Benchmarking |
 | 67 | [jerela/OpenSimLive](https://github.com/jerela/OpenSimLive) | specialized | capture, biomechanics | C++ | 30 | Live inverse kinematics based on IMU orientations using OpenSim 4.1 API |
+| 89 | [opensim-org/opensim-moco](https://github.com/opensim-org/opensim-moco) | extended | biomechanics, muscle-sim | C++ | 73 | OpenSim Moco — solve optimal control problems for musculoskeletal models with direct collocation (muscle activity for observed/corrected motion, motion prediction) |
+| 90 | [mitkof6/OpenSimRT](https://github.com/mitkof6/OpenSimRT) | extended | capture, biomechanics | C++ | 82 | OpenSimRT — real-time musculoskeletal kinematics and dynamics analysis using marker- and IMU-based solutions |
+| 91 | [CEINMS/CEINMS](https://github.com/CEINMS/CEINMS) | core | biomechanics, muscle-sim | C++ | 33 | CEINMS — Calibrated EMG-Informed Neuromusculoskeletal Modelling Toolbox; estimates muscle forces and joint moments calibrated to the individual, OpenSim-compatible |
 
-## musculoskeletal-sim — Musculoskeletal simulation, humanoid control & RL (11)
+## musculoskeletal-sim — Musculoskeletal simulation, humanoid control & RL (12)
 
 | # | Repository | Tier | Stages | Lang | ★ snapshot | Description |
 |---:|---|---|---|---|---:|---|
@@ -75,8 +88,9 @@ Stars/forks/updated are the maintainer's pasted snapshot, **not live data**.
 | 45 | [amathislab/musclemimic_models](https://github.com/amathislab/musclemimic_models) | extended | muscle-sim, body-model | Python | 61 | Musculoskeletal models released from MuscleMimic research: full-body musculoskeletal model |
 | 46 | [robfiras/loco-mujoco](https://github.com/robfiras/loco-mujoco) | extended | control-rl, muscle-sim | Python | 1474 | Imitation learning benchmark focusing on complex locomotion tasks using MuJoCo |
 | 54 | [lsw9021/MASS](https://github.com/lsw9021/MASS) | needs-review | muscle-sim | Mathematica | 638 | MASS (details in upstream repo) |
+| 92 | [sofa-framework/sofa](https://github.com/sofa-framework/sofa) | specialized | muscle-sim, visualization | C++ | 1279 | SOFA — real-time multi-physics simulation with emphasis on medical simulation; FEM soft-tissue modelling |
 
-## visualization-tools — Visualization, viewers & editing tools (7)
+## visualization-tools — Visualization, viewers & editing tools (8)
 
 | # | Repository | Tier | Stages | Lang | ★ snapshot | Description |
 |---:|---|---|---|---|---:|---|
@@ -87,13 +101,17 @@ Stars/forks/updated are the maintainer's pasted snapshot, **not live data**.
 | 37 | [eth-ait/aitviewer](https://github.com/eth-ait/aitviewer) | core | visualization | Python | 756 | A set of tools to visualize and interact with sequences of 3D data |
 | 41 | [tgeijten/scone-studio](https://github.com/tgeijten/scone-studio) | extended | visualization, biomechanics | C++ | 46 | SCONE Studio — graphical user interface for SCONE |
 | 58 | [strayrobots/3d-annotation-tool](https://github.com/strayrobots/3d-annotation-tool) | specialized | visualization, tooling | C++ | 94 | A graphical user interface to annotate point clouds and 3D data |
+| 85 | [sangho0n/Realtime_SMPLX_Unity](https://github.com/sangho0n/Realtime_SMPLX_Unity) | specialized | visualization, body-model | C# | 50 | Real-time SMPL-X in Unity — shape reconstruction via a Python server plus MediaPipe pose in Unity, animating SMPL-X live |
 
-## data-capture — RGB-D / sensor capture (2)
+## data-capture — RGB-D / sensor capture (5)
 
 | # | Repository | Tier | Stages | Lang | ★ snapshot | Description |
 |---:|---|---|---|---|---:|---|
 | 51 | [marek-simonik/record3d](https://github.com/marek-simonik/record3d) | specialized | capture | C | 493 | Record3D iOS app library — receive RGBD stream from iOS devices with TrueDepth cameras |
 | 57 | [strayrobots/scanner](https://github.com/strayrobots/scanner) | specialized | capture | C++ | 155 | An app for collecting raw RGB-D scans on iOS devices |
+| 80 | [SlimeVR/SlimeVR-Server](https://github.com/SlimeVR/SlimeVR-Server) | core | capture, pose | Fluent | 1047 | SlimeVR Server — server for the SlimeVR open full-body tracking ecosystem; fuses IMU trackers into a full-body pose |
+| 81 | [SlimeVR/SlimeVR-Tracker-ESP](https://github.com/SlimeVR/SlimeVR-Tracker-ESP) | core | capture | C++ | 1088 | SlimeVR Tracker firmware for ESP32/ESP8266 and various IMUs — DIY open-hardware body trackers |
+| 82 | [sccn/labstreaminglayer](https://github.com/sccn/labstreaminglayer) | core | capture, tooling | HTML | 788 | Lab Streaming Layer (LSL) — multimodal time-synchronised data transmission and recording (liblsl, pylsl, LabRecorder/XDF ecosystem) |
 
 ## datasets-interaction — Datasets & human-object/scene interaction (2)
 
@@ -112,7 +130,7 @@ Stars/forks/updated are the maintainer's pasted snapshot, **not live data**.
 | 55 | [neumovelab/myoassist](https://github.com/neumovelab/myoassist) | specialized | muscle-sim, control-rl | Jupyter Notebook | 62 | MyoAssist (assistive musculoskeletal simulation; details in upstream repo) |
 | 56 | [hzm2016/mass-dart-exo](https://github.com/hzm2016/mass-dart-exo) | needs-review | muscle-sim, control-rl | Mathematica | 2 | MASS / DART exoskeleton project (details in upstream repo) |
 
-## 3d-reconstruction — 3D reconstruction, mesh generation & world models (7)
+## 3d-reconstruction — 3D reconstruction, mesh generation & world models (8)
 
 | # | Repository | Tier | Stages | Lang | ★ snapshot | Description |
 |---:|---|---|---|---|---:|---|
@@ -123,3 +141,23 @@ Stars/forks/updated are the maintainer's pasted snapshot, **not live data**.
 | 52 | [isl-org/Open3D](https://github.com/isl-org/Open3D) | core | capture, visualization, tooling | C++ | 14109 | Open3D: A Modern Library for 3D Data Processing |
 | 69 | [xibushu/UniForge3D](https://github.com/xibushu/UniForge3D) | experimental | body-model | Python | 373 | UniForge3D: Joint 3D Reconstruction and Generation in a Shared Anchor-Guided Space |
 | 70 | [Net-Maker/GaussiAnimate](https://github.com/Net-Maker/GaussiAnimate) | experimental | body-model, visualization | Python | 157 | GaussiAnimate: Reconstruct and Rig Animatable Categories with Level of Dynamics |
+| 72 | [YuliangXiu/ECON](https://github.com/YuliangXiu/ECON) | extended | capture, body-model | Python | 1213 | ECON — explicit clothed humans optimised via normal integration; high-fidelity 3D clothed human from a single image, SMPL-X animatable |
+
+## rehab-assessment — Rehab exercise assessment, clinical scores & movement correction (3)
+
+| # | Repository | Tier | Stages | Lang | ★ snapshot | Description |
+|---:|---|---|---|---|---:|---|
+| 86 | [avakanski/A-Deep-Learning-Framework-for-Assessing-Physical-Rehabilitation-Exercises](https://github.com/avakanski/A-Deep-Learning-Framework-for-Assessing-Physical-Rehabilitation-Exercises) | extended | dataset, pose | Jupyter Notebook | 75 | Framework for quality assessment of physical rehabilitation exercises on the UI-PRMD dataset (skeletal joint data, correct vs incorrect movements) |
+| 87 | [fokhruli/STGCN-rehab](https://github.com/fokhruli/STGCN-rehab) | core | dataset, pose | Python | 44 | Graph convolutional networks for assessment of physical rehabilitation exercises (KIMORE and UI-PRMD) |
+| 88 | [GuyTevet/motion-diffusion-model](https://github.com/GuyTevet/motion-diffusion-model) | experimental | pose, body-model | Python | 4120 | MDM — Human Motion Diffusion Model; text/action-to-motion generation plus motion editing and in-betweening |
+
+## haptics-exoskeleton — Haptic feedback suits, exoskeleton hardware & actuators (6)
+
+| # | Repository | Tier | Stages | Lang | ★ snapshot | Description |
+|---:|---|---|---|---|---:|---|
+| 93 | [naubiomech/OpenExo](https://github.com/naubiomech/OpenExo) | core | control-rl, feedback-haptics, muscle-sim | HTML | 384 | OpenExo — open-source modular exoskeleton platform for mobility and rehabilitation research: mechanical designs, electronics, firmware, control and biofeedback schemes |
+| 94 | [neurobionics/opensourceleg](https://github.com/neurobionics/opensourceleg) | extended | control-rl | Python | 120 | Open-Source Leg — open-source SDK for developing and testing algorithms on robotic prosthesis/exoskeleton leg hardware (actuators and sensors) |
+| 95 | [senseshift/senseshift-firmware](https://github.com/senseshift/senseshift-firmware) | core | feedback-haptics | C++ | 149 | SenseShift firmware — open-source firmware for DIY haptic-feedback devices (vest, gloves, sleeves), compatible with bHaptics and OpenGloves protocols |
+| 96 | [LucidVR/lucidgloves](https://github.com/LucidVR/lucidgloves) | specialized | feedback-haptics | C++ | 2396 | LucidGloves — Arduino/ESP32 DIY VR haptic gloves with force feedback, via OpenGloves |
+| 97 | [mjbots/moteus](https://github.com/mjbots/moteus) | extended | control-rl, feedback-haptics | C++ | 1345 | moteus — open-source brushless DC servo motor controller (firmware and PCB designs) |
+| 98 | [simplefoc/Arduino-FOC](https://github.com/simplefoc/Arduino-FOC) | specialized | control-rl | C++ | 3074 | Arduino SimpleFOC — field-oriented control library for BLDC and stepper motors across Arduino/STM32/ESP32-class hardware |
