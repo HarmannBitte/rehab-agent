@@ -1,6 +1,7 @@
 # Changelog
 
 ## Unreleased
+- Master anatomy-issues checklist (`docs/anatomy-issues-checklist.md`): 128 posture/movement-relevant anatomical issues in 12 regions with per-issue model-audit status
 - Research note on breathing tracking: diaphragm→rib-cage/abdominal mechanics, OEP/RIP/depth-camera tracking, diaphragm ultrasound (`docs/research-breathing-tracking.md`)
 - Research note on detailed anatomy models: foot arch/flat feet, articulated spine bending, ribcage/diaphragm breathing (`docs/research-detailed-anatomy-models.md`)
 - Fat-measurement reference notes (`fat-distribution/measurement-notes.md`): method hierarchy, twin metrics, LiDAR conclusiveness
