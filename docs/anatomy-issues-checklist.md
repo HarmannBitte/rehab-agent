@@ -137,33 +137,33 @@
 
 | ID | Issue | What changes anatomically | Priority | Status |
 |---|---|---|---|---|
-| WB-01 | Leg-length discrepancy — structural | True bone length difference | H | TO CHECK |
-| WB-02 | Leg-length discrepancy — functional | Apparent difference from pelvis/foot posture | M | TO CHECK |
+| WB-01 | Leg-length discrepancy — structural | True bone length difference | H | PARAMETER — per-side segment lengths (batch 4) |
+| WB-02 | Leg-length discrepancy — functional | Apparent difference from pelvis/foot posture | M | PARAMETER — apparent LLD components (batch 4) |
 | WB-03 | Obesity / regional fat distribution | Fat mass amount + depot pattern | H | RESearched — see `fat-distribution/` folder |
-| WB-04 | Lipedema | Symmetrical painful leg fat deposition, spares feet | M | TO CHECK |
-| WB-05 | Lipodystrophy | Regional fat loss/redistribution | L | TO CHECK |
-| WB-06 | Left–right muscle asymmetry | Side-to-side muscle size/strength difference | H | TO CHECK |
-| WB-07 | Limb amputation (upper/lower) | Missing limb segment; prosthesis interface | M | TO CHECK |
-| WB-08 | Congenital limb deficiency | Partially formed limb | L | TO CHECK |
-| WB-09 | Skeletal dysplasia / achondroplasia | Short-limb body proportions | L | TO CHECK |
-| WB-10 | Marfan habitus | Tall, long-limb proportions, chest deformity link | L | TO CHECK |
-| WB-11 | Pregnancy-related anatomical change | Centre-of-mass shift, lordosis, abdominal wall change | M | TO CHECK |
-| WB-12 | Ageing posture change | Kyphosis increase, height loss, sarcopenia coupling | M | TO CHECK |
+| WB-04 | Lipedema | Symmetrical painful leg fat deposition, spares feet | M | VISUALISE ONLY — no biomechanical model (batch 4) |
+| WB-05 | Lipodystrophy | Regional fat loss/redistribution | L | VISUALISE ONLY — shape record (batch 4) |
+| WB-06 | Left–right muscle asymmetry | Side-to-side muscle size/strength difference | H | PARAMETER — bilateral muscle volumes (batch 4) |
+| WB-07 | Limb amputation (upper/lower) | Missing limb segment; prosthesis interface | M | MODEL EXISTS — OpenSim amputee models, validated (batch 4) |
+| WB-08 | Congenital limb deficiency | Partially formed limb | L | MODEL EXISTS — amputee-model machinery (batch 4) |
+| WB-09 | Skeletal dysplasia / achondroplasia | Short-limb body proportions | L | PARAMETER — proportion scaling (batch 4) |
+| WB-10 | Marfan habitus | Tall, long-limb proportions, chest deformity link | L | PARAMETER — proportion scaling (batch 4) |
+| WB-11 | Pregnancy-related anatomical change | Centre-of-mass shift, lordosis, abdominal wall change | M | MODEL EXISTS — pregnant-woman MSK model (batch 4) |
+| WB-12 | Ageing posture change | Kyphosis increase, height loss, sarcopenia coupling | M | MODEL EXISTS — age-adjusted muscle params (batch 4) |
 
 ## I. Muscle, tendon & soft tissue (MS)
 
 | ID | Issue | What changes anatomically | Priority | Status |
 |---|---|---|---|---|
-| MS-01 | Sarcopenia | Age-related muscle mass/quality loss (incl. fatty infiltration) | H | TO CHECK |
-| MS-02 | Muscle atrophy (disuse/neurogenic) | Local muscle volume loss | H | TO CHECK |
+| MS-01 | Sarcopenia | Age-related muscle mass/quality loss (incl. fatty infiltration) | H | MODEL EXISTS — DXA/MRI params + guideline cut-offs (batch 4) |
+| MS-02 | Muscle atrophy (disuse/neurogenic) | Local muscle volume loss | H | MODEL EXISTS — MRI volume to force params (batch 4) |
 | MS-03 | Muscle fatty infiltration | Fat within muscle (measurable as MRI fat fraction) | H | TO CHECK (fat methods in `fat-distribution/measurement-notes.md`) |
-| MS-04 | Muscle/tendon contracture (general) | Fixed shortening limiting joint range | H | TO CHECK |
-| MS-05 | Upper crossed syndrome (Janda) | Tight pectorals/upper traps vs weak deep neck flexors/scapular muscles | M | TO CHECK |
-| MS-06 | Lower crossed syndrome (Janda) | Tight hip flexors/erectors vs weak abdominals/gluteals | M | TO CHECK |
-| MS-07 | Joint hypermobility / Ehlers-Danlos | Ligament laxity, excessive joint range, instability | M | TO CHECK |
-| MS-08 | Diastasis recti | Separated rectus abdominis along linea alba | M | TO CHECK |
-| MS-09 | Lymphedema / chronic edema | Regional limb volume increase (fluid) | L | TO CHECK |
-| MS-10 | Tendinopathy (general mechanics) | Tendon thickening/stiffness change | L | TO CHECK |
+| MS-04 | Muscle/tendon contracture (general) | Fixed shortening limiting joint range | H | PARAMETER — fibre-length/passive stiffness (batch 4) |
+| MS-05 | Upper crossed syndrome (Janda) | Tight pectorals/upper traps vs weak deep neck flexors/scapular muscles | M | PATTERN LABEL ONLY — Janda, validity contested (batch 4) |
+| MS-06 | Lower crossed syndrome (Janda) | Tight hip flexors/erectors vs weak abdominals/gluteals | M | PATTERN LABEL ONLY — Janda, validity contested (batch 4) |
+| MS-07 | Joint hypermobility / Ehlers-Danlos | Ligament laxity, excessive joint range, instability | M | MODEL EXISTS (sparse) — stiffness studies, no patient model (batch 4) |
+| MS-08 | Diastasis recti | Separated rectus abdominis along linea alba | M | MODEL EXISTS — abdominal-wall FE + ultrasound (batch 4) |
+| MS-09 | Lymphedema / chronic edema | Regional limb volume increase (fluid) | L | PARAMETER — limb volume from surface (batch 4) |
+| MS-10 | Tendinopathy (general mechanics) | Tendon thickening/stiffness change | L | PARAMETER — tendon stiffness (batch 4) |
 
 ## J. Bone & joint — general (BJ)
 
@@ -310,23 +310,23 @@
 
 | ID | Issue | What changes anatomically | Priority | Status |
 |---|---|---|---|---|
-| WB-13 | Hemihypertrophy / hemihypotrophy | One body side over- or under-grown | L | TO CHECK |
-| WB-14 | Segmental overgrowth (Proteus, Klippel-Trénaunay) | Progressive asymmetric limb overgrowth (+ vascular in KTS) | L | TO CHECK |
-| WB-15 | Acromegaly / gigantism proportions | Enlarged jaw, hands, feet; altered proportions | L | TO CHECK |
-| WB-16 | Multiple hereditary exostoses | Multiple bone outgrowths deforming limbs/joints | L | TO CHECK |
-| WB-17 | Neurofibromatosis type 1 skeletal signs | Tibial bowing/pseudoarthrosis, scoliosis link | L | TO CHECK |
-| WB-18 | Cachexia (severe wasting) | Extreme muscle/fat loss changing body shape | L | TO CHECK |
-| WB-19 | Burn / scar contractures | Skin/fascia shortening restricting joint motion regionally | M | TO CHECK |
+| WB-13 | Hemihypertrophy / hemihypotrophy | One body side over- or under-grown | L | PARAMETER — side-wise size/mass (batch 4) |
+| WB-14 | Segmental overgrowth (Proteus, Klippel-Trénaunay) | Progressive asymmetric limb overgrowth (+ vascular in KTS) | L | VISUALISE ONLY — serial geometry (batch 4) |
+| WB-15 | Acromegaly / gigantism proportions | Enlarged jaw, hands, feet; altered proportions | L | PARAMETER — proportion geometry (batch 4) |
+| WB-16 | Multiple hereditary exostoses | Multiple bone outgrowths deforming limbs/joints | L | VISUALISE ONLY — outgrowth geometry (batch 4) |
+| WB-17 | Neurofibromatosis type 1 skeletal signs | Tibial bowing/pseudoarthrosis, scoliosis link | L | VISUALISE ONLY — skeletal geometry (batch 4) |
+| WB-18 | Cachexia (severe wasting) | Extreme muscle/fat loss changing body shape | L | PARAMETER — body-composition extremes (batch 4) |
+| WB-19 | Burn / scar contractures | Skin/fascia shortening restricting joint motion regionally | M | PARAMETER (sparse) — ROM restriction (batch 4) |
 
 ### Muscle/soft-tissue niche (MS, continued)
 
 | ID | Issue | What changes anatomically | Priority | Status |
 |---|---|---|---|---|
-| MS-11 | Muscle rupture with retraction (e.g. "Popeye" biceps) | Muscle belly displaced/deformed after tendon rupture | L | TO CHECK |
-| MS-12 | Muscle hernia | Muscle bulging through fascial defect | L | TO CHECK |
-| MS-13 | Heterotopic ossification / myositis ossificans | Bone forming inside muscle → motion block | L | TO CHECK |
-| MS-14 | Myotonic disorders (stiffness) | Delayed muscle relaxation altering movement pattern | L | TO CHECK |
-| MS-15 | Chronic exertional compartment syndrome | Exercise-induced compartment pressure (functional, low geometry signal) | L | TO CHECK |
+| MS-11 | Muscle rupture with retraction (e.g. "Popeye" biceps) | Muscle belly displaced/deformed after tendon rupture | L | VISUALISE ONLY — displaced muscle geometry (batch 4) |
+| MS-12 | Muscle hernia | Muscle bulging through fascial defect | L | VISUALISE ONLY — bulge geometry (batch 4) |
+| MS-13 | Heterotopic ossification / myositis ossificans | Bone forming inside muscle → motion block | L | VISUALISE ONLY — ROM block geometry (batch 4) |
+| MS-14 | Myotonic disorders (stiffness) | Delayed muscle relaxation altering movement pattern | L | NO MODEL FOUND (batch 4) |
+| MS-15 | Chronic exertional compartment syndrome | Exercise-induced compartment pressure (functional, low geometry signal) | L | OUT OF SCOPE — no geometry signature (batch 4) |
 
 ### Bone/joint niche (BJ, continued)
 
@@ -375,13 +375,14 @@ current clinical taxonomy (orthopaedic, congenital and neuromuscular
 categories cross-checked at creation). New finds get appended with fresh
 IDs; IDs are never renumbered.
 
-Already researched (99): the original 9 (SP-01, SP-20, FT-01, FT-16,
+Already researched (131): the original 9 (SP-01, SP-20, FT-01, FT-16,
 WB-03, RA-01, RA-02, RA-03, RA-10; MS-03 partially via the
 fat-measurement notes), **Batch 1: SP-02…SP-19**
 (`anatomy-audit-batch1-spine.md`), **Batch 2: HP/KN/FT chain**
-(`anatomy-audit-batch2-hip-knee-foot.md`), and **Batch 3:
-SH-01…SH-15** (`anatomy-audit-batch3-shoulder.md`).
-Remaining TO CHECK: 103.
+(`anatomy-audit-batch2-hip-knee-foot.md`), **Batch 3:
+SH-01…SH-15** (`anatomy-audit-batch3-shoulder.md`), and
+**Batch 4: WB/MS** (`anatomy-audit-batch4-wholebody-muscle.md`).
+Remaining TO CHECK: 71.
 
 Suggested audit order (by twin impact):
 1. **Spine/trunk remainder** (SP-05…SP-19) — posture is the core claim.

@@ -1,6 +1,7 @@
 # Changelog
 
 ## Unreleased
+- Anatomy audit Batch 4 (whole-body/muscle, 32 issues) completed: `docs/anatomy-audit-batch4-wholebody-muscle.md` (131/202 researched; muscle-parameter pipeline finding)
 - Anatomy audit Batch 3 (shoulder SH-01…SH-15) completed: `docs/anatomy-audit-batch3-shoulder.md` (99/202 researched; scapula = model-inferred rule)
 - Anatomy audit Batch 2 (hip/knee/foot, 57 issues) completed: `docs/anatomy-audit-batch2-hip-knee-foot.md` (84/202 researched; Torsion Tool adoption identified)
 - Anatomy audit Batch 1 (spine SP-02…SP-19) completed: `docs/anatomy-audit-batch1-spine.md`, checklist statuses updated (27/202 researched)
