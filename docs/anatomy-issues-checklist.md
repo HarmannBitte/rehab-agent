@@ -49,12 +49,12 @@
 
 | ID | Issue | What changes anatomically | Priority | Status |
 |---|---|---|---|---|
-| HN-01 | Forward head posture | Head translated forward of trunk line | H | TO CHECK |
-| HN-02 | Loss of cervical lordosis ("military neck") | Straightened cervical curve | M | TO CHECK |
-| HN-03 | Cervical kyphosis | Reversed cervical curve | M | TO CHECK |
-| HN-04 | Torticollis (congenital muscular / spasmodic) | Sternocleidomastoid shortening/spasm, head tilt+rotation | M | TO CHECK |
-| HN-05 | TMJ disorder / jaw misalignment | Jaw joint mechanics, bite asymmetry | L | TO CHECK |
-| HN-06 | Cranial asymmetry (plagiocephaly) | Skull shape asymmetry | L | TO CHECK |
+| HN-01 | Forward head posture | Head translated forward of trunk line | H | PARAMETER — CVA surface metric, 5° floor (batch 5) |
+| HN-02 | Loss of cervical lordosis ("military neck") | Straightened cervical curve | M | PARAMETER (imaging) — radiographic curve (batch 5) |
+| HN-03 | Cervical kyphosis | Reversed cervical curve | M | PARAMETER (imaging) — radiographic curve (batch 5) |
+| HN-04 | Torticollis (congenital muscular / spasmodic) | Sternocleidomastoid shortening/spasm, head tilt+rotation | M | MODEL EXISTS — OpenSim neck model, SCM params (batch 5) |
+| HN-05 | TMJ disorder / jaw misalignment | Jaw joint mechanics, bite asymmetry | L | MODEL EXISTS (research) — jaw+FE TMJ, specialty (batch 5) |
+| HN-06 | Cranial asymmetry (plagiocephaly) | Skull shape asymmetry | L | PARAMETER — scannable head-shape geometry (batch 5) |
 
 ## C. Shoulder girdle (SH)
 
@@ -203,12 +203,12 @@
 | RA-01 | Breathing pattern disorder (thoracic-dominant) | Upper-chest dominant ventilation, diaphragm under-recruited | H | RESearched — tracking + metrics in `research-breathing-tracking.md` |
 | RA-02 | Paradoxical breathing / thoracoabdominal asynchrony | Abdomen moves inward on inhalation etc. | M | RESearched — phase-angle methods (§2–3 of breathing note) |
 | RA-03 | Diaphragm paralysis / dysfunction | Elevated, weak or paradoxical hemidiaphragm | M | RESearched — ultrasound measures (excursion/thickening) in breathing note |
-| RA-04 | Pectus excavatum | Sternum sunken inward | M | TO CHECK |
-| RA-05 | Pectus carinatum | Sternum protruding outward | L | TO CHECK |
-| RA-06 | Barrel chest (COPD hyperinflation) | Increased AP chest diameter, flattened diaphragm | M | TO CHECK |
-| RA-07 | Rib flare | Lower ribs protrude outward (often with lordosis/diaphragm position) | M | TO CHECK |
-| RA-08 | Rib hump (scoliosis-linked) | Rib cage rotational deformity | M | TO CHECK (links SP-01) |
-| RA-09 | Abdominal wall hernia | Wall defect with protrusion | L | TO CHECK |
+| RA-04 | Pectus excavatum | Sternum sunken inward | M | MODEL EXISTS — patient FE Nuss simulation (batch 5) |
+| RA-05 | Pectus carinatum | Sternum protruding outward | L | MODEL EXISTS (sparse) — brace FE (batch 5) |
+| RA-06 | Barrel chest (COPD hyperinflation) | Increased AP chest diameter, flattened diaphragm | M | PARAMETER — chest geometry + breathing (batch 5) |
+| RA-07 | Rib flare | Lower ribs protrude outward (often with lordosis/diaphragm position) | M | PARAMETER — surface rib geometry (batch 5) |
+| RA-08 | Rib hump (scoliosis-linked) | Rib cage rotational deformity | M | PARAMETER — surface topography, links SP-01 (batch 5) |
+| RA-09 | Abdominal wall hernia | Wall defect with protrusion | L | MODEL EXISTS — abdominal-wall hernia FE (batch 5) |
 | RA-10 | Rib cage expansion mechanics (general) | Pump/bucket-handle expansion, diaphragm coupling | H | RESearched — rib/diaphragm models in anatomy note §3 + breathing note |
 
 ## M. Niche & rare additions (added 2026-10-28)
@@ -241,12 +241,12 @@
 
 | ID | Issue | What changes anatomically | Priority | Status |
 |---|---|---|---|---|
-| HN-07 | Cervical rib | Extra rib above 1st rib (thoracic-outlet link, SH-09) | L | TO CHECK |
-| HN-08 | Hemifacial microsomia / craniofacial asymmetry | One side of face/jaw underdeveloped | L | TO CHECK |
-| HN-09 | Retrognathia / micrognathia / prognathism | Jaw size/position discrepancies | L | TO CHECK |
-| HN-10 | Ocular torticollis | Compensatory head tilt from eye-muscle imbalance | L | TO CHECK |
-| HN-11 | Webbed neck (pterygium colli, e.g. Turner/Noonan) | Neck skin webbing, low hairline, posture appearance | L | TO CHECK |
-| HN-12 | TMJ ankylosis | Fused jaw joint, severe opening restriction | L | TO CHECK |
+| HN-07 | Cervical rib | Extra rib above 1st rib (thoracic-outlet link, SH-09) | L | VISUALISE ONLY — imaging finding (batch 5) |
+| HN-08 | Hemifacial microsomia / craniofacial asymmetry | One side of face/jaw underdeveloped | L | VISUALISE ONLY — craniofacial geometry (batch 5) |
+| HN-09 | Retrognathia / micrognathia / prognathism | Jaw size/position discrepancies | L | PARAMETER — cephalometric geometry (batch 5) |
+| HN-10 | Ocular torticollis | Compensatory head tilt from eye-muscle imbalance | L | NO MODEL FOUND — ocular cause (batch 5) |
+| HN-11 | Webbed neck (pterygium colli, e.g. Turner/Noonan) | Neck skin webbing, low hairline, posture appearance | L | VISUALISE ONLY — neck contour geometry (batch 5) |
+| HN-12 | TMJ ankylosis | Fused jaw joint, severe opening restriction | L | PARAMETER (sparse) — jaw opening ROM (batch 5) |
 
 ### Shoulder niche (SH, continued)
 
@@ -350,8 +350,8 @@
 
 | ID | Issue | What changes anatomically | Priority | Status |
 |---|---|---|---|---|
-| RA-11 | Diaphragmatic eventration / unilateral elevation | Abnormally high, thin diaphragm dome | L | TO CHECK |
-| RA-12 | Post-surgical chest-wall deformity | Thoracotomy/mastectomy asymmetry affecting posture/breathing | L | TO CHECK |
+| RA-11 | Diaphragmatic eventration / unilateral elevation | Abnormally high, thin diaphragm dome | L | VISUALISE ONLY — diaphragm position (batch 5) |
+| RA-12 | Post-surgical chest-wall deformity | Thoracotomy/mastectomy asymmetry affecting posture/breathing | L | PARAMETER — geometry + breathing asymmetry (batch 5) |
 
 ### Systemic congenital (NC) — cross-cutting
 
