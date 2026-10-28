@@ -1,6 +1,7 @@
 # Changelog
 
 ## Unreleased
+- **Anatomy-audit integration pass**: audit mechanisms folded into `schemas/twin-manifest.schema.json` (spinopelvic parameters, limb alignment/torsion, muscle parameters with separate weakness/contracture/reflex-gain groups, bone quality + exo derating, devices/prostheses, clinician-only safety flags, body state), `breathing` block added to `schemas/session.schema.json` and the synthetic example, integration table + red lines in `docs/accuracy.md`, manifest contract in `docs/architecture.md`; new schema test (12 tests)
 - **Anatomy audit COMPLETE (202/202)**: Batch 8 (niche spine + cross-cutting, 13 issues), `docs/anatomy-audit-batch8-niche-spine-crosscutting.md`, with five-mechanism closing synthesis
 - Anatomy audit Batch 7 (neuromotor NM-01…NM-15) completed: `docs/anatomy-audit-batch7-neuromotor.md` (189/202 researched)
 - Anatomy audit Batch 6 (arm/hand + bone/joint, 22 issues) completed: `docs/anatomy-audit-batch6-armhand-bonejoint.md` (174/202 researched; MS-03 formally closed)

@@ -26,6 +26,13 @@ clinician (or a test) can inspect what the system believed at each step.
   integration failures in this stack are frame/unit mismatches (SMPL vs OpenSim).
 - **No stage silently imputes missing joints.** Missing/occluded data is flagged;
   rehab feedback on fabricated motion is a safety bug, not a feature.
+- **The twin manifest is the contract for personalisation.** Audit-derived
+  blocks (`spinopelvic_parameters`, `limb_alignment`, `muscle_parameters`,
+  `bone_quality`, `devices_and_prostheses`, `safety_flags`, `body_state` in
+  `schemas/twin-manifest.schema.json`; `breathing` in the session schema) are
+  populated only from imaging/clinical sources listed in `docs/accuracy.md`.
+  Safety flags restrict downstream stages; stages must check them, not just
+  record them.
 
 ## Two front-ends, one back-end
 Camera (FreeMoCap/OpenCap/Pose2Sim) and IMU (TransPose/PIP/PNP/OpenSimLive) paths
