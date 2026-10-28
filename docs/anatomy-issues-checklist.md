@@ -226,16 +226,16 @@
 
 | ID | Issue | What changes anatomically | Priority | Status |
 |---|---|---|---|---|
-| SP-21 | Klippel-Feil syndrome | Congenitally fused cervical vertebrae, short neck, low motion | L | TO CHECK |
-| SP-22 | Hemivertebra / congenital vertebral malformation | Half-formed vertebra → congenital scoliosis/kyphosis driver | L | TO CHECK |
-| SP-23 | Lumbosacral transitional vertebra (sacralisation/lumbarisation, Bertolotti) | Extra/fused lumbosacral segment alters load transfer | L | TO CHECK |
-| SP-24 | Spina bifida (posterior arch defect) | Missing vertebral arch; neurological level-dependent posture | L | TO CHECK |
-| SP-25 | DISH (diffuse idiopathic skeletal hyperostosis) | Flowing spinal ossification → stiff spine | L | TO CHECK |
-| SP-26 | Atlantoaxial instability (e.g. Down syndrome) | C1–C2 laxity, head/neck positioning risk | L | TO CHECK |
-| SP-27 | Gibbus deformity | Sharp angular kyphosis (e.g. post-infectious Pott disease) | L | TO CHECK |
-| SP-28 | Thoracic insufficiency syndrome | Fused ribs/spine — chest cannot expand for lung growth | L | TO CHECK |
-| SP-29 | Basilar invagination / cranial settling | Skull base settling onto cervical spine | L | TO CHECK |
-| SP-30 | OPLL (ossification of posterior longitudinal ligament) | Ossified ligament stiffens/narrows cervical canal | L | TO CHECK |
+| SP-21 | Klippel-Feil syndrome | Congenitally fused cervical vertebrae, short neck, low motion | L | PARAMETER — locked cervical segments (batch 8) |
+| SP-22 | Hemivertebra / congenital vertebral malformation | Half-formed vertebra → congenital scoliosis/kyphosis driver | L | PARAMETER — congenital curve geometry (batch 8) |
+| SP-23 | Lumbosacral transitional vertebra (sacralisation/lumbarisation, Bertolotti) | Extra/fused lumbosacral segment alters load transfer | L | MODEL EXISTS (research) — LSTV FE models (batch 8) |
+| SP-24 | Spina bifida (posterior arch defect) | Missing vertebral arch; neurological level-dependent posture | L | MODEL EXISTS — level-based MSK simulations (batch 8) |
+| SP-25 | DISH (diffuse idiopathic skeletal hyperostosis) | Flowing spinal ossification → stiff spine | L | MODEL EXISTS (research) — DISH spine FE (batch 8) |
+| SP-26 | Atlantoaxial instability (e.g. Down syndrome) | C1–C2 laxity, head/neck positioning risk | L | NO MODEL — SAFETY FLAG (batch 8) |
+| SP-27 | Gibbus deformity | Sharp angular kyphosis (e.g. post-infectious Pott disease) | L | VISUALISE ONLY — angular kyphosis geometry (batch 8) |
+| SP-28 | Thoracic insufficiency syndrome | Fused ribs/spine — chest cannot expand for lung growth | L | PARAMETER (sparse) — chest geometry record (batch 8) |
+| SP-29 | Basilar invagination / cranial settling | Skull base settling onto cervical spine | L | VISUALISE ONLY — skull-base geometry + caution (batch 8) |
+| SP-30 | OPLL (ossification of posterior longitudinal ligament) | Ossified ligament stiffens/narrows cervical canal | L | PARAMETER — stiffened segments (batch 8) |
 
 ### Head/neck niche (HN, continued)
 
@@ -357,9 +357,9 @@
 
 | ID | Issue | What changes anatomically | Priority | Status |
 |---|---|---|---|---|
-| NC-01 | Arthrogryposis multiplex congenita | Multiple congenital joint contractures (links UL/MS regions) | L | TO CHECK |
-| NC-02 | Down syndrome musculoskeletal pattern | Hypotonia + ligament laxity + atlantoaxial risk (SP-26) + flat feet | M | TO CHECK |
-| NC-03 | Cerebral-palsy-associated skeletal deformity set | Hip displacement, torsional deformity, scoliosis cluster (links NM-01/02) | M | TO CHECK |
+| NC-01 | Arthrogryposis multiplex congenita | Multiple congenital joint contractures (links UL/MS regions) | L | MODEL EXISTS (research) — subject MSK orthosis models (batch 8) |
+| NC-02 | Down syndrome musculoskeletal pattern | Hypotonia + ligament laxity + atlantoaxial risk (SP-26) + flat feet | M | PARAMETER — combination + SP-26 flag (batch 8) |
+| NC-03 | Cerebral-palsy-associated skeletal deformity set | Hip displacement, torsional deformity, scoliosis cluster (links NM-01/02) | M | MODEL EXISTS — CP deformity cluster, cross-ref (batch 8) |
 
 ## Count & working order
 
@@ -375,17 +375,19 @@ current clinical taxonomy (orthopaedic, congenital and neuromuscular
 categories cross-checked at creation). New finds get appended with fresh
 IDs; IDs are never renumbered.
 
-Already researched (189): the original 9 (SP-01, SP-20, FT-01, FT-16,
-WB-03, RA-01, RA-02, RA-03, RA-10; MS-03 completed via the
-fat-measurement notes + Batch 4), **Batch 1: SP-02…SP-19**
-(`anatomy-audit-batch1-spine.md`), **Batch 2: HP/KN/FT chain**
-(`anatomy-audit-batch2-hip-knee-foot.md`), **Batch 3:
-SH-01…SH-15** (`anatomy-audit-batch3-shoulder.md`), **Batch 4:
-WB/MS** (`anatomy-audit-batch4-wholebody-muscle.md`), **Batch 5:
-HN + RA remainder** (`anatomy-audit-batch5-headneck-chest.md`),
-**Batch 6: UL + BJ** (`anatomy-audit-batch6-armhand-bonejoint.md`),
-and **Batch 7: NM** (`anatomy-audit-batch7-neuromotor.md`).
-Remaining TO CHECK: 13 (SP-21…SP-30, NC-01…NC-03).
+**AUDIT COMPLETE — 202/202 researched** (2026-10-28): the original 9
+(SP-01, SP-20, FT-01, FT-16, WB-03, RA-01, RA-02, RA-03, RA-10;
+MS-03 completed via the fat-measurement notes + Batch 4),
+**Batch 1: SP-02…SP-19** (`anatomy-audit-batch1-spine.md`),
+**Batch 2: HP/KN/FT chain** (`anatomy-audit-batch2-hip-knee-foot.md`),
+**Batch 3: SH-01…SH-15** (`anatomy-audit-batch3-shoulder.md`),
+**Batch 4: WB/MS** (`anatomy-audit-batch4-wholebody-muscle.md`),
+**Batch 5: HN + RA remainder**
+(`anatomy-audit-batch5-headneck-chest.md`), **Batch 6: UL + BJ**
+(`anatomy-audit-batch6-armhand-bonejoint.md`), **Batch 7: NM**
+(`anatomy-audit-batch7-neuromotor.md`), and **Batch 8: SP niche + NC**
+(`anatomy-audit-batch8-niche-spine-crosscutting.md` — includes the
+five-mechanism closing synthesis). Remaining TO CHECK: 0.
 
 Suggested audit order (by twin impact):
 1. **Spine/trunk remainder** (SP-05…SP-19) — posture is the core claim.

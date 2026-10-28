@@ -1,6 +1,7 @@
 # Changelog
 
 ## Unreleased
+- **Anatomy audit COMPLETE (202/202)**: Batch 8 (niche spine + cross-cutting, 13 issues), `docs/anatomy-audit-batch8-niche-spine-crosscutting.md`, with five-mechanism closing synthesis
 - Anatomy audit Batch 7 (neuromotor NM-01…NM-15) completed: `docs/anatomy-audit-batch7-neuromotor.md` (189/202 researched)
 - Anatomy audit Batch 6 (arm/hand + bone/joint, 22 issues) completed: `docs/anatomy-audit-batch6-armhand-bonejoint.md` (174/202 researched; MS-03 formally closed)
 - Anatomy audit Batch 5 (head/neck + chest remainder, 20 issues) completed: `docs/anatomy-audit-batch5-headneck-chest.md` (151/202 researched)
