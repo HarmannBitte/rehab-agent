@@ -211,6 +211,156 @@
 | RA-09 | Abdominal wall hernia | Wall defect with protrusion | L | TO CHECK |
 | RA-10 | Rib cage expansion mechanics (general) | Pump/bucket-handle expansion, diaphragm coupling | H | RESearched — rib/diaphragm models in anatomy note §3 + breathing note |
 
+## M. Niche & rare additions (added 2026-10-28)
+
+> The main list (A–L) covers common and moderately common issues. This
+> section adds the **niche layer**: rare, congenital, paediatric,
+> post-surgical and syndrome-associated conditions that still change body
+> geometry, posture, or movement. IDs continue each region's numbering so
+> references stay stable. Deliberately still excluded: pain-only
+> conditions with no structural/movement signature (e.g. fibromyalgia,
+> Morton's neuroma), transient injuries with normal healing, and internal
+> organ disease without a geometry/movement effect.
+
+### Spine niche (SP, continued)
+
+| ID | Issue | What changes anatomically | Priority | Status |
+|---|---|---|---|---|
+| SP-21 | Klippel-Feil syndrome | Congenitally fused cervical vertebrae, short neck, low motion | L | TO CHECK |
+| SP-22 | Hemivertebra / congenital vertebral malformation | Half-formed vertebra → congenital scoliosis/kyphosis driver | L | TO CHECK |
+| SP-23 | Lumbosacral transitional vertebra (sacralisation/lumbarisation, Bertolotti) | Extra/fused lumbosacral segment alters load transfer | L | TO CHECK |
+| SP-24 | Spina bifida (posterior arch defect) | Missing vertebral arch; neurological level-dependent posture | L | TO CHECK |
+| SP-25 | DISH (diffuse idiopathic skeletal hyperostosis) | Flowing spinal ossification → stiff spine | L | TO CHECK |
+| SP-26 | Atlantoaxial instability (e.g. Down syndrome) | C1–C2 laxity, head/neck positioning risk | L | TO CHECK |
+| SP-27 | Gibbus deformity | Sharp angular kyphosis (e.g. post-infectious Pott disease) | L | TO CHECK |
+| SP-28 | Thoracic insufficiency syndrome | Fused ribs/spine — chest cannot expand for lung growth | L | TO CHECK |
+| SP-29 | Basilar invagination / cranial settling | Skull base settling onto cervical spine | L | TO CHECK |
+| SP-30 | OPLL (ossification of posterior longitudinal ligament) | Ossified ligament stiffens/narrows cervical canal | L | TO CHECK |
+
+### Head/neck niche (HN, continued)
+
+| ID | Issue | What changes anatomically | Priority | Status |
+|---|---|---|---|---|
+| HN-07 | Cervical rib | Extra rib above 1st rib (thoracic-outlet link, SH-09) | L | TO CHECK |
+| HN-08 | Hemifacial microsomia / craniofacial asymmetry | One side of face/jaw underdeveloped | L | TO CHECK |
+| HN-09 | Retrognathia / micrognathia / prognathism | Jaw size/position discrepancies | L | TO CHECK |
+| HN-10 | Ocular torticollis | Compensatory head tilt from eye-muscle imbalance | L | TO CHECK |
+| HN-11 | Webbed neck (pterygium colli, e.g. Turner/Noonan) | Neck skin webbing, low hairline, posture appearance | L | TO CHECK |
+| HN-12 | TMJ ankylosis | Fused jaw joint, severe opening restriction | L | TO CHECK |
+
+### Shoulder niche (SH, continued)
+
+| ID | Issue | What changes anatomically | Priority | Status |
+|---|---|---|---|---|
+| SH-10 | Sprengel deformity | Congenitally high, small scapula | L | TO CHECK |
+| SH-11 | Poland syndrome | Absent pectoralis major (+ hand differences), chest asymmetry | L | TO CHECK |
+| SH-12 | Snapping scapula syndrome | Scapulothoracic crepitus/abnormal tracking | L | TO CHECK |
+| SH-13 | Obstetric brachial plexus palsy (Erb's) posture | "Waiter's tip" arm posture, growth asymmetry | L | TO CHECK |
+| SH-14 | Glenoid dysplasia / retroversion | Shallow/misoriented shoulder socket | L | TO CHECK |
+| SH-15 | Os acromiale / acromial variants | Unfused acromial ossification centre altering deltoid mechanics | L | TO CHECK |
+
+### Arm/hand niche (UL, continued)
+
+| ID | Issue | What changes anatomically | Priority | Status |
+|---|---|---|---|---|
+| UL-06 | Congenital radioulnar synostosis | Radius/ulna fused — forearm rotation fixed | L | TO CHECK |
+| UL-07 | Radial longitudinal deficiency (radial club hand) | Partial/absent radius, radial hand deviation | L | TO CHECK |
+| UL-08 | Camptodactyly / clinodactyly | Fixed finger flexion / lateral finger curvature | L | TO CHECK |
+| UL-09 | Syndactyly / polydactyly (hand) | Fused or extra digits — hand shape/grip | L | TO CHECK |
+| UL-10 | Volkmann ischaemic contracture | Forearm muscle fibrosis → claw-like contracture | L | TO CHECK |
+| UL-11 | Trigger finger (stenosing tenosynovitis) | Tendon catching, functional grip loss | L | TO CHECK |
+
+### Hip niche (HP, continued)
+
+| ID | Issue | What changes anatomically | Priority | Status |
+|---|---|---|---|---|
+| HP-11 | Legg-Calvé-Perthes disease | Childhood femoral-head necrosis → deformed head/hip | L | TO CHECK |
+| HP-12 | Slipped capital femoral epiphysis (SCFE) | Growth-plate slip → hip deformity, leg rotation change | L | TO CHECK |
+| HP-13 | Protrusio acetabuli | Socket protrudes into pelvis, deep hip | L | TO CHECK |
+| HP-14 | Acetabular retroversion | Socket opening faces backward → impingement pattern | L | TO CHECK |
+| HP-15 | Sacroiliac joint asymmetry/dysfunction | Pelvic ring asymmetry perception/mechanics | M | TO CHECK |
+| HP-16 | Proximal femoral focal deficiency | Underdeveloped proximal femur → major leg-length difference | L | TO CHECK |
+
+### Knee/leg niche (KN, continued)
+
+| ID | Issue | What changes anatomically | Priority | Status |
+|---|---|---|---|---|
+| KN-13 | Blount disease (tibia vara) | Growth disorder bowing the proximal tibia (infantile/adolescent) | L | TO CHECK |
+| KN-14 | Discoid meniscus | Disc-shaped (not C-shaped) meniscus, snapping knee | L | TO CHECK |
+| KN-15 | Nail-patella syndrome | Small/absent patellae + elbow and iliac anomalies | L | TO CHECK |
+| KN-16 | Congenital knee dislocation | Hyperextended/dislocated knee at birth | L | TO CHECK |
+| KN-17 | Fibular hemimelia | Partial/absent fibula → leg-length and foot deformity | L | TO CHECK |
+| KN-18 | Bipartite patella (variant) | Patella in two unfused parts — usually incidental | L | TO CHECK |
+
+### Foot niche (FT, continued)
+
+| ID | Issue | What changes anatomically | Priority | Status |
+|---|---|---|---|---|
+| FT-17 | Congenital vertical talus | "Rocker-bottom" rigid flat foot | L | TO CHECK |
+| FT-18 | Cavovarus foot | High arch + hindfoot varus (often Charcot-Marie-Tooth, NM-13) | M | TO CHECK |
+| FT-19 | Skewfoot (serpentine foot) | Combined forefoot adduction + hindfoot valgus Z-deformity | L | TO CHECK |
+| FT-20 | Brachymetatarsia | Abnormally short metatarsal (usually 4th toe) | L | TO CHECK |
+| FT-21 | Accessory navicular syndrome | Extra navicular ossicle altering tibialis posterior mechanics | L | TO CHECK |
+| FT-22 | Freiberg infraction | Flattened metatarsal head (osteochondrosis) | L | TO CHECK |
+| FT-23 | Toe polydactyly / syndactyly / macrodactyly | Extra, fused, or enlarged toes | L | TO CHECK |
+| FT-24 | Calcaneovalgus foot | Newborn foot bent up/outward (usually flexible) | L | TO CHECK |
+| FT-25 | Köhler / Sever osteochondroses | Paediatric navicular/heel growth-plate conditions | L | TO CHECK |
+
+### Whole-body niche (WB, continued)
+
+| ID | Issue | What changes anatomically | Priority | Status |
+|---|---|---|---|---|
+| WB-13 | Hemihypertrophy / hemihypotrophy | One body side over- or under-grown | L | TO CHECK |
+| WB-14 | Segmental overgrowth (Proteus, Klippel-Trénaunay) | Progressive asymmetric limb overgrowth (+ vascular in KTS) | L | TO CHECK |
+| WB-15 | Acromegaly / gigantism proportions | Enlarged jaw, hands, feet; altered proportions | L | TO CHECK |
+| WB-16 | Multiple hereditary exostoses | Multiple bone outgrowths deforming limbs/joints | L | TO CHECK |
+| WB-17 | Neurofibromatosis type 1 skeletal signs | Tibial bowing/pseudoarthrosis, scoliosis link | L | TO CHECK |
+| WB-18 | Cachexia (severe wasting) | Extreme muscle/fat loss changing body shape | L | TO CHECK |
+| WB-19 | Burn / scar contractures | Skin/fascia shortening restricting joint motion regionally | M | TO CHECK |
+
+### Muscle/soft-tissue niche (MS, continued)
+
+| ID | Issue | What changes anatomically | Priority | Status |
+|---|---|---|---|---|
+| MS-11 | Muscle rupture with retraction (e.g. "Popeye" biceps) | Muscle belly displaced/deformed after tendon rupture | L | TO CHECK |
+| MS-12 | Muscle hernia | Muscle bulging through fascial defect | L | TO CHECK |
+| MS-13 | Heterotopic ossification / myositis ossificans | Bone forming inside muscle → motion block | L | TO CHECK |
+| MS-14 | Myotonic disorders (stiffness) | Delayed muscle relaxation altering movement pattern | L | TO CHECK |
+| MS-15 | Chronic exertional compartment syndrome | Exercise-induced compartment pressure (functional, low geometry signal) | L | TO CHECK |
+
+### Bone/joint niche (BJ, continued)
+
+| ID | Issue | What changes anatomically | Priority | Status |
+|---|---|---|---|---|
+| BJ-07 | Osteogenesis imperfecta | Brittle bones → recurrent fractures, bowing, short stature | L | TO CHECK |
+| BJ-08 | Paget disease of bone | Enlarged, deformed, weak bone (e.g. bowed tibia, skull) | L | TO CHECK |
+| BJ-09 | Fibrous dysplasia | Fibrous bone replacement → deformity (e.g. shepherd's-crook femur) | L | TO CHECK |
+| BJ-10 | Osteopetrosis | Over-dense brittle bone, deformity/fracture pattern | L | TO CHECK |
+| BJ-11 | Limb-salvage / tumour resection reconstruction | Resected bone with endoprosthesis — non-standard anatomy | L | TO CHECK |
+
+### Neuromotor niche (NM, continued)
+
+| ID | Issue | What changes anatomically | Priority | Status |
+|---|---|---|---|---|
+| NM-13 | Charcot-Marie-Tooth disease | Progressive distal wasting → cavovarus feet, hand wasting | M | TO CHECK |
+| NM-14 | Friedreich / hereditary ataxias | Progressive scoliosis + pes cavus + gait ataxia pattern | L | TO CHECK |
+| NM-15 | Post-polio residual deformity | Asymmetric atrophy, limb shortening, joint deformity | L | TO CHECK |
+
+### Chest/breathing niche (RA, continued)
+
+| ID | Issue | What changes anatomically | Priority | Status |
+|---|---|---|---|---|
+| RA-11 | Diaphragmatic eventration / unilateral elevation | Abnormally high, thin diaphragm dome | L | TO CHECK |
+| RA-12 | Post-surgical chest-wall deformity | Thoracotomy/mastectomy asymmetry affecting posture/breathing | L | TO CHECK |
+
+### Systemic congenital (NC) — cross-cutting
+
+| ID | Issue | What changes anatomically | Priority | Status |
+|---|---|---|---|---|
+| NC-01 | Arthrogryposis multiplex congenita | Multiple congenital joint contractures (links UL/MS regions) | L | TO CHECK |
+| NC-02 | Down syndrome musculoskeletal pattern | Hypotonia + ligament laxity + atlantoaxial risk (SP-26) + flat feet | M | TO CHECK |
+| NC-03 | Cerebral-palsy-associated skeletal deformity set | Hip displacement, torsional deformity, scoliosis cluster (links NM-01/02) | M | TO CHECK |
+
 ## Count & working order
 
 **128 issues** (SP 20, HN 6, SH 9, UL 5, HP 10, KN 12, FT 16, WB 12,
