@@ -84,53 +84,53 @@
 
 | ID | Issue | What changes anatomically | Priority | Status |
 |---|---|---|---|---|
-| HP-01 | Developmental hip dysplasia | Shallow acetabulum, femoral head coverage loss | M | TO CHECK |
-| HP-02 | Femoroacetabular impingement — cam | Aspherical femoral head-neck junction | M | TO CHECK |
-| HP-03 | Femoroacetabular impingement — pincer | Acetabular over-coverage | M | TO CHECK |
-| HP-04 | Coxa vara / coxa valga | Femoral neck-shaft angle decreased / increased | M | TO CHECK |
-| HP-05 | Femoral anteversion | Femoral neck twisted forward → in-toeing | H | TO CHECK |
-| HP-06 | Femoral retroversion | Femoral neck twisted backward → out-toeing | M | TO CHECK |
-| HP-07 | Hip osteoarthritis | Joint space loss, osteophytes, deformity | H | TO CHECK |
-| HP-08 | Avascular necrosis of femoral head | Femoral head collapse | L | TO CHECK |
-| HP-09 | Total hip replacement | Prosthetic joint geometry, leg-length change | M | TO CHECK |
-| HP-10 | Gluteal insufficiency / Trendelenburg | Hip abductor weakness → pelvic drop in gait | H | TO CHECK |
+| HP-01 | Developmental hip dysplasia | Shallow acetabulum, femoral head coverage loss | M | MODEL EXISTS — parametric/patient FE + hip SSM (batch 2) |
+| HP-02 | Femoroacetabular impingement — cam | Aspherical femoral head-neck junction | M | MODEL EXISTS — FE systematic-review level, research only (batch 2) |
+| HP-03 | Femoroacetabular impingement — pincer | Acetabular over-coverage | M | MODEL EXISTS — parametric FE, research only (batch 2) |
+| HP-04 | Coxa vara / coxa valga | Femoral neck-shaft angle decreased / increased | M | ADOPT — Torsion Tool neck-shaft personalisation (batch 2) |
+| HP-05 | Femoral anteversion | Femoral neck twisted forward → in-toeing | H | ADOPT — Torsion Tool anteversion, clinically used (batch 2) |
+| HP-06 | Femoral retroversion | Femoral neck twisted backward → out-toeing | M | ADOPT — Torsion Tool version parameter (batch 2) |
+| HP-07 | Hip osteoarthritis | Joint space loss, osteophytes, deformity | H | MODEL EXISTS — hip FE + shape SSM (batch 2) |
+| HP-08 | Avascular necrosis of femoral head | Femoral head collapse | L | MODEL EXISTS — FE collapse studies, research only (batch 2) |
+| HP-09 | Total hip replacement | Prosthetic joint geometry, leg-length change | M | MODEL EXISTS — implant MSK/FE models (batch 2) |
+| HP-10 | Gluteal insufficiency / Trendelenburg | Hip abductor weakness → pelvic drop in gait | H | PARAMETER — abductor strength scaling (batch 2) |
 
 ## F. Knee & leg alignment (KN)
 
 | ID | Issue | What changes anatomically | Priority | Status |
 |---|---|---|---|---|
-| KN-01 | Genu valgum (knock knees) | Valgus knee alignment | H | TO CHECK |
-| KN-02 | Genu varum (bow legs) | Varus knee alignment | H | TO CHECK |
-| KN-03 | Genu recurvatum | Knee hyperextension | M | TO CHECK |
-| KN-04 | Patella alta / baja | Patella abnormally high / low | L | TO CHECK |
-| KN-05 | Patellar maltracking / instability | Patella tracks laterally, dislocation risk | M | TO CHECK |
-| KN-06 | Tibial torsion (internal/external) | Shin bone twisted along its axis | M | TO CHECK |
-| KN-07 | Knee osteoarthritis | Compartment joint-space loss → progressive varus/valgus | H | TO CHECK |
-| KN-08 | Ligament laxity / ACL deficiency | Joint instability | M | TO CHECK |
-| KN-09 | Meniscal injury/deficiency | Load-distribution anatomy changed | L | TO CHECK |
-| KN-10 | Osgood-Schlatter (adolescent) | Tibial tubercle apophysitis/bump | L | TO CHECK |
-| KN-11 | Knee flexion contracture | Fixed loss of extension (common post-stroke/arthritic) | M | TO CHECK |
-| KN-12 | Total knee replacement | Prosthetic joint geometry/alignment | M | TO CHECK |
+| KN-01 | Genu valgum (knock knees) | Valgus knee alignment | H | PARAMETER — mechanical-axis alignment (batch 2) |
+| KN-02 | Genu varum (bow legs) | Varus knee alignment | H | PARAMETER — mechanical-axis alignment (batch 2) |
+| KN-03 | Genu recurvatum | Knee hyperextension | M | PARAMETER — ROM limit (batch 2) |
+| KN-04 | Patella alta / baja | Patella abnormally high / low | L | MODEL EXISTS — validated FE patellar height (batch 2) |
+| KN-05 | Patellar maltracking / instability | Patella tracks laterally, dislocation risk | M | MODEL EXISTS — patient PF FE validated (batch 2) |
+| KN-06 | Tibial torsion (internal/external) | Shin bone twisted along its axis | M | ADOPT — Torsion Tool tibial torsion (batch 2) |
+| KN-07 | Knee osteoarthritis | Compartment joint-space loss → progressive varus/valgus | H | MODEL EXISTS — MS-FE OA models (batch 2) |
+| KN-08 | Ligament laxity / ACL deficiency | Joint instability | M | MODEL EXISTS — FE/MSK ligament models (batch 2) |
+| KN-09 | Meniscal injury/deficiency | Load-distribution anatomy changed | L | MODEL EXISTS — meniscus in knee FE (batch 2) |
+| KN-10 | Osgood-Schlatter (adolescent) | Tibial tubercle apophysitis/bump | L | NO MODEL FOUND (batch 2) |
+| KN-11 | Knee flexion contracture | Fixed loss of extension (common post-stroke/arthritic) | M | PARAMETER — ROM limit (batch 2) |
+| KN-12 | Total knee replacement | Prosthetic joint geometry/alignment | M | MODEL EXISTS — OpenSim-FE validated vs instrumented implant (batch 2) |
 
 ## G. Foot & ankle (FT)
 
 | ID | Issue | What changes anatomically | Priority | Status |
 |---|---|---|---|---|
 | FT-01 | Pes planus — flexible flat foot | Arch collapses under load, recovers unloaded | H | RESearched — FE + kinematic models exist (§1 of anatomy note) |
-| FT-02 | Adult-acquired flat foot (posterior tibial tendon dysfunction) | Progressive arch collapse + hindfoot valgus | M | TO CHECK |
-| FT-03 | Pes cavus (high arch) | Abnormally high, rigid arch | M | TO CHECK |
-| FT-04 | Dynamic overpronation | Excess arch collapse/eversion in gait | H | TO CHECK |
-| FT-05 | Oversupination | Lateral loading, rigid high-arch gait | L | TO CHECK |
-| FT-06 | Hallux valgus (bunion) | Big-toe lateral deviation + 1st metatarsal shift | M | TO CHECK |
-| FT-07 | Hallux rigidus | 1st MTP joint arthritis/stiffness | L | TO CHECK |
-| FT-08 | Hammer / claw / mallet toes | Toe joint deformities | L | TO CHECK |
-| FT-09 | Plantar fasciitis / fascia thickening | Plantar fascia degeneration/thickening | M | TO CHECK |
-| FT-10 | Achilles tendinopathy / Haglund deformity | Tendon thickening / heel bone prominence | L | TO CHECK |
-| FT-11 | Clubfoot (talipes equinovarus) | Congenital inward/downward foot deformity | M | TO CHECK |
-| FT-12 | Tarsal coalition | Abnormal bone/cartilage bridge between tarsals | L | TO CHECK |
-| FT-13 | Metatarsus adductus | Forefoot deviated inward (paediatric) | L | TO CHECK |
-| FT-14 | Chronic ankle instability | Ligament laxity, recurrent giving way | M | TO CHECK |
-| FT-15 | Equinus (gastrocnemius/soleus tightness) | Limited ankle dorsiflexion | M | TO CHECK |
+| FT-02 | Adult-acquired flat foot (posterior tibial tendon dysfunction) | Progressive arch collapse + hindfoot valgus | M | MODEL EXISTS — OpenSim flatfoot sim + FE (batch 2) |
+| FT-03 | Pes cavus (high arch) | Abnormally high, rigid arch | M | MODEL EXISTS — FE/MS cavus, thinner lit (batch 2) |
+| FT-04 | Dynamic overpronation | Excess arch collapse/eversion in gait | H | PARAMETER — multi-segment foot output (batch 2) |
+| FT-05 | Oversupination | Lateral loading, rigid high-arch gait | L | PARAMETER — multi-segment foot output (batch 2) |
+| FT-06 | Hallux valgus (bunion) | Big-toe lateral deviation + 1st metatarsal shift | M | MODEL EXISTS — foot FE systematic-review level (batch 2) |
+| FT-07 | Hallux rigidus | 1st MTP joint arthritis/stiffness | L | MODEL EXISTS (sparse) — 1st-MTP FE (batch 2) |
+| FT-08 | Hammer / claw / mallet toes | Toe joint deformities | L | PARAMETER (sparse) — toe segment geometry (batch 2) |
+| FT-09 | Plantar fasciitis / fascia thickening | Plantar fascia degeneration/thickening | M | MODEL EXISTS — fascia strain in foot FE (batch 2) |
+| FT-10 | Achilles tendinopathy / Haglund deformity | Tendon thickening / heel bone prominence | L | PARAMETER — tendon stiffness in OpenSim (batch 2) |
+| FT-11 | Clubfoot (talipes equinovarus) | Congenital inward/downward foot deformity | M | MODEL EXISTS — iterative FE Ponseti from surface scan (batch 2) |
+| FT-12 | Tarsal coalition | Abnormal bone/cartilage bridge between tarsals | L | VISUALISE ONLY — fused-segment geometry (batch 2) |
+| FT-13 | Metatarsus adductus | Forefoot deviated inward (paediatric) | L | VISUALISE ONLY — geometry (batch 2) |
+| FT-14 | Chronic ankle instability | Ligament laxity, recurrent giving way | M | MODEL EXISTS — ankle laxity MS/FE (batch 2) |
+| FT-15 | Equinus (gastrocnemius/soleus tightness) | Limited ankle dorsiflexion | M | PARAMETER — muscle-tendon contracture (batch 2) |
 | FT-16 | Arch height (general mechanics) | Dynamic arch rise/collapse in gait | H | RESearched — multi-segment + synergy foot models exist (§1 of anatomy note) |
 
 ## H. Whole-body alignment, proportions & composition (WB)
@@ -274,37 +274,37 @@
 
 | ID | Issue | What changes anatomically | Priority | Status |
 |---|---|---|---|---|
-| HP-11 | Legg-Calvé-Perthes disease | Childhood femoral-head necrosis → deformed head/hip | L | TO CHECK |
-| HP-12 | Slipped capital femoral epiphysis (SCFE) | Growth-plate slip → hip deformity, leg rotation change | L | TO CHECK |
-| HP-13 | Protrusio acetabuli | Socket protrudes into pelvis, deep hip | L | TO CHECK |
-| HP-14 | Acetabular retroversion | Socket opening faces backward → impingement pattern | L | TO CHECK |
-| HP-15 | Sacroiliac joint asymmetry/dysfunction | Pelvic ring asymmetry perception/mechanics | M | TO CHECK |
-| HP-16 | Proximal femoral focal deficiency | Underdeveloped proximal femur → major leg-length difference | L | TO CHECK |
+| HP-11 | Legg-Calvé-Perthes disease | Childhood femoral-head necrosis → deformed head/hip | L | MODEL EXISTS — patient geometry/FE cases (batch 2) |
+| HP-12 | Slipped capital femoral epiphysis (SCFE) | Growth-plate slip → hip deformity, leg rotation change | L | MODEL EXISTS — FE slip models (batch 2) |
+| HP-13 | Protrusio acetabuli | Socket protrudes into pelvis, deep hip | L | VISUALISE ONLY — no dedicated model (batch 2) |
+| HP-14 | Acetabular retroversion | Socket opening faces backward → impingement pattern | L | MODEL EXISTS — geometry in hip SSM/FE (batch 2) |
+| HP-15 | Sacroiliac joint asymmetry/dysfunction | Pelvic ring asymmetry perception/mechanics | M | MODEL EXISTS — pelvic FE; clinical construct contested (batch 2) |
+| HP-16 | Proximal femoral focal deficiency | Underdeveloped proximal femur → major leg-length difference | L | VISUALISE ONLY — geometry/leg-length (batch 2) |
 
 ### Knee/leg niche (KN, continued)
 
 | ID | Issue | What changes anatomically | Priority | Status |
 |---|---|---|---|---|
-| KN-13 | Blount disease (tibia vara) | Growth disorder bowing the proximal tibia (infantile/adolescent) | L | TO CHECK |
-| KN-14 | Discoid meniscus | Disc-shaped (not C-shaped) meniscus, snapping knee | L | TO CHECK |
-| KN-15 | Nail-patella syndrome | Small/absent patellae + elbow and iliac anomalies | L | TO CHECK |
-| KN-16 | Congenital knee dislocation | Hyperextended/dislocated knee at birth | L | TO CHECK |
-| KN-17 | Fibular hemimelia | Partial/absent fibula → leg-length and foot deformity | L | TO CHECK |
-| KN-18 | Bipartite patella (variant) | Patella in two unfused parts — usually incidental | L | TO CHECK |
+| KN-13 | Blount disease (tibia vara) | Growth disorder bowing the proximal tibia (infantile/adolescent) | L | MODEL EXISTS (sparse) — geometry/growth (batch 2) |
+| KN-14 | Discoid meniscus | Disc-shaped (not C-shaped) meniscus, snapping knee | L | MODEL EXISTS (sparse) — case FE (batch 2) |
+| KN-15 | Nail-patella syndrome | Small/absent patellae + elbow and iliac anomalies | L | NO MODEL FOUND (batch 2) |
+| KN-16 | Congenital knee dislocation | Hyperextended/dislocated knee at birth | L | NO MODEL FOUND (batch 2) |
+| KN-17 | Fibular hemimelia | Partial/absent fibula → leg-length and foot deformity | L | VISUALISE ONLY — geometry/leg-length (batch 2) |
+| KN-18 | Bipartite patella (variant) | Patella in two unfused parts — usually incidental | L | VISUALISE ONLY — variant note (batch 2) |
 
 ### Foot niche (FT, continued)
 
 | ID | Issue | What changes anatomically | Priority | Status |
 |---|---|---|---|---|
-| FT-17 | Congenital vertical talus | "Rocker-bottom" rigid flat foot | L | TO CHECK |
-| FT-18 | Cavovarus foot | High arch + hindfoot varus (often Charcot-Marie-Tooth, NM-13) | M | TO CHECK |
-| FT-19 | Skewfoot (serpentine foot) | Combined forefoot adduction + hindfoot valgus Z-deformity | L | TO CHECK |
-| FT-20 | Brachymetatarsia | Abnormally short metatarsal (usually 4th toe) | L | TO CHECK |
-| FT-21 | Accessory navicular syndrome | Extra navicular ossicle altering tibialis posterior mechanics | L | TO CHECK |
-| FT-22 | Freiberg infraction | Flattened metatarsal head (osteochondrosis) | L | TO CHECK |
-| FT-23 | Toe polydactyly / syndactyly / macrodactyly | Extra, fused, or enlarged toes | L | TO CHECK |
-| FT-24 | Calcaneovalgus foot | Newborn foot bent up/outward (usually flexible) | L | TO CHECK |
-| FT-25 | Köhler / Sever osteochondroses | Paediatric navicular/heel growth-plate conditions | L | TO CHECK |
+| FT-17 | Congenital vertical talus | "Rocker-bottom" rigid flat foot | L | VISUALISE ONLY — geometry (batch 2) |
+| FT-18 | Cavovarus foot | High arch + hindfoot varus (often Charcot-Marie-Tooth, NM-13) | M | MODEL EXISTS — CMT foot modelling (batch 2) |
+| FT-19 | Skewfoot (serpentine foot) | Combined forefoot adduction + hindfoot valgus Z-deformity | L | VISUALISE ONLY — geometry (batch 2) |
+| FT-20 | Brachymetatarsia | Abnormally short metatarsal (usually 4th toe) | L | VISUALISE ONLY — geometry (batch 2) |
+| FT-21 | Accessory navicular syndrome | Extra navicular ossicle altering tibialis posterior mechanics | L | MODEL EXISTS (sparse) — insertion mechanics cases (batch 2) |
+| FT-22 | Freiberg infraction | Flattened metatarsal head (osteochondrosis) | L | VISUALISE ONLY — geometry (batch 2) |
+| FT-23 | Toe polydactyly / syndactyly / macrodactyly | Extra, fused, or enlarged toes | L | VISUALISE ONLY — shape from scan (batch 2) |
+| FT-24 | Calcaneovalgus foot | Newborn foot bent up/outward (usually flexible) | L | VISUALISE ONLY — infant geometry (batch 2) |
+| FT-25 | Köhler / Sever osteochondroses | Paediatric navicular/heel growth-plate conditions | L | NO MODEL FOUND (batch 2) |
 
 ### Whole-body niche (WB, continued)
 
@@ -375,10 +375,12 @@ current clinical taxonomy (orthopaedic, congenital and neuromuscular
 categories cross-checked at creation). New finds get appended with fresh
 IDs; IDs are never renumbered.
 
-Already researched (27): the original 9 (SP-01, SP-20, FT-01, FT-16,
+Already researched (84): the original 9 (SP-01, SP-20, FT-01, FT-16,
 WB-03, RA-01, RA-02, RA-03, RA-10; MS-03 partially via the
-fat-measurement notes) plus **Batch 1 (2026-10-28): SP-02…SP-19** —
-see `anatomy-audit-batch1-spine.md`. Remaining TO CHECK: 175.
+fat-measurement notes), **Batch 1 (2026-10-28): SP-02…SP-19**
+(`anatomy-audit-batch1-spine.md`), and **Batch 2 (2026-10-28):
+HP-01…HP-16, KN-01…KN-18, FT-02…FT-15, FT-17…FT-25**
+(`anatomy-audit-batch2-hip-knee-foot.md`). Remaining TO CHECK: 118.
 
 Suggested audit order (by twin impact):
 1. **Spine/trunk remainder** (SP-05…SP-19) — posture is the core claim.
