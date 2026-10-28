@@ -24,7 +24,7 @@
 | D-05 | Exoskeleton safety ownership | Named responsible engineer + risk assessment process | Must exist before Track-2 hardware is powered near a person | Exo Track 2 |
 | D-06 | Patient-facing surface | Phone app (matches iPhone hardware) vs clinician-led tablet vs web | Phone-first, clinician-reviewed outputs only (roadmap Phase 3) | Phase 3 |
 | D-07 | Data jurisdiction & retention for RGB-D health data | Local-only processing vs cloud mocap services | Local-only by default (hardware.md privacy note) | Any real recording |
-| D-08 | Original 70 repos' live metadata | Run `scripts/enrich_metadata.py --apply` with a GitHub token | Do before the first public release of this repo | Catalog polish |
+| D-08 | Original 70 repos' live metadata | ~~Run `scripts/enrich_metadata.py --apply` with a GitHub token~~ **Done 2026-10-28** (anonymous API: repos 1–52 + gap entries refreshed; licenses for all 108 verified; documentation standard enforced by validator/tests). Re-run with `GITHUB_TOKEN` before public release to refresh stars/forks again | Before the first public release of this repo | Catalog polish |
 
 ## Known catalog limitations (accepted, recorded)
 - Star/fork counts are orientation only and go stale; upstream READMEs win.

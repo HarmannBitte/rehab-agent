@@ -53,6 +53,27 @@ class TestCatalog(unittest.TestCase):
         self.assertIn("TransPose", out.stdout)
         self.assertNotIn("SMPLSim", out.stdout)
 
+    def test_every_repo_fully_documented(self):
+        # Documentation standard: see catalog/repos.json `documentation_standard`
+        for r in DATA["repos"]:
+            self.assertGreaterEqual(len(r["description"]), 40, r["slug"])
+            self.assertGreaterEqual(len(r["notes"]), 30, r["slug"])
+            self.assertGreaterEqual(len(r["tags"]), 2, r["slug"])
+            self.assertTrue(r["pipeline_stages"], r["slug"])
+            self.assertTrue(r["license"], r["slug"])
+            self.assertTrue(r["license_source"], r["slug"])
+            self.assertTrue(r["updated_snapshot"], r["slug"])
+            self.assertTrue(r["upstream_path"], r["slug"])
+            if not r["private"]:
+                self.assertIsNotNone(r["stars_snapshot"], r["slug"])
+                self.assertIsNotNone(r["forks_snapshot"], r["slug"])
+
+    def test_generated_catalog_details_every_repo(self):
+        md = (ROOT / "docs" / "catalog.md").read_text()
+        for r in DATA["repos"]:
+            self.assertIn(f"### {r['id']}. [{r['slug']}]", md, r["slug"])
+            self.assertIn(r["license"], md, r["slug"])
+
     def test_example_session_has_required_keys(self):
         s = json.loads((ROOT / "examples" / "synthetic-session" / "session.json").read_text())
         for k in ["session_id", "twin_tier", "hardware", "streams", "calibration", "sync", "accuracy_layers"]:
