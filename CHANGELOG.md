@@ -1,6 +1,7 @@
 # Changelog
 
 ## Unreleased
+- Research note on detailed anatomy models: foot arch/flat feet, articulated spine bending, ribcage/diaphragm breathing (`docs/research-detailed-anatomy-models.md`)
 - Fat-measurement reference notes (`fat-distribution/measurement-notes.md`): method hierarchy, twin metrics, LiDAR conclusiveness
 - Research note on dance→3D mapping and motion data beyond squats (`docs/research-dance-3d-motion.md`)
 - New separate `fat-distribution/` folder: 12 fat/adipose-distribution models (8 code repos, 2 paper-only, 2 closed references) with Tier A/B usage rules
