@@ -141,6 +141,10 @@ clinically available — do not CT people just for this), (c) label
 diaphragm motion as *inferred* everywhere: it cannot be observed from the
 surface, only estimated, same honesty rule as the fat layer.
 
+**Tracking methods in depth** (measurement ranking, our-hardware
+implementation, session metrics, red lines):
+[`research-breathing-tracking.md`](research-breathing-tracking.md).
+
 ## 4. Recommended adoptions (pending your approval, as with the dance note)
 
 1. **Spine:** Bruno thoracolumbar full-body OpenSim model as the posture
