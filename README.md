@@ -52,7 +52,7 @@ closed reference models: [`fat-distribution/README.md`](fat-distribution/README.
 ```bash
 git clone <this-repo> rehab-agent && cd rehab-agent
 
-python3 scripts/validate_catalog.py     # check the catalog (108 repos)
+python3 scripts/validate_catalog.py     # check the catalog (115 repos)
 python3 scripts/list.py --tier core     # see the recommended first wave
 python3 scripts/clone.py --tier core --dry-run
 python3 scripts/clone.py --tier core    # shallow-clone core repos into upstream/
