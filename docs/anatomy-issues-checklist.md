@@ -375,8 +375,10 @@ current clinical taxonomy (orthopaedic, congenital and neuromuscular
 categories cross-checked at creation). New finds get appended with fresh
 IDs; IDs are never renumbered.
 
-Already researched (9): SP-01, SP-20, FT-01, FT-16, WB-03, RA-01, RA-02,
-RA-03, RA-10 (and MS-03 partially, via the fat-measurement notes).
+Already researched (27): the original 9 (SP-01, SP-20, FT-01, FT-16,
+WB-03, RA-01, RA-02, RA-03, RA-10; MS-03 partially via the
+fat-measurement notes) plus **Batch 1 (2026-10-28): SP-02…SP-19** —
+see `anatomy-audit-batch1-spine.md`. Remaining TO CHECK: 175.
 
 Suggested audit order (by twin impact):
 1. **Spine/trunk remainder** (SP-05…SP-19) — posture is the core claim.

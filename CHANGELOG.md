@@ -1,6 +1,7 @@
 # Changelog
 
 ## Unreleased
+- Anatomy audit Batch 1 (spine SP-02…SP-19) completed: `docs/anatomy-audit-batch1-spine.md`, checklist statuses updated (27/202 researched)
 - Master anatomy-issues checklist (`docs/anatomy-issues-checklist.md`): 202 posture/movement-relevant anatomical issues in 13 groups (incl. niche/rare layer) with per-issue model-audit status
 - Research note on breathing tracking: diaphragm→rib-cage/abdominal mechanics, OEP/RIP/depth-camera tracking, diaphragm ultrasound (`docs/research-breathing-tracking.md`)
 - Research note on detailed anatomy models: foot arch/flat feet, articulated spine bending, ribcage/diaphragm breathing (`docs/research-detailed-anatomy-models.md`)
