@@ -60,15 +60,15 @@
 
 | ID | Issue | What changes anatomically | Priority | Status |
 |---|---|---|---|---|
-| SH-01 | Rounded shoulders | Protracted/ internally rotated shoulder girdle posture | H | TO CHECK |
-| SH-02 | Scapular winging | Medial scapular border lifts off rib cage (serratus/long thoracic) | M | TO CHECK |
-| SH-03 | Scapular dyskinesis | Abnormal scapular motion pattern in arm movement | M | TO CHECK |
-| SH-04 | Shoulder impingement anatomy | Acromion shape / subacromial space narrowing | M | TO CHECK |
-| SH-05 | Rotator cuff tear + fatty infiltration | Tendon tear, muscle atrophy/fatty degeneration | M | TO CHECK |
-| SH-06 | Adhesive capsulitis (frozen shoulder) | Capsular contracture, severe range loss | M | TO CHECK |
-| SH-07 | Shoulder instability | Laxity / labral anatomy, dislocation history | L | TO CHECK |
-| SH-08 | Clavicle malunion / deformity | Shortened/angulated clavicle after fracture | L | TO CHECK |
-| SH-09 | Thoracic outlet compression anatomy | Narrowed scalene/costoclavicular space | L | TO CHECK |
+| SH-01 | Rounded shoulders | Protracted/ internally rotated shoulder girdle posture | H | PARAMETER — scapular posture metrics (batch 3) |
+| SH-02 | Scapular winging | Medial scapular border lifts off rib cage (serratus/long thoracic) | M | MODEL EXISTS — muscle-deficiency params in shoulder MS models (batch 3) |
+| SH-03 | Scapular dyskinesis | Abnormal scapular motion pattern in arm movement | M | PARAMETER — Kibler pattern from model kinematics (batch 3) |
+| SH-04 | Shoulder impingement anatomy | Acromion shape / subacromial space narrowing | M | MODEL EXISTS — FE + scapula SSM, research only (batch 3) |
+| SH-05 | Rotator cuff tear + fatty infiltration | Tendon tear, muscle atrophy/fatty degeneration | M | MODEL EXISTS — shoulder sim + MRI fat-fraction params (batch 3) |
+| SH-06 | Adhesive capsulitis (frozen shoulder) | Capsular contracture, severe range loss | M | PARAMETER — ROM envelope (batch 3) |
+| SH-07 | Shoulder instability | Laxity / labral anatomy, dislocation history | L | MODEL EXISTS — FE stability, research only (batch 3) |
+| SH-08 | Clavicle malunion / deformity | Shortened/angulated clavicle after fracture | L | PARAMETER — clavicle geometry in shoulder models (batch 3) |
+| SH-09 | Thoracic outlet compression anatomy | Narrowed scalene/costoclavicular space | L | NO MODEL FOUND (twin-relevant) (batch 3) |
 
 ## D. Arm, elbow, wrist & hand (UL)
 
@@ -252,12 +252,12 @@
 
 | ID | Issue | What changes anatomically | Priority | Status |
 |---|---|---|---|---|
-| SH-10 | Sprengel deformity | Congenitally high, small scapula | L | TO CHECK |
-| SH-11 | Poland syndrome | Absent pectoralis major (+ hand differences), chest asymmetry | L | TO CHECK |
-| SH-12 | Snapping scapula syndrome | Scapulothoracic crepitus/abnormal tracking | L | TO CHECK |
-| SH-13 | Obstetric brachial plexus palsy (Erb's) posture | "Waiter's tip" arm posture, growth asymmetry | L | TO CHECK |
-| SH-14 | Glenoid dysplasia / retroversion | Shallow/misoriented shoulder socket | L | TO CHECK |
-| SH-15 | Os acromiale / acromial variants | Unfused acromial ossification centre altering deltoid mechanics | L | TO CHECK |
+| SH-10 | Sprengel deformity | Congenitally high, small scapula | L | VISUALISE ONLY — scapula rest position (batch 3) |
+| SH-11 | Poland syndrome | Absent pectoralis major (+ hand differences), chest asymmetry | L | PARAMETER — absent-muscle actuator set (batch 3) |
+| SH-12 | Snapping scapula syndrome | Scapulothoracic crepitus/abnormal tracking | L | MODEL EXISTS (sparse) — record only (batch 3) |
+| SH-13 | Obstetric brachial plexus palsy (Erb's) posture | "Waiter's tip" arm posture, growth asymmetry | L | MODEL EXISTS (sparse) — paediatric MS scarce (batch 3) |
+| SH-14 | Glenoid dysplasia / retroversion | Shallow/misoriented shoulder socket | L | MODEL EXISTS — glenoid version SSM/FE (batch 3) |
+| SH-15 | Os acromiale / acromial variants | Unfused acromial ossification centre altering deltoid mechanics | L | VISUALISE ONLY — variant note (batch 3) |
 
 ### Arm/hand niche (UL, continued)
 
@@ -375,12 +375,13 @@ current clinical taxonomy (orthopaedic, congenital and neuromuscular
 categories cross-checked at creation). New finds get appended with fresh
 IDs; IDs are never renumbered.
 
-Already researched (84): the original 9 (SP-01, SP-20, FT-01, FT-16,
+Already researched (99): the original 9 (SP-01, SP-20, FT-01, FT-16,
 WB-03, RA-01, RA-02, RA-03, RA-10; MS-03 partially via the
-fat-measurement notes), **Batch 1 (2026-10-28): SP-02…SP-19**
-(`anatomy-audit-batch1-spine.md`), and **Batch 2 (2026-10-28):
-HP-01…HP-16, KN-01…KN-18, FT-02…FT-15, FT-17…FT-25**
-(`anatomy-audit-batch2-hip-knee-foot.md`). Remaining TO CHECK: 118.
+fat-measurement notes), **Batch 1: SP-02…SP-19**
+(`anatomy-audit-batch1-spine.md`), **Batch 2: HP/KN/FT chain**
+(`anatomy-audit-batch2-hip-knee-foot.md`), and **Batch 3:
+SH-01…SH-15** (`anatomy-audit-batch3-shoulder.md`).
+Remaining TO CHECK: 103.
 
 Suggested audit order (by twin impact):
 1. **Spine/trunk remainder** (SP-05…SP-19) — posture is the core claim.
