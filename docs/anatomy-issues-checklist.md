@@ -74,11 +74,11 @@
 
 | ID | Issue | What changes anatomically | Priority | Status |
 |---|---|---|---|---|
-| UL-01 | Cubitus valgus / varus | Elbow carrying-angle deformity | L | TO CHECK |
-| UL-02 | Elbow flexion contracture | Fixed loss of extension | M | TO CHECK |
-| UL-03 | Madelung deformity (wrist) | Distal radius growth deformity | L | TO CHECK |
-| UL-04 | Dupuytren's contracture | Palmar fascia cords, finger flexion deformity | L | TO CHECK |
-| UL-05 | Rheumatoid hand deformities | Swan-neck / boutonnière / ulnar drift | L | TO CHECK |
+| UL-01 | Cubitus valgus / varus | Elbow carrying-angle deformity | L | PARAMETER — carrying angle per side (batch 6) |
+| UL-02 | Elbow flexion contracture | Fixed loss of extension | M | PARAMETER — ROM envelope + stiffness (batch 6) |
+| UL-03 | Madelung deformity (wrist) | Distal radius growth deformity | L | VISUALISE ONLY — wrist geometry (batch 6) |
+| UL-04 | Dupuytren's contracture | Palmar fascia cords, finger flexion deformity | L | PARAMETER (sparse) — per-finger flexion limits (batch 6) |
+| UL-05 | Rheumatoid hand deformities | Swan-neck / boutonnière / ulnar drift | L | MODEL EXISTS (research) — finger FE mechanisms (batch 6) |
 
 ## E. Hip & pelvis (HP)
 
@@ -156,7 +156,7 @@
 |---|---|---|---|---|
 | MS-01 | Sarcopenia | Age-related muscle mass/quality loss (incl. fatty infiltration) | H | MODEL EXISTS — DXA/MRI params + guideline cut-offs (batch 4) |
 | MS-02 | Muscle atrophy (disuse/neurogenic) | Local muscle volume loss | H | MODEL EXISTS — MRI volume to force params (batch 4) |
-| MS-03 | Muscle fatty infiltration | Fat within muscle (measurable as MRI fat fraction) | H | TO CHECK (fat methods in `fat-distribution/measurement-notes.md`) |
+| MS-03 | Muscle fatty infiltration | Fat within muscle (measurable as MRI fat fraction) | H | MODEL EXISTS — MRI fat fraction (Dixon PDFF) per muscle (fat notes + batch 4) |
 | MS-04 | Muscle/tendon contracture (general) | Fixed shortening limiting joint range | H | PARAMETER — fibre-length/passive stiffness (batch 4) |
 | MS-05 | Upper crossed syndrome (Janda) | Tight pectorals/upper traps vs weak deep neck flexors/scapular muscles | M | PATTERN LABEL ONLY — Janda, validity contested (batch 4) |
 | MS-06 | Lower crossed syndrome (Janda) | Tight hip flexors/erectors vs weak abdominals/gluteals | M | PATTERN LABEL ONLY — Janda, validity contested (batch 4) |
@@ -169,12 +169,12 @@
 
 | ID | Issue | What changes anatomically | Priority | Status |
 |---|---|---|---|---|
-| BJ-01 | Osteoporosis / low bone mineral density | Bone mass/strength loss (DXA-measurable) | M | TO CHECK |
-| BJ-02 | Osteoarthritis (non hip/knee joints) | Joint space loss, deformity (shoulder, ankle, spine facets, hands) | M | TO CHECK |
-| BJ-03 | Rheumatoid arthritis deformity pattern | Inflammatory joint destruction pattern | L | TO CHECK |
-| BJ-04 | Fracture malunion | Bone healed in deformed position | M | TO CHECK |
-| BJ-05 | Other joint replacements (shoulder, ankle) | Prosthetic joint geometry | L | TO CHECK |
-| BJ-06 | Rickets / osteomalacia | Softened bone → bowing deformities | L | TO CHECK |
+| BJ-01 | Osteoporosis / low bone mineral density | Bone mass/strength loss (DXA-measurable) | M | MODEL EXISTS — QCT FE bone strength (batch 6) |
+| BJ-02 | Osteoarthritis (non hip/knee joints) | Joint space loss, deformity (shoulder, ankle, spine facets, hands) | M | MODEL EXISTS (research) — joint FE/SSM family (batch 6) |
+| BJ-03 | Rheumatoid arthritis deformity pattern | Inflammatory joint destruction pattern | L | VISUALISE ONLY — deformity pattern record (batch 6) |
+| BJ-04 | Fracture malunion | Bone healed in deformed position | M | MODEL EXISTS — 3D malunion planning (batch 6) |
+| BJ-05 | Other joint replacements (shoulder, ankle) | Prosthetic joint geometry | L | MODEL EXISTS — RTSA OpenSim pipelines (batch 6) |
+| BJ-06 | Rickets / osteomalacia | Softened bone → bowing deformities | L | PARAMETER — bowing geometry (batch 6) |
 
 ## K. Neuromotor conditions (movement presentation) (NM)
 
@@ -263,12 +263,12 @@
 
 | ID | Issue | What changes anatomically | Priority | Status |
 |---|---|---|---|---|
-| UL-06 | Congenital radioulnar synostosis | Radius/ulna fused — forearm rotation fixed | L | TO CHECK |
-| UL-07 | Radial longitudinal deficiency (radial club hand) | Partial/absent radius, radial hand deviation | L | TO CHECK |
-| UL-08 | Camptodactyly / clinodactyly | Fixed finger flexion / lateral finger curvature | L | TO CHECK |
-| UL-09 | Syndactyly / polydactyly (hand) | Fused or extra digits — hand shape/grip | L | TO CHECK |
-| UL-10 | Volkmann ischaemic contracture | Forearm muscle fibrosis → claw-like contracture | L | TO CHECK |
-| UL-11 | Trigger finger (stenosing tenosynovitis) | Tendon catching, functional grip loss | L | TO CHECK |
+| UL-06 | Congenital radioulnar synostosis | Radius/ulna fused — forearm rotation fixed | L | PARAMETER — locked forearm rotation (batch 6) |
+| UL-07 | Radial longitudinal deficiency (radial club hand) | Partial/absent radius, radial hand deviation | L | VISUALISE ONLY — geometry; parametric hand mismatch (batch 6) |
+| UL-08 | Camptodactyly / clinodactyly | Fixed finger flexion / lateral finger curvature | L | PARAMETER — per-joint angle limits (batch 6) |
+| UL-09 | Syndactyly / polydactyly (hand) | Fused or extra digits — hand shape/grip | L | VISUALISE ONLY — topology not representable (batch 6) |
+| UL-10 | Volkmann ischaemic contracture | Forearm muscle fibrosis → claw-like contracture | L | PARAMETER — contracture parameter set (batch 6) |
+| UL-11 | Trigger finger (stenosing tenosynovitis) | Tendon catching, functional grip loss | L | NO MODEL FOUND — dynamic catching (batch 6) |
 
 ### Hip niche (HP, continued)
 
@@ -332,11 +332,11 @@
 
 | ID | Issue | What changes anatomically | Priority | Status |
 |---|---|---|---|---|
-| BJ-07 | Osteogenesis imperfecta | Brittle bones → recurrent fractures, bowing, short stature | L | TO CHECK |
-| BJ-08 | Paget disease of bone | Enlarged, deformed, weak bone (e.g. bowed tibia, skull) | L | TO CHECK |
-| BJ-09 | Fibrous dysplasia | Fibrous bone replacement → deformity (e.g. shepherd's-crook femur) | L | TO CHECK |
-| BJ-10 | Osteopetrosis | Over-dense brittle bone, deformity/fracture pattern | L | TO CHECK |
-| BJ-11 | Limb-salvage / tumour resection reconstruction | Resected bone with endoprosthesis — non-standard anatomy | L | TO CHECK |
+| BJ-07 | Osteogenesis imperfecta | Brittle bones → recurrent fractures, bowing, short stature | L | MODEL EXISTS (research) — OI bowed-bone FE (batch 6) |
+| BJ-08 | Paget disease of bone | Enlarged, deformed, weak bone (e.g. bowed tibia, skull) | L | VISUALISE ONLY — deformed bone geometry (batch 6) |
+| BJ-09 | Fibrous dysplasia | Fibrous bone replacement → deformity (e.g. shepherd's-crook femur) | L | VISUALISE ONLY — deformity geometry (batch 6) |
+| BJ-10 | Osteopetrosis | Over-dense brittle bone, deformity/fracture pattern | L | VISUALISE ONLY — density imaging record (batch 6) |
+| BJ-11 | Limb-salvage / tumour resection reconstruction | Resected bone with endoprosthesis — non-standard anatomy | L | PARAMETER — custom geometry + implant block (batch 6) |
 
 ### Neuromotor niche (NM, continued)
 
@@ -375,16 +375,17 @@ current clinical taxonomy (orthopaedic, congenital and neuromuscular
 categories cross-checked at creation). New finds get appended with fresh
 IDs; IDs are never renumbered.
 
-Already researched (151): the original 9 (SP-01, SP-20, FT-01, FT-16,
-WB-03, RA-01, RA-02, RA-03, RA-10; MS-03 partially via the
-fat-measurement notes), **Batch 1: SP-02…SP-19**
+Already researched (174): the original 9 (SP-01, SP-20, FT-01, FT-16,
+WB-03, RA-01, RA-02, RA-03, RA-10; MS-03 completed via the
+fat-measurement notes + Batch 4), **Batch 1: SP-02…SP-19**
 (`anatomy-audit-batch1-spine.md`), **Batch 2: HP/KN/FT chain**
 (`anatomy-audit-batch2-hip-knee-foot.md`), **Batch 3:
 SH-01…SH-15** (`anatomy-audit-batch3-shoulder.md`), **Batch 4:
-WB/MS** (`anatomy-audit-batch4-wholebody-muscle.md`), and
-**Batch 5: HN + RA remainder**
-(`anatomy-audit-batch5-headneck-chest.md`).
-Remaining TO CHECK: 51.
+WB/MS** (`anatomy-audit-batch4-wholebody-muscle.md`), **Batch 5:
+HN + RA remainder** (`anatomy-audit-batch5-headneck-chest.md`),
+and **Batch 6: UL + BJ**
+(`anatomy-audit-batch6-armhand-bonejoint.md`).
+Remaining TO CHECK: 28 (NM-01…NM-15, SP-21…SP-30, NC-01…NC-03).
 
 Suggested audit order (by twin impact):
 1. **Spine/trunk remainder** (SP-05…SP-19) — posture is the core claim.
