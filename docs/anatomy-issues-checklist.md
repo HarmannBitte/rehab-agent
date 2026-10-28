@@ -25,24 +25,24 @@
 | ID | Issue | What changes anatomically | Priority | Status |
 |---|---|---|---|---|
 | SP-01 | Scoliosis — adolescent idiopathic | Lateral spinal curvature + vertebral rotation, rib hump | H | RESearched — subject-specific OpenSim models exist (`research-detailed-anatomy-models.md` §2) |
-| SP-02 | Scoliosis — congenital | Malformed vertebrae driving curvature | M | TO CHECK |
-| SP-03 | Scoliosis — neuromuscular | Curvature from muscle imbalance/paralysis | M | TO CHECK |
-| SP-04 | Scoliosis — adult degenerative | Asymmetric disc/facet degeneration curvature | M | TO CHECK |
-| SP-05 | Hyperkyphosis / Scheuermann's kyphosis | Wedged thoracic vertebrae, rigid round back | H | TO CHECK |
-| SP-06 | Postural kyphosis (flexible) | Habitual thoracic over-flexion, no bone change | H | TO CHECK |
-| SP-07 | Lumbar hyperlordosis | Excess lumbar extension curve, anterior pelvic tilt coupling | H | TO CHECK |
-| SP-08 | Flat back (lumbar hypolordosis) | Loss of lumbar curve | M | TO CHECK |
-| SP-09 | Swayback posture | Pelvis shifted forward, thoracic back-sway | M | TO CHECK |
-| SP-10 | Anterior pelvic tilt | Pelvis rotated forward; hip flexor/erector dominance | H | TO CHECK |
-| SP-11 | Posterior pelvic tilt | Pelvis rotated backward; flat lumbar | M | TO CHECK |
-| SP-12 | Pelvic obliquity (lateral tilt) | One side of pelvis higher; apparent leg-length difference | H | TO CHECK |
-| SP-13 | Pelvic rotation asymmetry | Pelvis rotated in transverse plane | M | TO CHECK |
-| SP-14 | Spondylolisthesis | Vertebra slipped forward on the one below | M | TO CHECK |
-| SP-15 | Spondylolysis | Pars defect (stress fracture) in vertebra | L | TO CHECK |
-| SP-16 | Spinal stenosis | Narrowed spinal canal/foramina | L | TO CHECK |
-| SP-17 | Ankylosing spondylitis | Progressively fused/rigid spine | M | TO CHECK |
-| SP-18 | Disc degeneration / herniation | Disc height loss, segment geometry change | M | TO CHECK |
-| SP-19 | Osteoporotic vertebral wedge fracture | Wedged vertebral body → focal kyphosis | M | TO CHECK |
+| SP-02 | Scoliosis — congenital | Malformed vertebrae driving curvature | M | MODEL EXISTS — patient-specific EOS/CT 3D + FE (audit batch 1) |
+| SP-03 | Scoliosis — neuromuscular | Curvature from muscle imbalance/paralysis | M | MODEL EXISTS (geometry) — muscle drivers unmodelled (audit batch 1) |
+| SP-04 | Scoliosis — adult degenerative | Asymmetric disc/facet degeneration curvature | M | MODEL EXISTS — patient-specific FE, validated (audit batch 1) |
+| SP-05 | Hyperkyphosis / Scheuermann's kyphosis | Wedged thoracic vertebrae, rigid round back | H | MODEL EXISTS — coupled OpenSim+FE subject-specific (audit batch 1) |
+| SP-06 | Postural kyphosis (flexible) | Habitual thoracic over-flexion, no bone change | H | PARAMETER of spinopelvic model — no separate model (audit batch 1) |
+| SP-07 | Lumbar hyperlordosis | Excess lumbar extension curve, anterior pelvic tilt coupling | H | PARAMETER of spinopelvic model (audit batch 1) |
+| SP-08 | Flat back (lumbar hypolordosis) | Loss of lumbar curve | M | PARAMETER of spinopelvic model (audit batch 1) |
+| SP-09 | Swayback posture | Pelvis shifted forward, thoracic back-sway | M | PARAMETER — posture pattern (audit batch 1) |
+| SP-10 | Anterior pelvic tilt | Pelvis rotated forward; hip flexor/erector dominance | H | PARAMETER — pelvic tilt metric (audit batch 1) |
+| SP-11 | Posterior pelvic tilt | Pelvis rotated backward; flat lumbar | M | PARAMETER — pelvic tilt metric (audit batch 1) |
+| SP-12 | Pelvic obliquity (lateral tilt) | One side of pelvis higher; apparent leg-length difference | H | MODEL EXISTS — 3D pelvic geometry EOS/CT (audit batch 1) |
+| SP-13 | Pelvic rotation asymmetry | Pelvis rotated in transverse plane | M | MEASUREMENT ONLY — dedicated model gap (audit batch 1) |
+| SP-14 | Spondylolisthesis | Vertebra slipped forward on the one below | M | MODEL EXISTS — patient-specific FE, research only (audit batch 1) |
+| SP-15 | Spondylolysis | Pars defect (stress fracture) in vertebra | L | MODEL EXISTS — FE pars-defect models (audit batch 1) |
+| SP-16 | Spinal stenosis | Narrowed spinal canal/foramina | L | MODEL EXISTS — surgical FE; visualise-only for twin (audit batch 1) |
+| SP-17 | Ankylosing spondylitis | Progressively fused/rigid spine | M | MODEL EXISTS — FE ankylosed spine; lock joints in OpenSim (audit batch 1) |
+| SP-18 | Disc degeneration / herniation | Disc height loss, segment geometry change | M | MODEL EXISTS — poroelastic FE discs, research only (audit batch 1) |
+| SP-19 | Osteoporotic vertebral wedge fracture | Wedged vertebral body → focal kyphosis | M | MODEL EXISTS — validated CT FE wedge models (audit batch 1) |
 | SP-20 | Spine bending mechanics (general) | How curvature distributes across vertebrae | H | RESearched — articulated OpenSim spine models exist (§2 of anatomy note) |
 
 ## B. Head, neck & jaw (HN)
