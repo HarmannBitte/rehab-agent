@@ -8,6 +8,10 @@
 > folder is a self-contained shortlist (12 models: 8 code repos, 2 paper-only
 > models, 2 closed reference models). Metadata was fetched live from GitHub
 > on 2026-10-21.
+>
+> **Reference standards:** which fat measurements are actually best, which
+> metrics to store in the twin, and why LiDAR/shape estimates are not
+> conclusive — see [`measurement-notes.md`](measurement-notes.md).
 
 ## Why the twin needs a fat layer at all
 

@@ -1,6 +1,8 @@
 # Changelog
 
 ## Unreleased
+- Fat-measurement reference notes (`fat-distribution/measurement-notes.md`): method hierarchy, twin metrics, LiDAR conclusiveness
+- Research note on dance→3D mapping and motion data beyond squats (`docs/research-dance-3d-motion.md`)
 - New separate `fat-distribution/` folder: 12 fat/adipose-distribution models (8 code repos, 2 paper-only, 2 closed references) with Tier A/B usage rules
 - Gap pass: resolved all `needs-review` entries; added kalibr, apriltag, Meshroom (108 repos)
 - CI, unit tests, schemas + synthetic example, validation protocol, environment isolation
