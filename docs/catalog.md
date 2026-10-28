@@ -1,4 +1,4 @@
-# Full catalog — all 108 repositories
+# Full catalog — all 115 repositories
 
 Generated from `catalog/repos.json` by `scripts/generate_catalog.py`. Do not hand-edit this file; edit the JSON and regenerate.
 
@@ -23,7 +23,7 @@ Stars/forks/updated are dated snapshots, **not live data** (see the `snapshot_no
 | 71 | [muelea/shapy](https://github.com/muelea/shapy) | core | body-model | Python | none found in repo root | 389 | SHAPY — accurate 3D body shape regression using metric and semantic attributes; predicts SMPL-X shape plus height/weight/chest/waist/hip measurements from an image |
 | 73 | [yfeng95/PIXIE](https://github.com/yfeng95/PIXIE) | extended | body-model | Python | NOASSERTION | 517 | PIXIE — collaborative regression of expressive bodies: whole-body SMPL-X with detailed face and hand articulation from a single image |
 
-## anatomy-models — Anatomy & personalised model generation (7)
+## anatomy-models — Anatomy & personalised model generation (9)
 
 | # | Repository | Tier | Stages | Lang | License | ★ snapshot | Description |
 |---:|---|---|---|---|---|---:|---|
@@ -34,6 +34,8 @@ Stars/forks/updated are dated snapshots, **not live data** (see the `snapshot_no
 | 47 | [LNSGroup/MS-Human-700](https://github.com/LNSGroup/MS-Human-700) | specialized | muscle-sim, body-model | — | Apache-2.0 | 244 | MS-Human-700: Whole-body Human MusculoSkeletal Model |
 | 103 | [PatrikMrnka/msk-PIPE](https://github.com/PatrikMrnka/msk-PIPE) | extended | skeleton, biomechanics, muscle-sim | Python | none found in repo root | 2 | Automated pipeline generating personalised musculoskeletal models from medical images: CT/MRI -> segmentation -> OpenSim model with muscle attachments and wrapping |
 | 104 | [katya-stanzy/thin-plate-spline_personalised_muscoloskeletal_model](https://github.com/katya-stanzy/thin-plate-spline_personalised_muscoloskeletal_model) | extended | skeleton, biomechanics | Jupyter Notebook | none found in repo root | 10 | MRI-based workflow for personalised musculoskeletal models: subject-specific joint centres and muscle paths via thin-plate-spline mapping (3D Slicer + OpenSim) |
+| 114 | [MicheleConconi/Synergy-Based-Foot-Model](https://github.com/MicheleConconi/Synergy-Based-Foot-Model) | specialized | skeleton, biomechanics | MATLAB | none found in repo root | 0 | Multi-body foot model tracking the spatial kinematics of all foot bones with only 5 DOF, exploiting experimentally derived bone-motion coupling (synergies) measured from weight-bearing CT |
+| 115 | [OllieBoyne/Foot3D](https://github.com/OllieBoyne/Foot3D) | specialized | body-model, dataset | — | MIT | 47 | Foot3D - dataset of scanned 3D feet behind the FIND articulated foot model; external foot-shape/scan data for fitting the digital twin's foot surface |
 
 ## pose-mocap — Pose estimation & motion capture (video, markerless, IMU) (21)
 
@@ -79,7 +81,7 @@ Stars/forks/updated are dated snapshots, **not live data** (see the `snapshot_no
 | 90 | [mitkof6/OpenSimRT](https://github.com/mitkof6/OpenSimRT) | extended | capture, biomechanics | C++ | GPL-3.0 | 82 | OpenSimRT — real-time musculoskeletal kinematics and dynamics analysis using marker- and IMU-based solutions |
 | 91 | [CEINMS/CEINMS](https://github.com/CEINMS/CEINMS) | core | biomechanics, muscle-sim | C++ | Apache-2.0 | 33 | CEINMS — Calibrated EMG-Informed Neuromusculoskeletal Modelling Toolbox; estimates muscle forces and joint moments calibrated to the individual, OpenSim-compatible |
 
-## musculoskeletal-sim — Musculoskeletal simulation, humanoid control & RL (12)
+## musculoskeletal-sim — Musculoskeletal simulation, humanoid control & RL (13)
 
 | # | Repository | Tier | Stages | Lang | License | ★ snapshot | Description |
 |---:|---|---|---|---|---|---:|---|
@@ -95,6 +97,7 @@ Stars/forks/updated are dated snapshots, **not live data** (see the `snapshot_no
 | 46 | [robfiras/loco-mujoco](https://github.com/robfiras/loco-mujoco) | extended | control-rl, muscle-sim | Python | MIT | 1471 | Imitation learning benchmark focusing on complex locomotion tasks using MuJoCo |
 | 54 | [lsw9021/MASS](https://github.com/lsw9021/MASS) | specialized | muscle-sim, control-rl | Mathematica | Apache-2.0 | 638 | MASS (Muscle-Actuated Skeletal System) — simulation and control of a full-body musculoskeletal system driven by muscle activations, with Python/PyTorch deep-RL interfacing (SIGGRAPH 2019) |
 | 92 | [sofa-framework/sofa](https://github.com/sofa-framework/sofa) | specialized | muscle-sim, visualization | C++ | none found in repo root | 1279 | SOFA — real-time multi-physics simulation with emphasis on medical simulation; FEM soft-tissue modelling |
+| 113 | [Lars-DHondt-KUL/3dpredictsim](https://github.com/Lars-DHondt-KUL/3dpredictsim) | extended | biomechanics, muscle-sim | C++ | MIT | 4 | Framework generating 3D muscle-driven predictive simulations of human movement via direct collocation and algorithmic differentiation (KU Leuven); hosts the four-segment foot model with longitudinal arch used for predictive gait simulations |
 
 ## visualization-tools — Visualization, viewers & editing tools (8)
 
@@ -122,12 +125,15 @@ Stars/forks/updated are dated snapshots, **not live data** (see the `snapshot_no
 | 106 | [ethz-asl/kalibr](https://github.com/ethz-asl/kalibr) | specialized | capture, tooling | C++ | BSD-3-Clause | 5770 | Kalibr — visual-inertial calibration toolbox for cameras and IMUs |
 | 107 | [AprilRobotics/apriltag](https://github.com/AprilRobotics/apriltag) | specialized | capture, tooling | C | BSD-2-Clause | 2578 | AprilTag — visual fiducial marker system for robotics (pose of tagged objects from camera images) |
 
-## datasets-interaction — Datasets & human-object/scene interaction (2)
+## datasets-interaction — Datasets & human-object/scene interaction (5)
 
 | # | Repository | Tier | Stages | Lang | License | ★ snapshot | Description |
 |---:|---|---|---|---|---|---:|---|
 | 61 | [xiexh20/behave-dataset](https://github.com/xiexh20/behave-dataset) | specialized | dataset, pose | Python | NOASSERTION | 193 | Code to access the BEHAVE dataset (CVPR 2022) — human-object interaction |
 | 66 | [ptrvilya/echo](https://github.com/ptrvilya/echo) | experimental | pose, dataset | Python | MIT | 17 | ECHO: method for reconstructing human-object interaction from sparse ego-centric tracking |
+| 109 | [IDEA-Research/Motion-X](https://github.com/IDEA-Research/Motion-X) | specialized | dataset, pose | Python | NOASSERTION - non-commercial scientific research purposes only | 905 | Motion-X (NeurIPS 2023) - large-scale 3D expressive whole-body human motion dataset: 81.1K clips / ~144 h of SMPL-X whole-body poses (body, hands, face) with text annotations, built from online video plus eight existing datasets |
+| 111 | [NetEase-GameAI/ChoreoMaster](https://github.com/NetEase-GameAI/ChoreoMaster) | specialized | dataset, pose | — | none found in repo root | 120 | ChoreoMaster (ACM TOG 2021) - choreography-oriented, music-driven dance synthesis dataset and code (FBX motion units + music + labels); only ~1.48 h of the 9.91 h corpus is public |
+| 112 | [simonalexanderson/MotoricaDanceDataset](https://github.com/simonalexanderson/MotoricaDanceDataset) | specialized | dataset, pose | Python | NOASSERTION - custom Motorica AB copyright terms | 113 | Motorica Dance Dataset - 6 h of OptiTrack motion capture (17 cameras, 120 fps) across 8 dance styles; BVH plus retargeted skeletons, finger capture in some sessions, paired audio |
 
 ## rehab-assistive — Rehab, gait & assistive-device specific projects (5)
 
@@ -153,13 +159,14 @@ Stars/forks/updated are dated snapshots, **not live data** (see the `snapshot_no
 | 72 | [YuliangXiu/ECON](https://github.com/YuliangXiu/ECON) | extended | capture, body-model | Python | NOASSERTION | 1213 | ECON — explicit clothed humans optimised via normal integration; high-fidelity 3D clothed human from a single image, SMPL-X animatable |
 | 108 | [alicevision/Meshroom](https://github.com/alicevision/Meshroom) | extended | capture, body-model | Python | none found in repo root | 13028 | Meshroom — node-based photogrammetry toolbox (AliceVision) for 3D reconstruction from photos |
 
-## rehab-assessment — Rehab exercise assessment, clinical scores & movement correction (3)
+## rehab-assessment — Rehab exercise assessment, clinical scores & movement correction (4)
 
 | # | Repository | Tier | Stages | Lang | License | ★ snapshot | Description |
 |---:|---|---|---|---|---|---:|---|
 | 86 | [avakanski/A-Deep-Learning-Framework-for-Assessing-Physical-Rehabilitation-Exercises](https://github.com/avakanski/A-Deep-Learning-Framework-for-Assessing-Physical-Rehabilitation-Exercises) | extended | dataset, pose | Jupyter Notebook | none found in repo root | 75 | Framework for quality assessment of physical rehabilitation exercises on the UI-PRMD dataset (skeletal joint data, correct vs incorrect movements) |
 | 87 | [fokhruli/STGCN-rehab](https://github.com/fokhruli/STGCN-rehab) | core | dataset, pose | Python | MIT | 44 | Graph convolutional networks for assessment of physical rehabilitation exercises (KIMORE and UI-PRMD) |
 | 88 | [GuyTevet/motion-diffusion-model](https://github.com/GuyTevet/motion-diffusion-model) | experimental | pose, body-model | Python | MIT | 4120 | MDM — Human Motion Diffusion Model; text/action-to-motion generation plus motion editing and in-betweening |
+| 110 | [li-ronghui/LODGE](https://github.com/li-ronghui/LODGE) | experimental | pose, body-model | Python | none found in repo root | 178 | LODGE (CVPR 2024) - coarse-to-fine diffusion network for long music-driven dance generation guided by characteristic dance primitives |
 
 ## haptics-exoskeleton — Haptic feedback suits, exoskeleton hardware & actuators (6)
 
@@ -1478,3 +1485,87 @@ Stars/forks/updated are dated snapshots, **not live data** (see the `snapshot_no
 - **License:** none found in repo root (checked 2026-10-28; treat as all-rights-reserved) _(source: checked repo root 2026-10-28)_
 - **Snapshot:** ★ 13028 · forks 1235 · upstream updated 2026-10-20 (live API 2026-10-21)
 - **Clone target when vendored:** `upstream/alicevision/Meshroom` (never commit upstream code to this repo)
+
+### 109. [IDEA-Research/Motion-X](https://github.com/IDEA-Research/Motion-X)
+
+- **What it is:** Motion-X (NeurIPS 2023) - large-scale 3D expressive whole-body human motion dataset: 81.1K clips / ~144 h of SMPL-X whole-body poses (body, hands, face) with text annotations, built from online video plus eight existing datasets
+- **Why it's in this catalog:** Video-derived SMPL-X motion corpus for motion priors and tracker stress-testing. Pseudo-labelled, so never accuracy ground truth; non-commercial research licence with per-source terms - audit before any product use.
+- **Category / tier:** datasets-interaction / specialized
+- **Pipeline stages:** dataset, pose
+- **Tags:** motion-x, smpl-x, dataset, text-to-motion
+- **Primary language (GitHub):** Python
+- **License:** NOASSERTION - non-commercial scientific research purposes only (repo LICENSE) _(source: repo-root LICENSE file + GitHub API NOASSERTION (checked 2026-10-28))_
+- **Snapshot:** ★ 905 · forks 25 · upstream updated 2026-10-28 (live API 2026-10-28)
+- **Clone target when vendored:** `upstream/IDEA-Research/Motion-X` (never commit upstream code to this repo)
+
+### 110. [li-ronghui/LODGE](https://github.com/li-ronghui/LODGE)
+
+- **What it is:** LODGE (CVPR 2024) - coarse-to-fine diffusion network for long music-driven dance generation guided by characteristic dance primitives
+- **Why it's in this catalog:** Dance-generation reference for clinician-constrained 'corrected movement' drafts only - generation, not measurement; output must pass SKEL/OpenSim joint limits before display. No root licence file found: treat code as all-rights-reserved until cleared.
+- **Category / tier:** rehab-assessment / experimental
+- **Pipeline stages:** pose, body-model
+- **Tags:** lodge, dance-generation, diffusion, music-to-dance
+- **Primary language (GitHub):** Python
+- **License:** none found in repo root (checked 2026-10-28; treat as all-rights-reserved) _(source: checked repo root 2026-10-28)_
+- **Snapshot:** ★ 178 · forks 21 · upstream updated 2026-09-09 (live API 2026-10-28)
+- **Clone target when vendored:** `upstream/li-ronghui/LODGE` (never commit upstream code to this repo)
+
+### 111. [NetEase-GameAI/ChoreoMaster](https://github.com/NetEase-GameAI/ChoreoMaster)
+
+- **What it is:** ChoreoMaster (ACM TOG 2021) - choreography-oriented, music-driven dance synthesis dataset and code (FBX motion units + music + labels); only ~1.48 h of the 9.91 h corpus is public
+- **Why it's in this catalog:** True-mocap dance material for movement-library/prior work; the public subset is copyright-free, the wider corpus is non-commercial. GitHub reports no primary language (checked 2026-10-28).
+- **Category / tier:** datasets-interaction / specialized
+- **Pipeline stages:** dataset, pose
+- **Tags:** choreomaster, dance, mocap, music-driven
+- **Primary language (GitHub):** none reported
+- **License:** none found in repo root (checked 2026-10-28; treat as all-rights-reserved) _(source: checked repo root 2026-10-28)_
+- **Snapshot:** ★ 120 · forks 10 · upstream updated 2026-05-17 (live API 2026-10-28)
+- **Clone target when vendored:** `upstream/NetEase-GameAI/ChoreoMaster` (never commit upstream code to this repo)
+
+### 112. [simonalexanderson/MotoricaDanceDataset](https://github.com/simonalexanderson/MotoricaDanceDataset)
+
+- **What it is:** Motorica Dance Dataset - 6 h of OptiTrack motion capture (17 cameras, 120 fps) across 8 dance styles; BVH plus retargeted skeletons, finger capture in some sessions, paired audio
+- **Why it's in this catalog:** One of the few true-mocap (not video-reconstructed) dance corpora - candidate prior/stress-test data close to ground truth. Commercial copyright terms; licence audit mandatory before any product use.
+- **Category / tier:** datasets-interaction / specialized
+- **Pipeline stages:** dataset, pose
+- **Tags:** motorica, dance, mocap, optitrack
+- **Primary language (GitHub):** Python
+- **License:** NOASSERTION - custom Motorica AB copyright terms (LICENSE.txt; not an open-source licence) _(source: repo-root LICENSE.txt file (checked 2026-10-28))_
+- **Snapshot:** ★ 113 · forks 8 · upstream updated 2026-09-23 (live API 2026-10-28)
+- **Clone target when vendored:** `upstream/simonalexanderson/MotoricaDanceDataset` (never commit upstream code to this repo)
+
+### 113. [Lars-DHondt-KUL/3dpredictsim](https://github.com/Lars-DHondt-KUL/3dpredictsim)
+
+- **What it is:** Framework generating 3D muscle-driven predictive simulations of human movement via direct collocation and algorithmic differentiation (KU Leuven); hosts the four-segment foot model with longitudinal arch used for predictive gait simulations
+- **Why it's in this catalog:** Predictive-simulation framework behind the 4-segment arch foot adopted in docs/research-detailed-anatomy-models.md. Research code with a very small community - pin commits and validate before use.
+- **Category / tier:** musculoskeletal-sim / extended
+- **Pipeline stages:** biomechanics, muscle-sim
+- **Tags:** predictive-simulation, opensim, foot-model, direct-collocation, gait
+- **Primary language (GitHub):** C++
+- **License:** MIT _(source: GitHub API (live 2026-10-28))_
+- **Snapshot:** ★ 4 · forks 3 · upstream updated 2025-07-17 (live API 2026-10-28)
+- **Clone target when vendored:** `upstream/Lars-DHondt-KUL/3dpredictsim` (never commit upstream code to this repo)
+
+### 114. [MicheleConconi/Synergy-Based-Foot-Model](https://github.com/MicheleConconi/Synergy-Based-Foot-Model)
+
+- **What it is:** Multi-body foot model tracking the spatial kinematics of all foot bones with only 5 DOF, exploiting experimentally derived bone-motion coupling (synergies) measured from weight-bearing CT
+- **Why it's in this catalog:** Source model for the synergy-based arch foot recommended in docs/research-detailed-anatomy-models.md (arch as an explicit DOF). The referenced OpenSim port did not resolve on GitHub at check time - verify before planning on it. No root licence file: all-rights-reserved until cleared.
+- **Category / tier:** anatomy-models / specialized
+- **Pipeline stages:** skeleton, biomechanics
+- **Tags:** foot, synergy, arch, weight-bearing-ct, multi-body
+- **Primary language (GitHub):** MATLAB
+- **License:** none found in repo root (checked 2026-10-28; treat as all-rights-reserved) _(source: checked repo root 2026-10-28)_
+- **Snapshot:** ★ 0 · forks 0 · upstream updated 2026-04-09 (live API 2026-10-28)
+- **Clone target when vendored:** `upstream/MicheleConconi/Synergy-Based-Foot-Model` (never commit upstream code to this repo)
+
+### 115. [OllieBoyne/Foot3D](https://github.com/OllieBoyne/Foot3D)
+
+- **What it is:** Foot3D - dataset of scanned 3D feet behind the FIND articulated foot model; external foot-shape/scan data for fitting the digital twin's foot surface
+- **Why it's in this catalog:** Surface-shape foot data only - silent about arch mechanics and fascia strain; pair with the synergy-based or four-segment models for dynamics. GitHub reports no primary language (checked 2026-10-28).
+- **Category / tier:** anatomy-models / specialized
+- **Pipeline stages:** body-model, dataset
+- **Tags:** foot3d, foot-scans, statistical-shape, find
+- **Primary language (GitHub):** none reported
+- **License:** MIT _(source: GitHub API (live 2026-10-28))_
+- **Snapshot:** ★ 47 · forks 2 · upstream updated 2026-09-20 (live API 2026-10-28)
+- **Clone target when vendored:** `upstream/OllieBoyne/Foot3D` (never commit upstream code to this repo)

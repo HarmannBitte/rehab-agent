@@ -15,7 +15,7 @@ slugs=[r["slug"].lower() for r in D["repos"]]
 if len(slugs)!=len(set(slugs)): errs.append("duplicate slugs")
 if D["count"]!=len(D["repos"]): errs.append(f"count field {D['count']} != {len(D['repos'])} repos")
 # Repos where GitHub itself reports no primary language (verified via API, 2026-10-28)
-NO_LANGUAGE_OK={"andy-cheng/flex4dhuman","ntuywang103/vidihand","lnsgroup/ms-human-700"}
+NO_LANGUAGE_OK={"andy-cheng/flex4dhuman","ntuywang103/vidihand","lnsgroup/ms-human-700","netease-gameai/choreomaster","ollieboyne/foot3d"}
 for r in D["repos"]:
     s=r["slug"]
     if r["url"]!=f"https://github.com/{s}": errs.append(f"url mismatch: {s}")

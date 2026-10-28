@@ -1,6 +1,7 @@
 # Changelog
 
 ## Unreleased
+- Added 7 previously research-note-only repos to the catalog (IDs 109–115: Motion-X, LODGE, ChoreoMaster, MotoricaDanceDataset, 3dpredictsim, Synergy-Based-Foot-Model, Foot3D) with full documentation-standard metadata; catalog now 115 repos
 - Full repo-documentation pass: licenses + license provenance for all 108 catalog repos (and fat-distribution models), live metadata refresh for repos 1–52 + gap entries, expanded generated catalog with per-repo detail sections, documentation standard now enforced by validator and tests
 - Anatomy audit Batch 4 (whole-body/muscle, 32 issues) completed: `docs/anatomy-audit-batch4-wholebody-muscle.md` (131/202 researched; muscle-parameter pipeline finding)
 - Anatomy audit Batch 3 (shoulder SH-01…SH-15) completed: `docs/anatomy-audit-batch3-shoulder.md` (99/202 researched; scapula = model-inferred rule)

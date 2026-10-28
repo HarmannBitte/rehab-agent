@@ -1620,3 +1620,108 @@ repos:
     private: false
     pipeline_stages: ["capture", "body-model"]
     tags: ["meshroom", "photogrammetry", "alicevision", "surface-reconstruction"]
+  - slug: "IDEA-Research/Motion-X"
+    url: "https://github.com/IDEA-Research/Motion-X"
+    category: "datasets-interaction"
+    tier: "specialized"
+    language: "Python"
+    license: "NOASSERTION - non-commercial scientific research purposes only (repo LICENSE)"
+    updated_snapshot: "2026-10-28 (live API 2026-10-28)"
+    description: "Motion-X (NeurIPS 2023) - large-scale 3D expressive whole-body human motion dataset: 81.1K clips / ~144 h of SMPL-X whole-body poses (body, hands, face) with text annotations, built from online video plus eight existing datasets"
+    notes: "Video-derived SMPL-X motion corpus for motion priors and tracker stress-testing. Pseudo-labelled, so never accuracy ground truth; non-commercial research licence with per-source terms - audit before any product use."
+    upstream_path: "upstream/IDEA-Research/Motion-X"
+    stars_snapshot: 905
+    forks_snapshot: 25
+    private: false
+    pipeline_stages: ["dataset", "pose"]
+    tags: ["motion-x", "smpl-x", "dataset", "text-to-motion"]
+  - slug: "li-ronghui/LODGE"
+    url: "https://github.com/li-ronghui/LODGE"
+    category: "rehab-assessment"
+    tier: "experimental"
+    language: "Python"
+    license: "none found in repo root (checked 2026-10-28; treat as all-rights-reserved)"
+    updated_snapshot: "2026-09-09 (live API 2026-10-28)"
+    description: "LODGE (CVPR 2024) - coarse-to-fine diffusion network for long music-driven dance generation guided by characteristic dance primitives"
+    notes: "Dance-generation reference for clinician-constrained 'corrected movement' drafts only - generation, not measurement; output must pass SKEL/OpenSim joint limits before display. No root licence file found: treat code as all-rights-reserved until cleared."
+    upstream_path: "upstream/li-ronghui/LODGE"
+    stars_snapshot: 178
+    forks_snapshot: 21
+    private: false
+    pipeline_stages: ["pose", "body-model"]
+    tags: ["lodge", "dance-generation", "diffusion", "music-to-dance"]
+  - slug: "NetEase-GameAI/ChoreoMaster"
+    url: "https://github.com/NetEase-GameAI/ChoreoMaster"
+    category: "datasets-interaction"
+    tier: "specialized"
+    language: null
+    license: "none found in repo root (checked 2026-10-28; treat as all-rights-reserved)"
+    updated_snapshot: "2026-05-17 (live API 2026-10-28)"
+    description: "ChoreoMaster (ACM TOG 2021) - choreography-oriented, music-driven dance synthesis dataset and code (FBX motion units + music + labels); only ~1.48 h of the 9.91 h corpus is public"
+    notes: "True-mocap dance material for movement-library/prior work; the public subset is copyright-free, the wider corpus is non-commercial. GitHub reports no primary language (checked 2026-10-28)."
+    upstream_path: "upstream/NetEase-GameAI/ChoreoMaster"
+    stars_snapshot: 120
+    forks_snapshot: 10
+    private: false
+    pipeline_stages: ["dataset", "pose"]
+    tags: ["choreomaster", "dance", "mocap", "music-driven"]
+  - slug: "simonalexanderson/MotoricaDanceDataset"
+    url: "https://github.com/simonalexanderson/MotoricaDanceDataset"
+    category: "datasets-interaction"
+    tier: "specialized"
+    language: "Python"
+    license: "NOASSERTION - custom Motorica AB copyright terms (LICENSE.txt; not an open-source licence)"
+    updated_snapshot: "2026-09-23 (live API 2026-10-28)"
+    description: "Motorica Dance Dataset - 6 h of OptiTrack motion capture (17 cameras, 120 fps) across 8 dance styles; BVH plus retargeted skeletons, finger capture in some sessions, paired audio"
+    notes: "One of the few true-mocap (not video-reconstructed) dance corpora - candidate prior/stress-test data close to ground truth. Commercial copyright terms; licence audit mandatory before any product use."
+    upstream_path: "upstream/simonalexanderson/MotoricaDanceDataset"
+    stars_snapshot: 113
+    forks_snapshot: 8
+    private: false
+    pipeline_stages: ["dataset", "pose"]
+    tags: ["motorica", "dance", "mocap", "optitrack"]
+  - slug: "Lars-DHondt-KUL/3dpredictsim"
+    url: "https://github.com/Lars-DHondt-KUL/3dpredictsim"
+    category: "musculoskeletal-sim"
+    tier: "extended"
+    language: "C++"
+    license: "MIT"
+    updated_snapshot: "2025-07-17 (live API 2026-10-28)"
+    description: "Framework generating 3D muscle-driven predictive simulations of human movement via direct collocation and algorithmic differentiation (KU Leuven); hosts the four-segment foot model with longitudinal arch used for predictive gait simulations"
+    notes: "Predictive-simulation framework behind the 4-segment arch foot adopted in docs/research-detailed-anatomy-models.md. Research code with a very small community - pin commits and validate before use."
+    upstream_path: "upstream/Lars-DHondt-KUL/3dpredictsim"
+    stars_snapshot: 4
+    forks_snapshot: 3
+    private: false
+    pipeline_stages: ["biomechanics", "muscle-sim"]
+    tags: ["predictive-simulation", "opensim", "foot-model", "direct-collocation", "gait"]
+  - slug: "MicheleConconi/Synergy-Based-Foot-Model"
+    url: "https://github.com/MicheleConconi/Synergy-Based-Foot-Model"
+    category: "anatomy-models"
+    tier: "specialized"
+    language: "MATLAB"
+    license: "none found in repo root (checked 2026-10-28; treat as all-rights-reserved)"
+    updated_snapshot: "2026-04-09 (live API 2026-10-28)"
+    description: "Multi-body foot model tracking the spatial kinematics of all foot bones with only 5 DOF, exploiting experimentally derived bone-motion coupling (synergies) measured from weight-bearing CT"
+    notes: "Source model for the synergy-based arch foot recommended in docs/research-detailed-anatomy-models.md (arch as an explicit DOF). The referenced OpenSim port did not resolve on GitHub at check time - verify before planning on it. No root licence file: all-rights-reserved until cleared."
+    upstream_path: "upstream/MicheleConconi/Synergy-Based-Foot-Model"
+    stars_snapshot: 0
+    forks_snapshot: 0
+    private: false
+    pipeline_stages: ["skeleton", "biomechanics"]
+    tags: ["foot", "synergy", "arch", "weight-bearing-ct", "multi-body"]
+  - slug: "OllieBoyne/Foot3D"
+    url: "https://github.com/OllieBoyne/Foot3D"
+    category: "anatomy-models"
+    tier: "specialized"
+    language: null
+    license: "MIT"
+    updated_snapshot: "2026-09-20 (live API 2026-10-28)"
+    description: "Foot3D - dataset of scanned 3D feet behind the FIND articulated foot model; external foot-shape/scan data for fitting the digital twin's foot surface"
+    notes: "Surface-shape foot data only - silent about arch mechanics and fascia strain; pair with the synergy-based or four-segment models for dynamics. GitHub reports no primary language (checked 2026-10-28)."
+    upstream_path: "upstream/OllieBoyne/Foot3D"
+    stars_snapshot: 47
+    forks_snapshot: 2
+    private: false
+    pipeline_stages: ["body-model", "dataset"]
+    tags: ["foot3d", "foot-scans", "statistical-shape", "find"]
