@@ -1,6 +1,7 @@
 # Changelog
 
 ## Unreleased
+- New separate `fat-distribution/` folder: 12 fat/adipose-distribution models (8 code repos, 2 paper-only, 2 closed references) with Tier A/B usage rules
 - Gap pass: resolved all `needs-review` entries; added kalibr, apriltag, Meshroom (108 repos)
 - CI, unit tests, schemas + synthetic example, validation protocol, environment isolation
 - Metadata enrichment (`scripts/enrich_metadata.py`) and clone pinning (`scripts/record_pins.py`, `catalog/pins.json`)

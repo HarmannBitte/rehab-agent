@@ -37,6 +37,16 @@ LiDAR/D455 surfaces are centimetre-class (Tier B) — they register shape and
 support live tracking, but bone/joint/muscle accuracy still comes from MRI/CT
 (Tier A, `docs/accuracy.md`).
 
+## 🧈 Fat distribution (separate folder)
+
+Models of the patient's **fat/adipose distribution** — a layer the surface
+scan alone cannot see (fat + muscle + bone are summed in SMPL/LiDAR shape).
+Kept separate from the main catalog as requested: measured models from
+MRI/CT (TotalSegmentator tissue subtasks, vatsatseg, whole-body compartment
+quantification → Tier A) vs shape/silhouette-predicted depots (Pseudo-DXA,
+UK-Biobank silhouette model → Tier B, **estimate only**), plus paper-only and
+closed reference models: [`fat-distribution/README.md`](fat-distribution/README.md).
+
 ## Quick start
 
 ```bash
