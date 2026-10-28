@@ -363,8 +363,17 @@
 
 ## Count & working order
 
-**128 issues** (SP 20, HN 6, SH 9, UL 5, HP 10, KN 12, FT 16, WB 12,
-MS 10, BJ 6, NM 12, RA 10).
+**202 issues** after the 2026-10-28 niche expansion (SP 30, HN 12,
+SH 15, UL 11, HP 16, KN 18, FT 25, WB 19, MS 15, BJ 11, NM 15, RA 12,
+NC 3). Sections A–L hold the common layer; section M holds the niche
+layer with IDs continuing each region's numbering.
+
+**Completeness, honestly:** no finite list is provably complete —
+thousands of rare conditions exist. This list is complete *for its stated
+scope* (geometry/posture/movement-relevant, incl. niche) to the best of
+current clinical taxonomy (orthopaedic, congenital and neuromuscular
+categories cross-checked at creation). New finds get appended with fresh
+IDs; IDs are never renumbered.
 
 Already researched (9): SP-01, SP-20, FT-01, FT-16, WB-03, RA-01, RA-02,
 RA-03, RA-10 (and MS-03 partially, via the fat-measurement notes).
