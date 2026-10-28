@@ -183,18 +183,18 @@
 
 | ID | Issue | What changes anatomically | Priority | Status |
 |---|---|---|---|---|
-| NM-01 | Cerebral palsy — crouch gait | Persistent hip/knee flexion gait pattern | M | TO CHECK |
-| NM-02 | Cerebral palsy — spastic equinus / patterns | Spasticity-driven foot/limb postures, contractures | M | TO CHECK |
-| NM-03 | Stroke hemiparesis posture | One-sided weakness/spasticity, asymmetric posture | H | TO CHECK |
-| NM-04 | Parkinsonian stooped posture / camptocormia | Trunk flexion posture, rigidity pattern | M | TO CHECK |
-| NM-05 | Foot drop (peroneal nerve / L5) | Dorsiflexor failure, steppage gait | M | TO CHECK |
-| NM-06 | Muscular dystrophy posture | Progressive weakness → lordosis, pseudohypertrophy | L | TO CHECK |
-| NM-07 | Spinal muscular atrophy | Proximal weakness postures | L | TO CHECK |
-| NM-08 | Multiple sclerosis gait/posture | Spasticity + weakness + ataxia combination | L | TO CHECK |
-| NM-09 | Dystonia (incl. cervical) | Involuntary sustained muscle contractions → abnormal postures | L | TO CHECK |
-| NM-10 | Charcot (neuropathic) foot | Joint/bone collapse from neuropathy | L | TO CHECK |
-| NM-11 | Spasticity / hypertonia (general) | Velocity-dependent muscle overactivity | H | TO CHECK |
-| NM-12 | Hypotonia (general) | Low muscle tone, postural collapse tendency | M | TO CHECK |
+| NM-01 | Cerebral palsy — crouch gait | Persistent hip/knee flexion gait pattern | M | MODEL EXISTS — CP predictive simulation (batch 7) |
+| NM-02 | Cerebral palsy — spastic equinus / patterns | Spasticity-driven foot/limb postures, contractures | M | MODEL EXISTS — spasticity+contracture models (batch 7) |
+| NM-03 | Stroke hemiparesis posture | One-sided weakness/spasticity, asymmetric posture | H | MODEL EXISTS — unilateral weakness sims (batch 7) |
+| NM-04 | Parkinsonian stooped posture / camptocormia | Trunk flexion posture, rigidity pattern | M | MODEL EXISTS (research) — tone-vector model (batch 7) |
+| NM-05 | Foot drop (peroneal nerve / L5) | Dorsiflexor failure, steppage gait | M | MODEL EXISTS — weakness sims + AFO torque design (batch 7) |
+| NM-06 | Muscular dystrophy posture | Progressive weakness → lordosis, pseudohypertrophy | L | MODEL EXISTS — DMD weakness+contracture sims (batch 7) |
+| NM-07 | Spinal muscular atrophy | Proximal weakness postures | L | PARAMETER (sparse) — weakness distribution (batch 7) |
+| NM-08 | Multiple sclerosis gait/posture | Spasticity + weakness + ataxia combination | L | MODEL EXISTS (sparse) — parameter combination only (batch 7) |
+| NM-09 | Dystonia (incl. cervical) | Involuntary sustained muscle contractions → abnormal postures | L | MODEL EXISTS (research) — tone/posture models (batch 7) |
+| NM-10 | Charcot (neuropathic) foot | Joint/bone collapse from neuropathy | L | MODEL EXISTS (research) — Charcot foot FE (batch 7) |
+| NM-11 | Spasticity / hypertonia (general) | Velocity-dependent muscle overactivity | H | MODEL EXISTS (research) — reflex-feedback params (batch 7) |
+| NM-12 | Hypotonia (general) | Low muscle tone, postural collapse tendency | M | PARAMETER — low-force parameter set (batch 7) |
 
 ## L. Chest, rib cage, breathing & abdominal wall (RA)
 
@@ -342,9 +342,9 @@
 
 | ID | Issue | What changes anatomically | Priority | Status |
 |---|---|---|---|---|
-| NM-13 | Charcot-Marie-Tooth disease | Progressive distal wasting → cavovarus feet, hand wasting | M | TO CHECK |
-| NM-14 | Friedreich / hereditary ataxias | Progressive scoliosis + pes cavus + gait ataxia pattern | L | TO CHECK |
-| NM-15 | Post-polio residual deformity | Asymmetric atrophy, limb shortening, joint deformity | L | TO CHECK |
+| NM-13 | Charcot-Marie-Tooth disease | Progressive distal wasting → cavovarus feet, hand wasting | M | MODEL EXISTS — CMT OpenSim + exo optimisation (batch 7) |
+| NM-14 | Friedreich / hereditary ataxias | Progressive scoliosis + pes cavus + gait ataxia pattern | L | MODEL EXISTS (sparse) — components only, ataxia unmodelled (batch 7) |
+| NM-15 | Post-polio residual deformity | Asymmetric atrophy, limb shortening, joint deformity | L | PARAMETER — asymmetric weakness/atrophy set (batch 7) |
 
 ### Chest/breathing niche (RA, continued)
 
@@ -375,7 +375,7 @@ current clinical taxonomy (orthopaedic, congenital and neuromuscular
 categories cross-checked at creation). New finds get appended with fresh
 IDs; IDs are never renumbered.
 
-Already researched (174): the original 9 (SP-01, SP-20, FT-01, FT-16,
+Already researched (189): the original 9 (SP-01, SP-20, FT-01, FT-16,
 WB-03, RA-01, RA-02, RA-03, RA-10; MS-03 completed via the
 fat-measurement notes + Batch 4), **Batch 1: SP-02…SP-19**
 (`anatomy-audit-batch1-spine.md`), **Batch 2: HP/KN/FT chain**
@@ -383,9 +383,9 @@ fat-measurement notes + Batch 4), **Batch 1: SP-02…SP-19**
 SH-01…SH-15** (`anatomy-audit-batch3-shoulder.md`), **Batch 4:
 WB/MS** (`anatomy-audit-batch4-wholebody-muscle.md`), **Batch 5:
 HN + RA remainder** (`anatomy-audit-batch5-headneck-chest.md`),
-and **Batch 6: UL + BJ**
-(`anatomy-audit-batch6-armhand-bonejoint.md`).
-Remaining TO CHECK: 28 (NM-01…NM-15, SP-21…SP-30, NC-01…NC-03).
+**Batch 6: UL + BJ** (`anatomy-audit-batch6-armhand-bonejoint.md`),
+and **Batch 7: NM** (`anatomy-audit-batch7-neuromotor.md`).
+Remaining TO CHECK: 13 (SP-21…SP-30, NC-01…NC-03).
 
 Suggested audit order (by twin impact):
 1. **Spine/trunk remainder** (SP-05…SP-19) — posture is the core claim.

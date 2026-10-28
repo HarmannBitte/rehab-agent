@@ -1,6 +1,7 @@
 # Changelog
 
 ## Unreleased
+- Anatomy audit Batch 7 (neuromotor NM-01…NM-15) completed: `docs/anatomy-audit-batch7-neuromotor.md` (189/202 researched)
 - Anatomy audit Batch 6 (arm/hand + bone/joint, 22 issues) completed: `docs/anatomy-audit-batch6-armhand-bonejoint.md` (174/202 researched; MS-03 formally closed)
 - Anatomy audit Batch 5 (head/neck + chest remainder, 20 issues) completed: `docs/anatomy-audit-batch5-headneck-chest.md` (151/202 researched)
 - Added 7 previously research-note-only repos to the catalog (IDs 109–115: Motion-X, LODGE, ChoreoMaster, MotoricaDanceDataset, 3dpredictsim, Synergy-Based-Foot-Model, Foot3D) with full documentation-standard metadata; catalog now 115 repos
