@@ -40,6 +40,15 @@ converge at Stage 4–5: once you have a skeleton moving in OpenSim, assessment,
 simulation and visualisation are shared. Pick the front-end per setting
 (clinic = cameras, home = IMU) without rebuilding the back-end.
 
+## Scenario / what-if simulation (design stage)
+Stage 5–6 outputs feed a clinician-facing scenario model
+(`docs/design-joint-load-stress-model.md`): baseline vs fat-change /
+muscle-training / assistive-torque scenarios reporting per-joint load,
+muscle effort, distribution and stability — with fat effects anchored
+to measured body composition and muscle effects reported honestly
+(effort/stability, not promised load reduction). Illustrative demo:
+`examples/joint-load-demo/index.html`.
+
 ## Where an LLM/agent layer belongs
 Only *after* Stage 5 outputs exist: summarising measured ROM/gait/torque trends,
 turning clinician-authored exercise rules into checks, and drafting (never
